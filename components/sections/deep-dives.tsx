@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
 import { BrowserFrame } from "@/components/ui/browser-frame";
 import { CheckIcon } from "@/components/icons";
@@ -54,26 +55,13 @@ export function DeepDives() {
           <DeepDiveLink>See how scoring works</DeepDiveLink>
         </div>
         <BrowserFrame>
-          <div className="bg-white p-7">
-            <div className="rounded-lg border border-gold/35 bg-gold/6 p-5">
-              <div className="mb-3.5 flex items-center justify-between">
-                <span className="font-mono text-[11px] text-navy">RC-2026-8843</span>
-                <span className="rounded bg-slate/12 px-2 py-0.5 font-mono text-[10px] font-medium tracking-[0.05em] text-slate">
-                  LENIENT
-                </span>
-              </div>
-              <p className="mb-4 font-sans text-sm leading-snug text-ink">
-                4 similar cases found · typical action was{" "}
-                <strong className="font-semibold">written warning</strong> · proposed action is{" "}
-                <strong className="font-semibold">verbal warning</strong>
-              </p>
-              <textarea
-                readOnly
-                placeholder="Acknowledge with a note explaining the difference…"
-                className="h-14 w-full resize-none rounded-md border border-navy/15 bg-white p-2.5 font-sans text-[13px] text-ink"
-              />
-            </div>
-          </div>
+          <Image
+            src="/Consistency.png"
+            alt="Rectifia consistency and bias engine comparing a proposed case outcome against similar closed cases"
+            width={1408}
+            height={768}
+            className="h-auto w-full"
+          />
         </BrowserFrame>
       </div>
 
@@ -81,39 +69,13 @@ export function DeepDives() {
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-9 lg:grid-cols-2 lg:gap-14">
         <div className="lg:order-1">
           <BrowserFrame>
-            <div className="bg-white p-7">
-              <div className="mb-4.5 flex gap-2.5">
-                <div className="flex-1 rounded-lg border-2 border-navy p-3.5">
-                  <div className="mb-1.5 font-display text-sm font-semibold text-navy">
-                    Anonymous
-                  </div>
-                  <div className="font-sans text-xs leading-relaxed text-ink/70">
-                    No identity stored at all
-                  </div>
-                </div>
-                <div className="flex-1 rounded-lg border border-navy/15 p-3.5">
-                  <div className="mb-1.5 font-display text-sm font-semibold text-navy">
-                    Confidential
-                  </div>
-                  <div className="font-sans text-xs leading-relaxed text-ink/70">
-                    Identity encrypted, HR can follow up
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border border-navy/10 bg-surface p-4">
-                <div className="mb-2 font-mono text-[11px] text-navy/50">
-                  CASE CONFIRMATION
-                </div>
-                <div className="flex gap-2.5">
-                  <div className="flex-1 rounded-md border border-navy/12 bg-white p-2.5 font-mono text-[13px] text-navy">
-                    RC-2026-8851
-                  </div>
-                  <div className="flex-1 rounded-md border border-navy/12 bg-white p-2.5 font-mono text-[13px] text-navy">
-                    ••••••
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/Anonymity.png"
+              alt="Rectifia anonymous and confidential reporting options with a case confirmation ID and passcode"
+              width={1408}
+              height={768}
+              className="h-auto w-full"
+            />
           </BrowserFrame>
         </div>
         <div className="lg:order-2">

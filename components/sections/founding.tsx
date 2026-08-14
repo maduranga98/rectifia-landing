@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
 
 export function Founding() {
@@ -22,9 +23,17 @@ export function Founding() {
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] bg-gradient-to-l from-slate/40 to-transparent lg:block"
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
         aria-hidden
-      />
+      >
+        <Image
+          src="/Founding-programme.png"
+          alt=""
+          fill
+          className="object-cover object-left"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-navy" />
+      </div>
     </section>
   );
 }
