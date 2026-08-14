@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 import { trustStrip } from "@/lib/content";
@@ -47,11 +48,14 @@ export function Hero() {
 
         <div className="relative">
           <div className="relative min-h-[320px] overflow-hidden rounded-[10px] bg-gradient-to-br from-slate to-navy">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-mono text-xs tracking-[0.1em] text-white/25">
-                HR &amp; COMPLIANCE TEAM
-              </span>
-            </div>
+            <Image
+              src="/hero.png"
+              alt="Rectifia case management dashboard used by HR and compliance teams"
+              width={1408}
+              height={768}
+              priority
+              className="h-full w-full object-cover"
+            />
             <div className="absolute inset-0 bg-navy/12" />
           </div>
           <svg
