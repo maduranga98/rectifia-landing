@@ -1,4 +1,5 @@
 import { Kicker } from "@/components/ui/kicker";
+import { Reveal } from "@/components/ui/reveal";
 import { XIcon } from "@/components/icons";
 import { aiDoesNot } from "@/lib/content";
 
@@ -6,7 +7,7 @@ export function AiTrust() {
   return (
     <section id="ai-trust" className="bg-navy px-8 py-24">
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 lg:grid-cols-2">
-        <div>
+        <Reveal>
           <Kicker className="mb-3.5">AI POLICY</Kicker>
           <h2 className="mb-5 max-w-[440px] font-display text-[28px] font-bold tracking-tight text-white sm:text-[34px]">
             Every decision stays with your investigators.
@@ -19,8 +20,8 @@ export function AiTrust() {
             Scoring and checklists are grounded in your own uploaded policy documents, so
             guidance is specific to your organisation, never a generic model of misconduct.
           </p>
-        </div>
-        <div className="overflow-hidden rounded-lg border border-white/15">
+        </Reveal>
+        <Reveal delay={150} className="overflow-hidden rounded-lg border border-white/15">
           {aiDoesNot.map((item) => (
             <div
               key={item}
@@ -30,7 +31,7 @@ export function AiTrust() {
               <span className="font-sans text-[15.5px] leading-relaxed text-white">{item}</span>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
+import { Reveal } from "@/components/ui/reveal";
 
 export function Founding() {
   return (
     <section id="founding" className="relative overflow-hidden bg-navy">
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-8 py-[90px]">
-        <div className="relative z-10 max-w-[640px]">
+        <Reveal className="relative z-10 max-w-[640px]">
           <Kicker className="mb-4">FOUNDING PROGRAMME</Kicker>
           <h2 className="mb-4.5 font-display text-[32px] font-bold tracking-tight text-white">
             A small group of founding customers, ahead of general availability
@@ -20,7 +21,7 @@ export function Founding() {
           >
             Apply to the founding programme
           </a>
-        </div>
+        </Reveal>
       </div>
       <div
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"

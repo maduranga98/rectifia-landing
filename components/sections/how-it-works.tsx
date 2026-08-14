@@ -1,26 +1,30 @@
 import { Kicker } from "@/components/ui/kicker";
 import { BrowserFrame } from "@/components/ui/browser-frame";
+import { Reveal } from "@/components/ui/reveal";
 import { steps, pipeline } from "@/lib/content";
 
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-surface px-8 py-24">
       <div className="mx-auto max-w-[1280px]">
-        <Kicker className="mb-3.5">HOW IT WORKS</Kicker>
-        <h2 className="mb-12 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-          From report to a closed case, on a consistent track
-        </h2>
+        <Reveal>
+          <Kicker className="mb-3.5">HOW IT WORKS</Kicker>
+          <h2 className="mb-12 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            From report to a closed case, on a consistent track
+          </h2>
+        </Reveal>
 
         <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s) => (
-            <div key={s.num} className="border-t-2 border-navy pt-5">
+          {steps.map((s, i) => (
+            <Reveal key={s.num} delay={i * 90} className="border-t-2 border-navy pt-5">
               <div className="mb-2.5 font-mono text-[22px] font-medium text-navy">{s.num}</div>
               <div className="mb-2 font-display text-lg font-semibold text-navy">{s.title}</div>
               <p className="font-sans text-sm leading-relaxed text-ink">{s.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
+        <Reveal>
         <BrowserFrame>
           <div className="p-6">
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -52,6 +56,7 @@ export function HowItWorks() {
             </div>
           </div>
         </BrowserFrame>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
 import { BrowserFrame } from "@/components/ui/browser-frame";
+import { Reveal } from "@/components/ui/reveal";
 import { CheckIcon } from "@/components/icons";
 import {
   consistencyChecklist,
@@ -38,7 +39,7 @@ export function DeepDives() {
     <section id="deep-dives" className="flex flex-col gap-24 bg-white px-8 py-24">
       {/* Consistency & Bias Engine */}
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-9 lg:grid-cols-2 lg:gap-14">
-        <div>
+        <Reveal>
           <Kicker className="mb-3.5">CONSISTENCY &amp; BIAS ENGINE</Kicker>
           <h2 className="mb-4.5 font-display text-[28px] font-bold tracking-tight text-navy sm:text-[30px]">
             Every decision checked against your own record
@@ -53,21 +54,23 @@ export function DeepDives() {
           </p>
           <Checklist items={consistencyChecklist} />
           <DeepDiveLink>See how scoring works</DeepDiveLink>
-        </div>
-        <BrowserFrame>
-          <Image
-            src="/Consistency.png"
-            alt="Rectifia consistency and bias engine comparing a proposed case outcome against similar closed cases"
-            width={1408}
-            height={768}
-            className="h-auto w-full"
-          />
-        </BrowserFrame>
+        </Reveal>
+        <Reveal delay={150}>
+          <BrowserFrame>
+            <Image
+              src="/Consistency.png"
+              alt="Rectifia consistency and bias engine comparing a proposed case outcome against similar closed cases"
+              width={1408}
+              height={768}
+              className="h-auto w-full"
+            />
+          </BrowserFrame>
+        </Reveal>
       </div>
 
       {/* Anonymity */}
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-9 lg:grid-cols-2 lg:gap-14">
-        <div className="lg:order-1">
+        <Reveal className="lg:order-1">
           <BrowserFrame>
             <Image
               src="/Anonymity.png"
@@ -77,8 +80,8 @@ export function DeepDives() {
               className="h-auto w-full"
             />
           </BrowserFrame>
-        </div>
-        <div className="lg:order-2">
+        </Reveal>
+        <Reveal delay={150} className="lg:order-2">
           <Kicker className="mb-3.5">ANONYMITY</Kicker>
           <h2 className="mb-4.5 font-display text-[28px] font-bold tracking-tight text-navy sm:text-[30px]">
             Anonymity that survives an investigation
@@ -93,12 +96,12 @@ export function DeepDives() {
           </p>
           <Checklist items={anonymityChecklist} />
           <DeepDiveLink>See how identity protection works</DeepDiveLink>
-        </div>
+        </Reveal>
       </div>
 
       {/* Compliance deadlines */}
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-9 lg:grid-cols-2 lg:gap-14">
-        <div>
+        <Reveal>
           <Kicker className="mb-3.5">COMPLIANCE DEADLINES</Kicker>
           <h2 className="mb-4.5 font-display text-[28px] font-bold tracking-tight text-navy sm:text-[30px]">
             Deadlines you don&rsquo;t have to remember
@@ -113,29 +116,31 @@ export function DeepDives() {
           </p>
           <Checklist items={deadlineChecklist} />
           <DeepDiveLink>See deadline tracking</DeepDiveLink>
-        </div>
-        <BrowserFrame>
-          <div className="bg-white p-5">
-            {deadlineRows.map((r) => (
-              <div
-                key={r.id}
-                className="flex items-center justify-between border-b border-navy/6 py-3 last:border-b-0"
-              >
-                <div>
-                  <div className="font-mono text-xs text-navy">{r.id}</div>
-                  <div className="font-sans text-[12.5px] text-ink/60">{r.dept}</div>
-                </div>
-                <div className="font-mono text-xl text-navy">{r.days}</div>
-                <span
-                  className="rounded px-2 py-1 font-mono text-[10px] font-medium"
-                  style={{ color: r.color, background: `${r.color}1a` }}
+        </Reveal>
+        <Reveal delay={150}>
+          <BrowserFrame>
+            <div className="bg-white p-5">
+              {deadlineRows.map((r) => (
+                <div
+                  key={r.id}
+                  className="flex items-center justify-between border-b border-navy/6 py-3 last:border-b-0"
                 >
-                  {r.status}
-                </span>
-              </div>
-            ))}
-          </div>
-        </BrowserFrame>
+                  <div>
+                    <div className="font-mono text-xs text-navy">{r.id}</div>
+                    <div className="font-sans text-[12.5px] text-ink/60">{r.dept}</div>
+                  </div>
+                  <div className="font-mono text-xl text-navy">{r.days}</div>
+                  <span
+                    className="rounded px-2 py-1 font-mono text-[10px] font-medium"
+                    style={{ color: r.color, background: `${r.color}1a` }}
+                  >
+                    {r.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </BrowserFrame>
+        </Reveal>
       </div>
     </section>
   );
