@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
@@ -18,8 +19,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/95 backdrop-blur">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-4">
-        <Link href="/" className="font-display text-lg font-semibold tracking-tight text-white">
-          Rectifia
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image src="/logo.png" alt="" width={32} height={32} className="rounded-lg" priority />
+          <span className="font-display text-lg font-semibold tracking-tight text-white">
+            Rectifia
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
