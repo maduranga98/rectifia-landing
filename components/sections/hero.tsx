@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Kicker } from "@/components/ui/kicker";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
+import { Reveal } from "@/components/ui/reveal";
 import { trustStrip } from "@/lib/content";
 
 export function Hero() {
@@ -10,7 +11,7 @@ export function Hero() {
       className="relative overflow-hidden bg-navy px-8 pb-16 pt-20 lg:pb-24 lg:pt-28"
     >
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 lg:grid-cols-[55%_45%] lg:gap-8">
-        <div>
+        <Reveal>
           <Kicker className="mb-5">
             WORKPLACE MISCONDUCT REPORTING &amp; CASE MANAGEMENT
           </Kicker>
@@ -44,9 +45,9 @@ export function Hero() {
               </span>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="relative">
+        <Reveal delay={150} className="relative">
           <div className="relative min-h-[320px] overflow-hidden rounded-[10px] bg-gradient-to-br from-slate to-navy">
             <Image
               src="/hero.png"
@@ -71,7 +72,7 @@ export function Hero() {
               strokeLinejoin="round"
             />
           </svg>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

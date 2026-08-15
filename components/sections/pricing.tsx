@@ -1,5 +1,6 @@
 import { Kicker } from "@/components/ui/kicker";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
+import { Reveal } from "@/components/ui/reveal";
 import { pricingTiers, pulseAddon } from "@/lib/content";
 
 const ctaClass =
@@ -11,20 +12,23 @@ export function Pricing() {
   return (
     <section id="pricing" className="bg-surface px-8 py-24">
       <div className="mx-auto max-w-[1280px]">
-        <Kicker className="mb-3.5">PRICING</Kicker>
-        <h2 className="mb-3 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-          Priced by headcount, not by report
-        </h2>
-        <p className="mb-12 max-w-[640px] font-sans text-base leading-relaxed text-ink">
-          Billing is based on employee headcount. Rectifia never bills per report, since charging
-          per report would create an incentive to suppress reports.
-        </p>
+        <Reveal>
+          <Kicker className="mb-3.5">PRICING</Kicker>
+          <h2 className="mb-3 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            Priced by headcount, not by report
+          </h2>
+          <p className="mb-12 max-w-[640px] font-sans text-base leading-relaxed text-ink">
+            Billing is based on employee headcount. Rectifia never bills per report, since
+            charging per report would create an incentive to suppress reports.
+          </p>
+        </Reveal>
 
         <div className="mb-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {pricingTiers.map((tier) => (
-            <div
+          {pricingTiers.map((tier, i) => (
+            <Reveal
               key={tier.name}
-              className={`rounded-lg border border-navy/8 bg-white p-7 ${
+              delay={i * 90}
+              className={`hover-lift rounded-lg border border-navy/8 bg-white p-7 ${
                 tier.highlight ? "border-t-[3px] border-t-gold" : ""
               }`}
             >
@@ -49,11 +53,11 @@ export function Pricing() {
                   {tier.ctaLabel}
                 </a>
               )}
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-6 rounded-lg border border-navy/8 bg-white px-7 py-6">
+        <Reveal className="flex flex-wrap items-center justify-between gap-6 rounded-lg border border-navy/8 bg-white px-7 py-6">
           <div>
             <span className="font-mono text-[10px] font-medium tracking-[0.06em] text-gold">
               ADD-ON
@@ -73,7 +77,7 @@ export function Pricing() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

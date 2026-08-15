@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Kicker } from "@/components/ui/kicker";
+import { Reveal } from "@/components/ui/reveal";
 import { faqItems } from "@/lib/content";
 
 export function Faq() {
@@ -10,12 +11,14 @@ export function Faq() {
   return (
     <section id="faq" className="bg-surface px-8 py-24">
       <div className="mx-auto max-w-[760px]">
-        <Kicker className="mb-3.5 text-center" tone="gold">
-          FAQ
-        </Kicker>
-        <h2 className="mb-10 text-center font-display text-[32px] font-bold tracking-tight text-navy">
-          Common questions
-        </h2>
+        <Reveal>
+          <Kicker className="mb-3.5 text-center" tone="gold">
+            FAQ
+          </Kicker>
+          <h2 className="mb-10 text-center font-display text-[32px] font-bold tracking-tight text-navy">
+            Common questions
+          </h2>
+        </Reveal>
 
         <div className="border-t border-navy/10">
           {faqItems.map((item, i) => {
@@ -38,11 +41,16 @@ export function Faq() {
                     +
                   </span>
                 </button>
-                {open && (
-                  <p className="mb-5.5 max-w-[640px] font-sans text-[15px] leading-relaxed text-ink">
-                    {item.a}
-                  </p>
-                )}
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <p className="mb-5.5 max-w-[640px] font-sans text-[15px] leading-relaxed text-ink">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
