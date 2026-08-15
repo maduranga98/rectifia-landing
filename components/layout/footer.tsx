@@ -71,7 +71,7 @@ export function Footer() {
             © {new Date().getFullYear()} Rectifia. All rights reserved.
           </span>
           <span className="font-mono text-[11px] tracking-[0.06em] text-white/35">
-            NOT LEGAL ADVICE — CONFIRM REQUIREMENTS WITH COUNSEL
+            NOT LEGAL ADVICE - CONFIRM REQUIREMENTS WITH COUNSEL
           </span>
         </div>
       </div>

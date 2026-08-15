@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { blogPosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Blog — Rectifia",
+  title: "Blog - Rectifia",
   description:
     "Notes on consistent case outcomes, whistleblower compliance deadlines, and how Rectifia's reporting and investigation platform actually works.",
 };
@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
               From the blog
             </h1>
             <p className="mt-3.5 max-w-[560px] font-sans text-base leading-relaxed text-white/70">
-              Product mechanics, compliance deadlines, and honest comparisons — how Rectifia
+              Product mechanics, compliance deadlines, and honest comparisons - how Rectifia
               actually works, written by the team building it.
             </p>
           </div>

@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rectifia — Fair cases. Consistent outcomes.",
+  title: "Rectifia - Fair cases. Consistent outcomes.",
   description:
     "A workplace misconduct reporting channel employees actually trust, and an investigation workflow that keeps outcomes consistent across every case, department, and investigator.",
   icons: {

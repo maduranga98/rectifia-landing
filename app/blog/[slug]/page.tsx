@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: `${post.title} — Rectifia`,
+    title: `${post.title} - Rectifia`,
     description: post.excerpt,
   };
 }
