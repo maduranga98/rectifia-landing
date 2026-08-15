@@ -6,12 +6,12 @@ import { useState } from "react";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 
 const navLinks = [
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#features", label: "Platform" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#frameworks", label: "Compliance" },
-  { href: "#blog", label: "Blog" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/#features", label: "Platform" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#frameworks", label: "Compliance" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function Header() {

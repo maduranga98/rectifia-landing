@@ -23,10 +23,10 @@ function Checklist({ items }: { items: string[] }) {
   );
 }
 
-function DeepDiveLink({ children }: { children: React.ReactNode }) {
+function DeepDiveLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a
-      href="#blog"
+      href={href}
       className="font-display text-[14.5px] font-semibold text-navy underline decoration-gold underline-offset-4"
     >
       {children}
@@ -53,7 +53,9 @@ export function DeepDives() {
             it&rsquo;s finalized, with the reasoning attached, not just the outcome.
           </p>
           <Checklist items={consistencyChecklist} />
-          <DeepDiveLink>See how scoring works</DeepDiveLink>
+          <DeepDiveLink href="/blog/consistency-bias-engine-explained">
+            See how scoring works
+          </DeepDiveLink>
         </Reveal>
         <Reveal delay={150}>
           <BrowserFrame>
@@ -95,7 +97,9 @@ export function DeepDives() {
             ever creating a login or an email trail back to them.
           </p>
           <Checklist items={anonymityChecklist} />
-          <DeepDiveLink>See how identity protection works</DeepDiveLink>
+          <DeepDiveLink href="/blog/anonymous-vs-confidential-reporting">
+            See how identity protection works
+          </DeepDiveLink>
         </Reveal>
       </div>
 
@@ -115,7 +119,9 @@ export function DeepDives() {
             sees which cases are at risk before a deadline passes.
           </p>
           <Checklist items={deadlineChecklist} />
-          <DeepDiveLink>See deadline tracking</DeepDiveLink>
+          <DeepDiveLink href="/blog/eu-whistleblower-directive-deadlines">
+            See deadline tracking
+          </DeepDiveLink>
         </Reveal>
         <Reveal delay={150}>
           <BrowserFrame>

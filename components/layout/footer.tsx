@@ -5,25 +5,25 @@ const columns = [
   {
     title: "Product",
     links: [
-      { label: "How it works", href: "#how-it-works" },
-      { label: "Platform", href: "#features" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Compliance", href: "#frameworks" },
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "Platform", href: "/#features" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "Compliance", href: "/#frameworks" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Founding programme", href: "#founding" },
-      { label: "Blog", href: "#blog" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Founding programme", href: "/#founding" },
+      { label: "Blog", href: "/blog" },
+      { label: "FAQ", href: "/#faq" },
       { label: "Contact sales", href: "mailto:sales@rectifia.com" },
     ],
   },
   {
     title: "Trust",
     links: [
-      { label: "Security", href: "#ai-trust" },
+      { label: "Security", href: "/#ai-trust" },
       { label: "Privacy policy", href: "/privacy" },
       { label: "Terms of service", href: "/terms" },
     ],

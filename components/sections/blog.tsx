@@ -4,9 +4,9 @@ import { Reveal } from "@/components/ui/reveal";
 import { blogPosts } from "@/lib/content";
 
 export function Blog() {
-  const sorted = [...blogPosts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+  const sorted = [...blogPosts]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   return (
     <section id="blog" className="bg-white px-8 py-24">
@@ -19,7 +19,7 @@ export function Blog() {
             </h2>
           </div>
           <Link
-            href="#blog"
+            href="/blog"
             className="font-display text-[14.5px] font-semibold text-navy transition-colors hover:text-gold"
           >
             View all posts →
@@ -30,7 +30,7 @@ export function Blog() {
           {sorted.map((post, i) => (
             <Reveal key={post.slug} delay={i * 90}>
               <Link
-                href={`#blog-${post.slug}`}
+                href={`/blog/${post.slug}`}
                 className="hover-lift block overflow-hidden rounded-lg border border-navy/8 bg-white"
               >
                 <div className="aspect-video overflow-hidden bg-gradient-to-br from-navy/10 to-slate/20" />
