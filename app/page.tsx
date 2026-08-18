@@ -12,10 +12,51 @@ import { Founding } from "@/components/sections/founding";
 import { Blog } from "@/components/sections/blog";
 import { Faq } from "@/components/sections/faq";
 import { DemoCta } from "@/components/sections/demo-cta";
+import { faqItems, pricingTiers } from "@/lib/content";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Rectifia",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description:
+    "A workplace misconduct reporting channel employees actually trust, and an investigation workflow that keeps outcomes consistent across every case, department, and investigator.",
+  offers: pricingTiers
+    .filter((tier) => !tier.price.toLowerCase().includes("contact"))
+    .map((tier) => ({
+      "@type": "Offer",
+      name: tier.name,
+      price: tier.price.replace(/[^0-9.]/g, ""),
+      priceCurrency: "USD",
+      description: tier.range,
+    })),
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <Hero />

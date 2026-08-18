@@ -5,7 +5,7 @@ import { problemPoints } from "@/lib/content";
 export function Problem() {
   return (
     <section id="problem" className="relative overflow-hidden bg-navy px-8 pb-24 pt-14">
-      <Image src="/problem.png" alt="" fill className="object-cover" />
+      <Image src="/problem.webp" alt="" fill className="object-cover" />
       <div className="absolute inset-0 bg-navy/78" />
       <div className="relative mx-auto grid max-w-[1280px] grid-cols-1 gap-8 sm:grid-cols-3">
         {problemPoints.map((p, i) => (

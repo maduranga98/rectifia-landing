@@ -60,7 +60,7 @@ export function DeepDives() {
         <Reveal delay={150}>
           <BrowserFrame>
             <Image
-              src="/Consistency.png"
+              src="/Consistency.webp"
               alt="Rectifia consistency and bias engine comparing a proposed case outcome against similar closed cases"
               width={1408}
               height={768}
@@ -75,7 +75,7 @@ export function DeepDives() {
         <Reveal className="lg:order-1">
           <BrowserFrame>
             <Image
-              src="/Anonymity.png"
+              src="/Anonymity.webp"
               alt="Rectifia anonymous and confidential reporting options with a case confirmation ID and passcode"
               width={1408}
               height={768}

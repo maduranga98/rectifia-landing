@@ -1,0 +1,35 @@
+# Rectifia
+
+> Rectifia is a workplace misconduct reporting and HR case management platform. It gives employees a reporting channel they trust (anonymous or confidential, no login required) and gives HR and compliance teams an investigation workflow that keeps outcomes consistent across every case, department, and investigator.
+
+## What Rectifia does
+
+- **Reporting channel**: Employees file reports anonymously (no identity ever stored) or confidentially, with no login required.
+- **Severity & evidence scoring**: AI scores severity and evidence completeness separately and routes cases to the right handler. AI never decides guilt, recommends discipline, or closes a case - that stays with human investigators.
+- **Consistency & Bias Engine**: Before a case closes, the proposed action is checked against similar closed cases (same category, comparable severity and evidence) to catch cases where two similar situations would otherwise get different outcomes.
+- **Compliance deadline tracking**: Acknowledgment and feedback clocks (e.g. the EU Whistleblower Directive's 7-day acknowledgment and 3-month feedback deadlines) are computed per jurisdiction and shown on every case.
+- **Role-based access**: HR sees case status and category. Handlers see only cases assigned to them. Company Admin has zero access to case content by design.
+
+## Pricing
+
+Rectifia bills by employee headcount, never per report or per submission, specifically to avoid creating an incentive to suppress reporting.
+
+- Starter: up to 25 employees, $59/mo
+- Growth: 26-200 employees, $199/mo
+- Scale: 201-500 employees, $549/mo
+- Enterprise: 500+ employees, contact sales
+
+## Compliance posture
+
+Rectifia is built to align with the EU Whistleblower Directive (2019/1937). Rectifia does not yet hold SOC 2 or ISO 27001 certification (on the roadmap) - if that is a hard procurement requirement today, Rectifia is not yet the right fit.
+
+## Key pages
+
+- Homepage: https://rectifia.com/ - product overview, how it works, pricing, FAQ
+- Blog: https://rectifia.com/blog - compliance deadlines, product mechanics, vendor comparisons
+- Privacy Policy: https://rectifia.com/privacy
+- Terms of Service: https://rectifia.com/terms
+
+## Contact
+
+Sales: sales@rectifia.com

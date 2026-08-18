@@ -24,9 +24,27 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
 
+  const url = `https://rectifia.com/blog/${post.slug}`;
+
   return {
-    title: `${post.title} - Rectifia`,
+    title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      section: post.category,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -40,9 +58,45 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const url = `https://rectifia.com/blog/${post.slug}`;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    articleSection: post.category,
+    author: { "@type": "Organization", name: "Rectifia" },
+    publisher: {
+      "@type": "Organization",
+      name: "Rectifia",
+      logo: { "@type": "ImageObject", url: "https://rectifia.com/logo.png" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://rectifia.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://rectifia.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <article className="bg-white px-8 py-20">
