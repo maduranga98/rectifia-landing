@@ -6,10 +6,26 @@ import { Kicker } from "@/components/ui/kicker";
 import { Reveal } from "@/components/ui/reveal";
 import { blogPosts } from "@/lib/content";
 
+const description =
+  "Notes on consistent case outcomes, whistleblower compliance deadlines, and how Rectifia's reporting and investigation platform actually works.";
+
 export const metadata: Metadata = {
-  title: "Blog - Rectifia",
-  description:
-    "Notes on consistent case outcomes, whistleblower compliance deadlines, and how Rectifia's reporting and investigation platform actually works.",
+  title: "Blog",
+  description,
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://rectifia.com/blog",
+    title: "Blog | Rectifia",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Rectifia",
+    description,
+  },
 };
 
 export default function BlogIndexPage() {

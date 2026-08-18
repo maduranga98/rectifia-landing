@@ -50,7 +50,7 @@ export function Hero() {
         <Reveal delay={150} className="relative">
           <div className="relative min-h-[320px] overflow-hidden rounded-[10px] bg-gradient-to-br from-slate to-navy">
             <Image
-              src="/hero.png"
+              src="/hero.webp"
               alt="Rectifia case management dashboard used by HR and compliance teams"
               width={1408}
               height={768}

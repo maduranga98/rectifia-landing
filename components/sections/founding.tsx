@@ -28,7 +28,7 @@ export function Founding() {
         aria-hidden
       >
         <Image
-          src="/Founding-programme.png"
+          src="/Founding-programme.webp"
           alt=""
           fill
           className="object-cover object-left"
