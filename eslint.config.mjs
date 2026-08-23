@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Static export output directory (see next.config.ts distDir).
     "dist/**",
+    // Separate CommonJS Cloud Functions package with its own lint setup.
+    "functions/**",
   ]),
 ]);
 
