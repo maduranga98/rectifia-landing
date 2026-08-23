@@ -8,7 +8,7 @@ import { DeepDives } from "@/components/sections/deep-dives";
 import { AiTrust } from "@/components/sections/ai-trust";
 import { Pricing } from "@/components/sections/pricing";
 import { Frameworks } from "@/components/sections/frameworks";
-import { Founding } from "@/components/sections/founding";
+import { WhyRectifia } from "@/components/sections/why-rectifia";
 import { Blog } from "@/components/sections/blog";
 import { Faq } from "@/components/sections/faq";
 import { DemoCta } from "@/components/sections/demo-cta";
@@ -67,7 +67,7 @@ export default function Home() {
         <AiTrust />
         <Pricing />
         <Frameworks />
-        <Founding />
+        <WhyRectifia />
         <Blog />
         <Faq />
         <DemoCta />

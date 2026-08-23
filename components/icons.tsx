@@ -51,6 +51,24 @@ export function ScaleIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ShieldIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#DB9B3A"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
+    </svg>
+  );
+}
+
 export function ClockIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
