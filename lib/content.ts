@@ -260,9 +260,27 @@ export const railSections = [
   { id: "ai-trust", label: "TRUST" },
   { id: "pricing", label: "PRICING" },
   { id: "frameworks", label: "COMPLIANCE" },
-  { id: "founding", label: "FOUNDING" },
+  { id: "why-rectifia", label: "WHY US" },
   { id: "faq", label: "FAQ" },
 ];
+
+export const whyRectifiaPoints = [
+  {
+    icon: "scale",
+    title: "Every case checked against your own record",
+    desc: "Closed cases become reference points. When a proposed action looks harsher or more lenient than similar past cases, it's flagged before the case closes - in either direction, never just one.",
+  },
+  {
+    icon: "shield",
+    title: "AI that never renders a verdict",
+    desc: "Your own policy documents structure how each case is scored. The model flags gaps and patterns. It's explicitly instructed never to conclude that a policy was violated - that stays a human decision, always.",
+  },
+  {
+    icon: "check",
+    title: "Every flag comes with its reasoning",
+    desc: "No black-box score. Investigators, and if it ever comes to it, regulators, can see exactly why a case was flagged, not just that it was.",
+  },
+] as const;
 
 export type BlogPost = {
   slug: string;

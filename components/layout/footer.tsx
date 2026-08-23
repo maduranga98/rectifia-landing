@@ -14,7 +14,7 @@ const columns = [
   {
     title: "Company",
     links: [
-      { label: "Founding programme", href: "/#founding" },
+      { label: "Why Rectifia", href: "/#why-rectifia" },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/#faq" },
       { label: "Contact sales", href: "mailto:sales@rectifia.com" },
