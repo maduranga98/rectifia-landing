@@ -1,10 +1,25 @@
 {
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default"
+    }
+  ],
   "hosting": {
     "site": "rectifia-landing",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/api/book-demo",
+        "function": {
+          "functionId": "bookDemo",
+          "region": "us-central1"
+        }
+      }
+    ],
     "headers": [
       {
         "source": "/_next/static/**",
