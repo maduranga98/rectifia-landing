@@ -44,6 +44,14 @@ const softwareJsonLd = {
       priceCurrency: "USD",
       description: tier.range,
     })),
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Place", name: "European Union" },
+    { "@type": "Country", name: "Australia" },
+    { "@type": "Country", name: "Japan" },
+    { "@type": "Country", name: "Kenya" },
+  ],
 };
 
 export default function Home() {
