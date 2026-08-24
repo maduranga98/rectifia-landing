@@ -223,6 +223,12 @@ export const frameworks = [
     desc: "Configurable per-jurisdiction timelines and defensible documentation.",
     span: "narrow",
   },
+  {
+    code: "KE",
+    title: "Bribery Act 2016 · Data Protection Act 2019",
+    desc: "Kenya has no dedicated whistleblower protection law yet - the Whistleblower Protection Bill has been reintroduced repeatedly since 2017 without passing. Section 9 of the Bribery Act 2016 still places a duty on public and private entities to maintain corruption-prevention procedures, and reporter identity is handled in line with the Data Protection Act 2019. This isn't legal advice - confirm current obligations with local counsel.",
+    span: "wide",
+  },
 ];
 
 export const faqItems = [

@@ -40,10 +40,24 @@ export const metadata: Metadata = {
     "EU Whistleblower Directive compliance",
     "anonymous employee reporting",
     "HR investigation software",
+    "UK whistleblowing software PIDA compliance",
+    "Australia Respect@Work positive duty software",
+    "Japan whistleblower protection act compliance",
+    "Kenya workplace misconduct reporting",
+    "US SOX compliance reporting hotline",
+    "multi-jurisdiction whistleblowing compliance software",
   ],
   authors: [{ name: "Rectifia" }],
   alternates: {
     canonical: "/",
+    languages: {
+      "en-US": "/",
+      "en-GB": "/",
+      "en-AU": "/",
+      "en-KE": "/",
+      en: "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     type: "website",
@@ -60,6 +74,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
+    alternateLocale: ["en_GB", "en_AU", "en_KE"],
   },
   twitter: {
     card: "summary_large_image",
@@ -92,6 +107,15 @@ export const metadata: Metadata = {
   },
 };
 
+const areaServed = [
+  { "@type": "Country", name: "United States" },
+  { "@type": "Country", name: "United Kingdom" },
+  { "@type": "Place", name: "European Union" },
+  { "@type": "Country", name: "Australia" },
+  { "@type": "Country", name: "Japan" },
+  { "@type": "Country", name: "Kenya" },
+];
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -101,6 +125,7 @@ const organizationJsonLd = {
   description: siteDescription,
   email: "sales@rectifia.com",
   sameAs: [],
+  areaServed,
 };
 
 const websiteJsonLd = {
