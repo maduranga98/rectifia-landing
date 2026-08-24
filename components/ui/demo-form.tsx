@@ -70,7 +70,7 @@ export function DemoForm({ variant = "inline" }: { variant?: "inline" | "modal" 
       className={
         variant === "modal"
           ? "flex flex-col gap-4"
-          : "mx-auto flex w-full max-w-xl flex-col gap-4 rounded-lg border border-navy/8 bg-white p-8"
+          : "mx-auto flex w-full max-w-[1280px] flex-col gap-4 rounded-lg border border-navy/8 bg-white p-8"
       }
     >
       <div className="grid gap-4 sm:grid-cols-2">

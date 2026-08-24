@@ -10,7 +10,7 @@ export function Faq() {
 
   return (
     <section id="faq" className="bg-surface px-8 py-24">
-      <div className="mx-auto max-w-[760px]">
+      <div className="mx-auto max-w-[1280px]">
         <Reveal>
           <Kicker className="mb-3.5 text-center" tone="gold">
             FAQ
