@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { Reveal } from "@/components/ui/reveal";
+import { CategoryThumbnail } from "@/components/blog/category-thumbnail";
 import { blogPosts } from "@/lib/content";
 
 const description =
@@ -59,7 +60,7 @@ export default function BlogIndexPage() {
                     href={`/blog/${post.slug}`}
                     className="hover-lift block h-full overflow-hidden rounded-lg border border-navy/8 bg-white"
                   >
-                    <div className="aspect-video overflow-hidden bg-gradient-to-br from-navy/10 to-slate/20" />
+                    <CategoryThumbnail category={post.category} />
                     <div className="p-5">
                       <span className="rounded bg-navy/6 px-2 py-1 font-mono text-[10px] font-medium tracking-[0.05em] text-navy">
                         {post.category}
