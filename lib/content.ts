@@ -399,6 +399,8 @@ None of that is a caveat buried at the bottom. It's the honest tradeoff you're m
 
 If you're under roughly 2,000 employees, don't yet have a dedicated compliance function, and NAVEX's quote is making your CFO ask hard questions - this is worth a look.
 
+If you're under roughly 300 employees and mainly need a trusted anonymous reporting channel - not a full investigation and consistency-tracking workflow - you're probably better served by something lighter. [VoxWel](https://voxwel.com) is a sister product built for exactly that: flat $1/employee/month, live in under 24 hours, no case-investigation layer bolted on. We'd rather point you there than sell you more than you need.
+
 If you're a large, multi-jurisdiction enterprise that already has SOC 2 as a procurement gate and needs training/third-party-risk modules bundled in, NAVEX (or a comparably sized incumbent) is probably still the right call for now. We'd rather say that than pretend otherwise.
 
 The switching decision usually comes down to one honest question: are you paying for capability you'll use, or for a name that makes the decision easier to defend internally? Both are legitimate reasons to buy something. Just be clear with yourself about which one you're paying for.`,
