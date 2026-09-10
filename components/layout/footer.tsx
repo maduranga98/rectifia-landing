@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { LinkedInIcon } from "@/components/icons";
+
+const linkedInUrl = "https://www.linkedin.com/company/rectifia/";
+
 const columns = [
   {
     title: "Product",
@@ -43,6 +47,15 @@ export function Footer() {
             <p className="mt-3 max-w-[240px] font-sans text-sm leading-relaxed text-white/55">
               Fair cases. Consistent outcomes. A reporting channel employees trust.
             </p>
+            <a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Rectifia on LinkedIn"
+              className="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 text-white/60 transition-colors hover:border-gold/50 hover:text-gold"
+            >
+              <LinkedInIcon aria-hidden="true" />
+            </a>
           </div>
 
           {columns.map((col) => (
