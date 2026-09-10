@@ -1009,4 +1009,232 @@ The Consistency & Bias Checking Engine compares closed cases within the same cat
 
 If you're a reporter unsure which category fits, that's a legitimate reason to lean toward describing what happened as specifically as possible rather than forcing it into the category that sounds most serious - the intake process and the investigator are equipped to reclassify or expand scope as the actual facts emerge, and an accurate starting description serves the case better than a category chosen for how it might read.`,
   },
+  {
+    slug: "best-investigation-case-management-software-anonymous-complaints",
+    title: "Best Investigation & Case Management Software for Anonymous Workplace Complaints (2026)",
+    category: "Buyer's Guide",
+    date: "2026-09-30",
+    readTime: "8 min read",
+    excerpt:
+      "A reporting channel collects complaints. Investigation software is what happens after that - the part most 'anonymous reporting' vendors treat as an afterthought. Here's what to actually evaluate, and where it lives on most vendors' roadmaps versus in the product.",
+    content: `Most of what gets marketed as "whistleblowing software" is a reporting channel: a form, a QR code, maybe a passcode-protected chat thread back to the reporter. That's a real and necessary piece of infrastructure. It is also not the same product as investigation software, and the gap between the two is where most of the actual HR and Compliance workload lives.
+
+A reporting channel answers "how does someone tell us something." Investigation software answers a harder set of questions: who's assigned to this, what should they ask, does this look like the last five cases like it or different, is there a conflict of interest nobody caught, and can we show - months later, to a board or a tribunal - that we handled this the same way we handled everything comparable to it.
+
+## What "investigation software" should actually mean
+
+If a vendor's pitch is entirely about anonymity architecture - encryption, zero-knowledge claims, how untraceable a reporter is - that's a signal you're looking at a reporting channel, not investigation software. Anonymity matters, but it's the intake layer. The evaluation questions that actually separate investigation software from a hotline with a database behind it:
+
+**Does it structure the investigation, or just store the complaint?** A category-specific intake questionnaire, an AI-generated checklist of what to ask and what to request, a place for manual investigator notes distinct from the reporter's own messages - these are workflow features, not storage features.
+
+**Does it track consistency across cases, or is every case an island?** This is the single biggest gap in the market. Most platforms treat each complaint as isolated. Nobody is checking whether the action taken on this case looks like the action taken on the last similar one - which means inconsistent discipline is invisible until it surfaces in a discrimination claim or an audit, at which point it's evidence against you, not a flag you got to see in time.
+
+**Does it catch conflicts of interest automatically, or rely on someone remembering?** If the person a complaint names also happens to hold a Case Handler or admin role, that needs to be caught by the system before routing, not noticed three weeks into an investigation.
+
+**Does it separate severity from evidence strength?** A serious allegation with thin documentation and a moderate one with a clear paper trail are different problems that need different handling. A single merged "priority score" hides that distinction from the person who has to act on it.
+
+## Where Rectifia fits this
+
+Rectifia was built around the investigation, not just the intake. Category-specific questionnaires feed a dual severity and evidence score - kept as two separate numbers, never merged into one - which route the case and shape what the AI asks for next. Once a Case Handler is assigned, an AI-generated checklist suggests what to ask and what documents to request, based on the category and what's already in the case thread; the investigator can edit, ignore, or check items off, but nothing here is a mandatory gate.
+
+The part that doesn't exist anywhere else we've found: when a case closes, it becomes a reference point - category, severity, evidence strength, department, action taken, no names or narrative. When a similar case comes up later and a Case Handler proposes an action, the Consistency & Bias Checking Engine compares it against that history and flags it - in either direction, harsher or more lenient - if it deviates from the pattern. It never suggests what to do. It just makes the deviation visible before the case closes, which is the only point where seeing it actually changes anything.
+
+Conflict-of-interest detection runs automatically too: if an accused person's department and role match a Case Handler or the Company Admin, the case doesn't route to them - it gets flagged for manual Super Admin assignment instead, with no case content exposed in that notification.
+
+## Where we're honest about the gaps
+
+We don't have SOC 2 or ISO 27001 certification yet - it's on the roadmap, and if that's a hard procurement gate for you today, that's a legitimate reason to look elsewhere for now. We don't have a decade of case studies; we have a small founding-customer group getting meaningful pricing in exchange for helping us build that track record honestly rather than us claiming it prematurely. And v1 covers Harassment, Toxic Management, Retaliation, and Burnout/Mental Health as intake categories - Discrimination, Favoritism, Conflict of Interest as a standalone report type, and Financial Fraud are explicitly out of scope for now, not silently unsupported.
+
+## What to actually ask a vendor
+
+Not "is it anonymous" - most platforms in this category are, to varying degrees. Ask instead: "show me what happens after a report comes in. Walk me through what an investigator sees, and what happens if two similar cases end up with different outcomes six months apart." If the honest answer is "nothing, we don't track that across cases," you've just identified exactly what a reporting channel is missing that investigation software is supposed to provide.`,
+  },
+  {
+    slug: "eu-directive-compliance-large-employers-1000-plus",
+    title: "EU Whistleblowing Directive Compliance for Large Employers (1,000+): Beyond the Reporting Channel",
+    category: "Compliance",
+    date: "2026-10-07",
+    readTime: "7 min read",
+    excerpt:
+      "Most EU Directive compliance guides are checklists built for a 50-employee threshold decision. At 1,000+ employees, with multiple investigators and multiple departments, the compliance question changes - and a checklist stops being the right tool to answer it.",
+    content: `Most content comparing EU Whistleblowing Directive platforms is written for the threshold decision: does my organization need a compliant channel at all, and which vendor checks the six boxes - anonymous reporting, 7-day acknowledgment, two-way communication, 3-month feedback, retaliation-protection documentation, GDPR-compliant retention. (We've written a detailed breakdown of the 7-day and 3-month clocks specifically, if that's the question you're actually asking.)
+
+That checklist is the right evaluation for a 60-person company deciding whether they're in scope at all. It stops being the right evaluation once you're past roughly 1,000 employees, because at that scale the six-box checklist is table stakes - nearly every vendor you demo will tick all six - and the actual differentiator moves somewhere the checklist doesn't cover.
+
+## What changes at scale
+
+**You have more than one investigator, which means you have a consistency problem the checklist doesn't measure.** At 60 employees, one HR lead probably handles every case that comes in, so consistency is implicit - it's the same person applying the same judgment. At 1,000+, you likely have multiple Case Handlers across departments and regions. Two similar complaints, handled by two different investigators three months apart, can reasonably get different outcomes without anyone doing anything wrong - just different people, different weeks, no visibility into how the last similar case was resolved. That inconsistency is invisible from the inside until someone lines up ten closed cases side by side, usually during a dispute rather than before one.
+
+**Conflict of interest stops being rare.** At small headcounts, the accused person is unlikely to also be the person who'd normally handle the case. At 1,000+, with more people holding Case Handler or admin-adjacent roles, the odds of an accidental conflict rise, and it needs to be caught automatically rather than relying on an investigator to recognize a name.
+
+**"Designated impartial handler" - a phrase in the Directive itself - needs to mean something operational, not just a policy statement.** The Directive requires a designated, impartial person or department handle follow-up. At scale, "impartial" has to be enforced structurally, not just declared in a policy document nobody re-reads at intake time.
+
+**Documentation burden increases with headcount, not just with case volume.** If a large employer ever needs to demonstrate - to a regulator, a board, or in litigation - that similar complaints were treated similarly, "we investigated case by case" isn't itself evidence of fairness. A documented pattern is.
+
+## What this means for vendor evaluation at your scale
+
+The evaluation question shifts from "is this compliant" to "does this scale with more than one investigator without losing consistency." Concretely, that means asking about: automatic conflict-of-interest routing (not a manual checkbox an admin has to remember to tick), a way to compare a proposed action against how similar cases were previously handled, and jurisdiction configuration that's genuinely first-class rather than a labeled default - because a 1,000+ employee company operating across multiple EU member states, or the UK, or further afield, needs the compliance logic to reflect where each case actually sits, not a single EU-shaped default applied everywhere.
+
+## Where Rectifia fits
+
+Jurisdiction is a per-company configuration, not a hardcoded assumption - and where a jurisdiction introduces a genuinely different legal structure, like Japan's designated-handler requirement with individual confidentiality liability, that's modeled as its own mechanism rather than retrofitted onto EU logic with a different label. Conflict-of-interest detection runs automatically at case routing, not as a step someone has to remember. And the Consistency & Bias Checking Engine is the direct answer to the "more than one investigator" problem above: it compares a proposed action against your organization's own closed-case history in the same category and department tier, and flags deviations in either direction before the case is finalized - never suggesting what to do, only making the pattern visible at the one point it can still change the outcome.
+
+Pricing at this scale isn't published outright - the per-head formula above 500 employees is disclosed on request rather than negotiated case by case, which is a different thing than an opaque enterprise quote, but it's still a conversation rather than a self-serve number. Worth asking for directly rather than assuming it requires the same sales cycle an incumbent's quote does.
+
+## What we're not claiming
+
+We don't have SOC 2 or ISO 27001 yet, and if that's a hard gate in your procurement process today, that's a legitimate reason to stay with an incumbent for now. This also isn't legal advice - whether a specific configuration satisfies the Directive's requirements for your organization, across whichever member states you operate in, is a question for employment counsel. What we can say plainly: the compliance logic is built to be jurisdiction-aware rather than EU-default-with-labels, and that's a claim worth verifying directly with any vendor you're evaluating at this scale, not just Rectifia - ask to see what actually changes in the system when you add a second or third jurisdiction, not just which checkbox gets ticked.`,
+  },
+  {
+    slug: "is-navex-ethicspoint-actually-anonymous",
+    title: "Is NAVEX EthicsPoint Actually Anonymous?",
+    category: "Comparison",
+    date: "2026-10-14",
+    readTime: "5 min read",
+    excerpt:
+      "NAVEX's marketing says anonymous. The honest answer is more specific than that - it depends which channel a reporter uses, and what 'anonymous' is technically doing versus what it's promising. Here's the actual distinction.",
+    content: `"Is NAVEX anonymous" is a reasonable question to ask before trusting a reporting channel with something serious, and the honest answer is: it depends which channel, and what you mean by anonymous.
+
+## The distinction that matters: confidentiality versus anonymity
+
+A platform can promise confidentiality - "we won't tell anyone who you are" - as an organizational policy backed by access controls. Or it can be architected so that the platform itself never has the reporter's identity to begin with, meaning there's nothing to leak even under a subpoena, an insider threat, or a well-meaning admin mistake. Those are different guarantees, and the difference matters most in exactly the situations where anonymity matters most - when the accused person has organizational power.
+
+NAVEX EthicsPoint's web-based reporting is built on the confidentiality model: server-side handling with access controls and a stated policy against disclosure, not a zero-knowledge architecture that makes the identity technically unrecoverable. That's a legitimate, widely-used approach, and for a lot of organizations and report types it's sufficient. It is not the same claim as "the system architecturally cannot know who you are."
+
+## Where the phone hotline changes the picture
+
+NAVEX's flagship differentiator is a 24/7 staffed phone hotline with live agents - a real strength for large, distributed workforces where a web form feels less accessible or less trusted. But a phone channel introduces a risk a web form doesn't: voice recognition. In a large enterprise, a live agent hearing a voice is a non-issue. In a smaller team, or when the report concerns someone who might plausibly recognize a colleague's voice, that channel is structurally weaker on anonymity than the technical promise implies, regardless of what confidentiality policy sits behind it.
+
+## What we can and can't tell you
+
+We're not going to pretend to have audited NAVEX's actual infrastructure - that's not something a vendor comparison post can honestly claim to know from the outside, and we'd be skeptical of any competitor post that asserted it did. What we can point to is publicly available: NAVEX's own materials describe confidentiality and access-control-based protection for web submissions, not a zero-knowledge architecture, and the phone hotline's voice-recognition exposure is a structural property of any live-agent phone channel, not something specific to NAVEX's implementation.
+
+## The question to ask directly, whoever you're evaluating
+
+Not "is it anonymous" - nearly every vendor will say yes, and most mean it sincerely as a policy commitment. Ask instead: "if you were legally compelled to identify a reporter, or if an employee with database access went looking, could you technically do it?" A platform with genuine zero-knowledge architecture answers "no, structurally, not just as a promise." A platform relying on confidentiality policy and access controls answers "we wouldn't, but technically the information exists." Both are legitimate answers depending on what you need - but only one of them is actually what most buyers picture when they hear the word "anonymous."`,
+  },
+  {
+    slug: "sox-whistleblower-requirements-beyond-a-hotline",
+    title: "SOX Whistleblower Requirements: What US Public Companies Need Beyond a Hotline",
+    category: "Compliance",
+    date: "2026-10-21",
+    readTime: "6 min read",
+    excerpt:
+      "Section 301 requires an audit committee complaint procedure. Section 806 protects the people who use it. Neither section tells you how to actually run a defensible investigation once a report comes in - and that's usually where the real exposure sits.",
+    content: `Sarbanes-Oxley's whistleblower provisions get cited constantly in vendor pitches, but the two sections that actually matter are narrower than the marketing suggests, and neither one is primarily about the reporting channel.
+
+## What SOX actually requires
+
+Section 301 requires public company audit committees to establish procedures for receiving, retaining, and treating complaints about accounting, internal accounting controls, or auditing matters - and for confidential, anonymous submission by employees of concerns about questionable accounting or auditing. Section 806 is the anti-retaliation provision: an employee of a public company (or certain contractors and subsidiaries) who provides information about conduct they reasonably believe constitutes securities fraud, shareholder fraud, or violation of SEC rules is protected from retaliation, with a private right of action and the possibility of reinstatement and back pay if that protection is violated.
+
+Neither section applies to private companies directly, though many adopt similar procedures voluntarily or because investors and insurers expect it - which is why "does SOX apply to us" is worth answering carefully rather than assuming a private company is entirely off the hook.
+
+## Where a reporting channel satisfies SOX, and where it doesn't
+
+A compliant complaint procedure under Section 301 is a real, checkable requirement: audit committee oversight, a way to submit anonymously, retention of records. A basic reporting channel can satisfy this box.
+
+What SOX's text doesn't specify - and where companies actually get exposed - is what happens after the report lands. Section 806 retaliation claims turn on whether adverse action taken against a reporter afterward can be explained by something other than the report itself. That's not a reporting-channel question. It's a documentation and consistency question: was this person's outcome consistent with how comparable situations were handled for people who never filed a report? If a company can't show that pattern, "we didn't retaliate" becomes a much harder claim to defend, because the burden in practice tends to fall on demonstrating that adverse treatment had nothing to do with the disclosure.
+
+## Where this connects to case handling, not just intake
+
+This is the gap between a hotline and investigation software. A hotline gets you a compliant Section 301 procedure. What actually protects a company in a Section 806 dispute is being able to show, after the fact, that the person who reported was treated the same way anyone in a comparable situation would have been - which requires tracking outcomes across cases, not just logging that a report came in.
+
+Rectifia's Consistency & Bias Checking Engine exists for exactly this kind of exposure, even though it wasn't built with SOX specifically in mind: when a proposed action on a case deviates from how similar cases were handled before, it's flagged before the case closes - which means the pattern is visible and correctable while it still can be, not something reconstructed under pressure once a Section 806 claim is already filed.
+
+## What we're not claiming
+
+This isn't legal advice, and whether your specific procedures satisfy Section 301 or would hold up in a Section 806 dispute is a question for securities and employment counsel, not a vendor blog post. What's worth taking away: a SOX-compliant hotline and a defensible response to a retaliation claim are two different things, and most of the vendor evaluation conversation focuses entirely on the first one.`,
+  },
+  {
+    slug: "uk-pida-compliance-growing-employers",
+    title: "UK PIDA Compliance for Growing Employers: Where a Reporting Channel Stops Being Enough",
+    category: "Compliance",
+    date: "2026-10-28",
+    readTime: "6 min read",
+    excerpt:
+      "PIDA doesn't require a reporting channel by name - it requires that a worker who makes a protected disclosure isn't dismissed or subjected to detriment because of it. The distance between those two things is exactly where most compliance content stops short.",
+    content: `The Public Interest Disclosure Act 1998 protects workers who make a qualifying, public-interest disclosure from dismissal or detriment as a result. It doesn't, in its text, mandate that employers run a specific reporting channel. That gap - between what PIDA actually requires and what most vendor content implies it requires - is worth being precise about before evaluating software against it.
+
+## What PIDA actually does
+
+PIDA creates two protections: an automatically unfair dismissal claim if the reason (or principal reason) for dismissal was a protected disclosure, with no qualifying service period and uncapped compensation; and a detriment claim - available from day one of employment - covering anything short of dismissal, from demotion to increased scrutiny to hostile treatment a workplace failed to prevent. Critically, once a worker shows they made a protected disclosure and then suffered a detriment or dismissal, the burden shifts to the employer to show the disclosure played no part in that treatment.
+
+That burden-shifting mechanic is the part most compliance content undersells. It means every adverse action following a protected disclosure needs a documented, independently defensible rationale that would hold up if the disclosure were removed from the picture entirely. An employer that can't produce that documentation - because the reasoning for a subsequent decision wasn't recorded at the time, or because the record that exists looks connected to the disclosure - faces a materially harder defense.
+
+## Where a reporting channel helps, and where it stops
+
+A reporting channel that makes anonymous or confidential disclosure genuinely accessible does real work here: the harder it is to identify who made a disclosure, the harder it is - practically, not just legally - to retaliate against them, and the fewer detriment claims arise in the first place. That's a legitimate, meaningful compliance benefit.
+
+What a reporting channel alone doesn't produce is the documentation trail that actually wins a PIDA dispute after the fact: a demonstrable, consistent pattern showing that whatever happened to the worker afterward - a performance review, a restructuring decision, a disciplinary action - would have happened regardless of the disclosure, because it matches how comparable situations were handled for people who never disclosed anything.
+
+## Where this connects to investigation workflow
+
+This is the same underlying gap that shows up across every jurisdiction we've looked at: the compliance risk isn't really in the intake, it's in whether the organization can show consistent treatment afterward. Rectifia's audit trail captures the full case timeline - messages, evidence, manual investigator log entries, and any Consistency & Bias Engine flags along with how they were resolved - which is the kind of contemporaneous record that matters far more in a tribunal than a policy document nobody consulted when the actual decision was made.
+
+## What we're not claiming
+
+PIDA compliance, and whether a specific set of internal practices would satisfy a tribunal, is a question for UK employment counsel - this isn't legal advice, and case law under PIDA (particularly the post-2013 "public interest" test) continues to develop in ways a vendor blog post shouldn't try to adjudicate. What's worth taking from this: if a vendor's PIDA pitch stops at "we support anonymous reporting," that's an accurate but incomplete answer to a question that's really about what happens in the months after the report, not the moment it's filed.`,
+  },
+  {
+    slug: "whistleblowing-software-cost-enterprise-1000-5000-employees",
+    title: "Whistleblowing Software Costs for Enterprises (1,000-5,000 Employees): What's Actually in the Quote",
+    category: "Pricing",
+    date: "2026-11-04",
+    readTime: "6 min read",
+    excerpt:
+      "At 1,000-5,000 employees, the pricing conversation stops being a rate card and starts being a negotiation shaped by which modules get bundled in. Here's what actually drives the number at this size, and what to separate out before you sign.",
+    content: `Below roughly 500 employees, whistleblowing and case management software pricing is mostly rate-card math - a tier, a monthly number, done. Above 1,000, that stops being true. The quote becomes a negotiation shaped by bundling, and the range between vendors for comparable headcounts gets genuinely wide, which makes it hard to know if a number is reasonable without a real anchor.
+
+## What actually moves the number at this size
+
+**Modules bundled beyond core case management.** Policy management, compliance training, third-party risk monitoring, and advanced analytics dashboards routinely get added to a quote whether or not the buyer asked for them, because incumbents' enterprise packages are built around a full GRC suite by default. Each of these is a legitimate product for some buyers - the issue is that they get priced into a quote for a company that only wanted case intake and investigation workflow.
+
+**Implementation and setup fees.** At enterprise scale, setup fees of $5,000-$25,000+ are common among legacy vendors, covering onboarding, configuration, and training sessions. Whether that reflects genuinely complex integration work or a standard line item applied regardless of actual complexity is worth asking directly - a platform designed for fast self-serve configuration shouldn't need six weeks and a consultant to set up regardless of headcount.
+
+**Contract structure.** Multi-year commitments with 60-90 day notice periods are standard in the legacy enterprise segment, and they change the real cost of a bad vendor fit - not just the sticker price, but the cost of being locked in if the platform doesn't work for your team.
+
+## A realistic range at this scale
+
+For a 1,000-5,000 employee company evaluating a legacy GRC-style platform for case management specifically (not the full training-plus-policy-plus-third-party-risk suite), the realistic range tends to run $2,000-$10,000+ per month depending on modules bundled in, plus the setup fee above. The full-suite version of the same vendor relationship can run considerably higher.
+
+Under a headcount-based model with no per-case fee and no forced modules, the same range of company sizes looks structurally different: a straight per-head calculation with no separate charge for report volume, module count, or seat-based admin access. The honest caveat is that pricing at this size genuinely requires a conversation rather than a published number, on any model - the question worth asking isn't "can you show me a number instantly," it's "can you show me the calculation, so I can verify it myself rather than trusting that it's fair."
+
+## What to separate out before comparing quotes
+
+Ask each vendor to break out, line by line: core case management and investigation workflow, any bundled modules you didn't request, setup/implementation, and ongoing support tier. Vendors that resist breaking this down, or whose quote arrives as a single bundled number, are making it harder to tell what you're actually paying for versus what you're being sold alongside it.
+
+## Where Rectifia fits
+
+Headcount-only pricing with no per-case fee at any size, and above 500 employees the per-head formula is disclosed on request rather than negotiated case by case from scratch - which means you can ask for the calculation, not just the final number. We don't bundle training or third-party-risk modules into that number, because we don't build those products; if you need them from the same vendor relationship, that's a legitimate reason a full-suite incumbent might be the better fit for your organization specifically.`,
+  },
+  {
+    slug: "multi-jurisdiction-compliance-not-multi-language",
+    title: "Multi-Jurisdiction Compliance Isn't Multi-Language: What 'Supports 200+ Languages' Doesn't Tell You",
+    category: "Compliance",
+    date: "2026-11-11",
+    readTime: "6 min read",
+    excerpt:
+      "Translating the intake form is the easy 20% of operating across jurisdictions. The hard 80% is legal structure - designated roles, deadline logic, retention rules - that a language pack doesn't touch. Here's the distinction most vendor comparisons skip.",
+    content: `"Multilingual reporting" shows up on almost every whistleblowing platform's feature list, and it's a genuinely useful thing to have - an employee who can't file a report in their working language is less likely to file one at all. But translation coverage and jurisdictional compliance get conflated constantly in vendor comparisons, and they're not the same axis of capability.
+
+## Why this distinction matters
+
+A platform can translate its intake form into 200 languages and still apply identical compliance logic - identical deadline countdowns, identical designated-handler concept, identical retention rules - underneath every one of them. That's a language pack, not jurisdictional depth. It solves the problem of an employee reading the form in their own language; it doesn't solve the problem of the organization actually meeting each jurisdiction's specific legal structure once a report is filed.
+
+Whether that gap matters depends entirely on how many genuinely different legal structures your organization operates under, not how many languages your workforce speaks. A company operating only in the EU, across several member states, can often get away with translation plus reasonably minor per-country variation on top of a single Directive-based framework. A company with operations spanning, say, the EU, the UK, and Japan is dealing with three structurally different legal frameworks, not one framework in three languages.
+
+## Where the gap shows up concretely
+
+The EU Whistleblowing Directive requires a "designated impartial person or department" handle disclosures - a procedural requirement. Japan's amended Whistleblower Protection Act requires specific individuals - 従事者, designated handlers - be named, with individual criminal liability attached to a confidentiality breach. Those aren't the same requirement with different vocabulary; they're structurally different obligations, and a platform that has one generic "handler" concept applied everywhere, with a Japanese translation layered on top, isn't actually meeting the Japan-specific requirement - it's meeting the EU requirement in Japanese. (We've written a fuller breakdown of what the designated-handler requirement specifically demands, and separately, what Australia's positive-duty framework requires that's structurally distinct from both.)
+
+Retention rules, deadline logic, and what counts as a "protected disclosure" in the first place also vary by jurisdiction in ways a translated form doesn't surface - the form looks identical in every language; the legal obligations underneath it don't.
+
+## What to ask instead of "how many languages do you support"
+
+Ask: "if I add a jurisdiction with a genuinely different legal structure - not just a different language - what in the system actually changes?" A platform with real jurisdictional depth should be able to point to specific mechanisms: a role that only appears for certain jurisdictions, deadline logic that recalculates per jurisdiction rather than defaulting to one standard everywhere, retention rules that vary rather than applying a single global policy.
+
+## Where Rectifia sits on this
+
+Jurisdiction is a per-company configuration setting, and where a jurisdiction introduces a structurally different legal requirement - like Japan's designated-handler mechanism - that's built as its own mechanism, dormant until that jurisdiction is added, rather than the EU framework relabeled. We support Australia, Japan, the EU, the UK, the US, and Kenya as configured jurisdictions currently; India is explicitly out of scope for now, not silently unsupported. This isn't a claim to have solved every jurisdiction's legal nuance - it's a claim that jurisdiction is treated as a structural setting rather than a translation toggle, and that's worth verifying directly with any vendor by asking the "what actually changes" question above rather than counting languages on a features page.`,
+  },
 ];

@@ -61,6 +61,16 @@ function TrustSafetyIcon(props: IconProps) {
   );
 }
 
+function BuyersGuideIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z" />
+      <path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H14a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z" />
+      <path d="M15 9.5l1.4 1.4 2.6-2.6" />
+    </svg>
+  );
+}
+
 function DefaultIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
@@ -91,6 +101,11 @@ const CATEGORY_STYLES: Record<string, CategoryStyle> = {
     icon: "text-gold-dark",
   },
   "Trust & Safety": { Icon: TrustSafetyIcon, bg: "bg-navy", icon: "text-white" },
+  "Buyer's Guide": {
+    Icon: BuyersGuideIcon,
+    bg: "bg-slate/15 border border-navy/15",
+    icon: "text-navy/70",
+  },
 };
 
 const DEFAULT_STYLE: CategoryStyle = {
