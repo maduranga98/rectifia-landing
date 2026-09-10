@@ -124,7 +124,7 @@ const organizationJsonLd = {
   logo: `${siteUrl}/logo.png`,
   description: siteDescription,
   email: "sales@rectifia.com",
-  sameAs: [],
+  sameAs: ["https://www.linkedin.com/company/rectifia/"],
   areaServed,
 };
 
