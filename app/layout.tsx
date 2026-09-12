@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://rectifia.com";
-const siteTitle = "Rectifia - Fair cases. Consistent outcomes.";
+const siteTitle = "Rectifia | Anonymous Reporting & Consistent HR Investigations";
 const siteDescription =
-  "A workplace misconduct reporting channel employees actually trust, and an investigation workflow that keeps outcomes consistent across every case, department, and investigator.";
+  "An anonymous reporting channel employees trust, plus an AI-assisted workflow that flags inconsistent HR outcomes. EU, UK, US, and AU compliant.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
