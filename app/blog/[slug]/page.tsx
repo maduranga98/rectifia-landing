@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    description: post.excerpt,
+    description: post.metaDescription,
     alternates: {
       canonical: url,
     },
@@ -36,14 +36,14 @@ export async function generateMetadata({
       type: "article",
       url,
       title: post.title,
-      description: post.excerpt,
+      description: post.metaDescription,
       publishedTime: post.date,
       section: post.category,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: post.metaDescription,
     },
   };
 }

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/content";
+import { jurisdictions } from "@/lib/jurisdictions";
 
 export const dynamic = "force-static";
 
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/terms`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
+  const jurisdictionRoutes: MetadataRoute.Sitemap = jurisdictions.map((jurisdiction) => ({
+    url: `${siteUrl}/jurisdictions/${jurisdiction.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -20,5 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  return [...staticRoutes, ...jurisdictionRoutes, ...blogRoutes];
 }

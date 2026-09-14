@@ -295,6 +295,7 @@ export type BlogPost = {
   date: string;
   readTime: string;
   excerpt: string;
+  metaDescription: string;
   content: string;
 };
 
@@ -307,6 +308,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     excerpt:
       "Nobody decides to treat two similar cases differently on purpose. It happens because every case gets judged in isolation, without a memory of the fifty cases that came before it.",
+    metaDescription:
+      "Similar HR cases diverge because each one is judged in isolation. How case history and structured comparison keep disciplinary outcomes consistent.",
     content: `Picture two cases that land on the same HR Director's desk six months apart.
 
 Case one: a mid-level manager yells at a direct report in front of the team, once, documented by two witnesses. He gets a written warning.
@@ -359,6 +362,8 @@ If you're evaluating case management software and this is the first time you're 
     readTime: "8 min read",
     excerpt:
       "NAVEX's EthicsPoint routinely runs $36,000–$120,000+ a year for a 500–5,000 employee company. Here's an honest answer on whether you need all of that, from a company building a direct competitor.",
+    metaDescription:
+      "NAVEX EthicsPoint runs $36,000-$120,000+ a year. An honest look at when a mid-size company needs all of that and when a leaner alternative fits.",
     content: `If you're reading this, chances are a NAVEX rep just sent you a quote, and the number made you close the laptop for a minute.
 
 You're not overreacting. For a company somewhere in the 500–5,000 employee range, NAVEX's EthicsPoint platform routinely lands between $36,000 and $120,000+ a year, before you even talk about the $5,000–$25,000 setup fee that shows up in the fine print. For a lot of HR and Compliance teams, that's not "a line item." That's a headcount.
@@ -413,6 +418,8 @@ The switching decision usually comes down to one honest question: are you paying
     readTime: "6 min read",
     excerpt:
       "\"Flags deviations, never a verdict\" sounds good on a features page. Here's the mechanism, end to end: two scores kept apart, closed cases as reference points, and a comparison that runs before a case closes.",
+    metaDescription:
+      "How the Consistency & Bias Engine scores a case: severity and evidence kept apart, closed cases as reference points, and a check before a case closes.",
     content: `"Flags deviations, never a verdict" sounds good on a features page. It's a fair question to ask what it actually means in practice. Here's the mechanism, end to end.
 
 ## It starts with two numbers, kept apart
@@ -457,6 +464,8 @@ That inconsistency is invisible from the inside - every individual decision felt
     readTime: "5 min read",
     excerpt:
       "Two deadlines most HR teams know exist and few have a reliable system for meeting. Missing either one isn't usually a decision anyone made - it's a report that sat in an inbox while everyone assumed someone else was handling it.",
+    metaDescription:
+      "The EU Whistleblower Directive sets a 7-day acknowledgment and a 3-month feedback clock. What each deadline covers and how to stop missing them.",
     content: `The EU Whistleblower Directive (2019/1937) sets two deadlines that most HR teams know exist and few have a reliable system for actually meeting. Missing either one isn't usually a decision anyone made - it's a report that sat in an inbox for two weeks while everyone assumed someone else was handling it.
 
 ## The two clocks
@@ -499,6 +508,8 @@ Rectifia is designed to support these obligations. It isn't legal advice - confi
     readTime: "4 min read",
     excerpt:
       "Every workplace reporting tool says some version of \"your identity is protected.\" Almost none explain what that actually means technically, and the difference matters more than the marketing copy suggests.",
+    metaDescription:
+      "Anonymous and confidential reporting are two different technical promises. What each actually protects, where it breaks, and why the difference matters.",
     content: `Every workplace reporting tool says some version of "your identity is protected." Almost none of them explain what that actually means technically, and the difference matters more than the marketing copy suggests.
 
 ## Two different promises, not one
@@ -537,6 +548,8 @@ Most reporting decisions in a workplace aren't really about the form. They're ab
     readTime: "6 min read",
     excerpt:
       "The quote doesn't show up on NAVEX's website, so most buyers walk into the sales call blind. Here's what the number actually looks like at 2,000 employees, and what the same headcount costs on a headcount-based model instead.",
+    metaDescription:
+      "What NAVEX really costs a 2,000-employee company in 2026, why the quote is never published, and how headcount-based pricing compares at that size.",
     content: `NAVEX doesn't publish pricing. That's not an accident - enterprise software with a sales-led motion rarely does, because the number depends on what a rep thinks your budget can absorb. But it means most HR and Compliance leaders walk into their first call with no anchor at all, which makes it hard to know whether a quote is reasonable or padded.
 
 Here's a real anchor, built from public benchmarking and vendor-comparison data across the compliance software market: for a company in the 500-5,000 employee range, EthicsPoint pricing routinely lands between $36,000 and $120,000+ a year, before the $5,000-$25,000 setup fee that tends to show up once you're past the discovery call. At 2,000 employees specifically, most companies land somewhere in the middle to upper end of that range once you add the modules incumbents typically bundle in - hotline access, case management, policy management, and often a training or third-party-risk module you didn't ask for but got quoted anyway.
@@ -569,6 +582,8 @@ Not "can you discount this," which mostly just moves the number within a range t
     readTime: "6 min read",
     excerpt:
       "Australia's positive duty changed what 'having a reporting channel' means. Most whistleblowing platforms sold into the Australian market were built for the EU Directive first and retrofitted - here's what that gap actually looks like.",
+    metaDescription:
+      "Australia's positive duty raised the bar for reporting channels. Why EU-first platforms fall short of what Respect@Work compliance now requires.",
     content: `Since the positive duty amendments to the Sex Discrimination Act took effect, Australian employers carry a proactive obligation: not just responding to complaints, but taking reasonable and proportionate measures to eliminate sexual harassment, sex discrimination, and related conduct before it happens. That's a meaningfully different obligation than "have a hotline," and it changes what buyers in Australia should actually be evaluating software against.
 
 ## Where the gap shows up
@@ -599,6 +614,8 @@ If you're an Australian HR Director evaluating NAVEX or a similar EU-first incum
     readTime: "5 min read",
     excerpt:
       "Japan's Whistleblower Protection Act creates a specific role - the designated handler - that most Western-built platforms have no concept of. Here's what that requirement actually means and how software should handle it.",
+    metaDescription:
+      "Japan's Whistleblower Protection Act creates a designated handler role most Western platforms never modelled. What that means for your software.",
     content: `Japan's amended Whistleblower Protection Act introduced an obligation that doesn't have a clean equivalent in the EU Directive or US frameworks: companies with more than 300 employees must designate specific individuals - 従事者 (jujisha), commonly translated as "designated handlers" - who are legally bound to confidentiality around whistleblower reports, with criminal penalties attached to breach.
 
 This isn't a policy nicety. It's a named-individual, legally-defined role, and most whistleblowing platforms built primarily for the US or EU market simply have no data model for it, because their home markets don't require anything like it.
@@ -629,6 +646,8 @@ Ask directly: "does your platform have a concept of designated handler as a dist
     readTime: "7 min read",
     excerpt:
       "Per-seat, per-case, flat enterprise quote, headcount-based - the pricing model a vendor picks tells you almost as much about their incentives as their feature list does. Here's how the major approaches actually work.",
+    metaDescription:
+      "Per-seat, per-case, enterprise quote or headcount-based: how each whistleblowing software pricing model works and what it does to your annual bill.",
     content: `Before comparing quotes, it's worth understanding that whistleblowing and case management software isn't priced one consistent way across the market. The model a vendor uses shapes their incentives, and it's worth understanding before you're deep in a sales cycle and the framing has already been set by their pitch.
 
 ## The four models you'll actually encounter
@@ -661,6 +680,8 @@ Headcount-only, published self-serve bands under 500 employees (roughly $59-$549
     readTime: "6 min read",
     excerpt:
       "The line between 'AI flags a pattern' and 'AI makes a decision' sounds philosophical until you're the general counsel asking where it's actually drawn in the code. Here's the boundary, and why it's not a marketing position.",
+    metaDescription:
+      "Where the line sits between AI flagging an inconsistent discipline pattern and AI making the decision, and how that boundary is enforced in code.",
     content: `Every vendor in this category will tell you their AI "doesn't make decisions." Almost none of them will tell you exactly where that boundary lives - which prompt, which function, which line of code prevents the model from crossing it. That vagueness is usually the tell that the boundary is a talking point, not an engineering constraint.
 
 ## Why this distinction is a legal question, not a UX preference
@@ -689,6 +710,8 @@ This boundary protects against a specific failure mode - AI substituting its jud
     readTime: "5 min read",
     excerpt:
       "A single 'priority score' is easier to build and easier to explain in a demo. It's also the wrong design, because severity and evidence strength answer two completely different questions.",
+    metaDescription:
+      "Severity and evidence strength answer different questions. Why merging them into a single priority score is the wrong design for complaint triage.",
     content: `A lot of intake scoring systems - not just in this category - collapse everything into one number: a priority score, a risk score, a triage score. It's an understandable design choice. One number is easy to sort by, easy to explain in a demo, easy to build a dashboard around. It's also the wrong choice for workplace misconduct intake, because severity and evidence strength are answering two genuinely different questions, and merging them hides information the person handling the case actually needs.
 
 ## The two questions, kept separate
@@ -725,6 +748,8 @@ It's genuinely a little harder to build a simple sorted queue view around two nu
     readTime: "6 min read",
     excerpt:
       "The positive duty shifted Australian employers from 'respond well when something is reported' to 'proactively prevent it from happening.' That's a different set of systems, not just a different mindset.",
+    metaDescription:
+      "The positive duty requires Australian employers to prevent workplace harassment, not just respond to it. The systems HR needs in place for 2026.",
     content: `Since Australia's positive duty amendments took effect, employers carry a proactive legal obligation under the Sex Discrimination Act: take reasonable and proportionate measures to eliminate, as far as possible, sexual harassment, sex-based harassment, discrimination, and related conduct - not just handle complaints well after the fact.
 
 That's a meaningfully different standard than "have a reporting channel and respond to what comes in." Prevention-focused obligations require evidence of a system, not just a policy document sitting in an employee handbook.
@@ -759,6 +784,8 @@ No software product satisfies the positive duty's prevention requirement on its 
     readTime: "6 min read",
     excerpt:
       "Public companies, large proprietaries, and corporate trustees in Australia are required to have a whistleblower policy with specific content - not just any policy that mentions whistleblowing. Here's what has to actually be in it.",
+    metaDescription:
+      "Part 9.4AAA requires Australian companies to hold a whistleblower policy with specific content. What has to be in it, and which entities it binds.",
     content: `Part 9.4AAA of the Corporations Act 2001 requires certain Australian entities - public companies, large proprietary companies, and corporate trustees of registrable superannuation entities - to have a whistleblower policy in place, and it isn't satisfied by any document that happens to use the word "whistleblower." The Act specifies content requirements, and a policy missing them isn't compliant regardless of intent.
 
 ## What has to be in the policy
@@ -793,6 +820,8 @@ If you're a public company, large proprietary company, or corporate trustee eval
     readTime: "5 min read",
     excerpt:
       "The 300-employee line in Japan's amended Whistleblower Protection Act isn't a soft recommendation - it's the threshold where a specific legal obligation, with criminal liability attached, becomes mandatory.",
+    metaDescription:
+      "At 300 employees, Japan's Whistleblower Protection Act makes designated handlers mandatory, with criminal liability attached to a confidentiality breach.",
     content: `Japan's amended Whistleblower Protection Act (公益通報者保護法) sets a specific headcount threshold that changes what's legally required, not just what's recommended: companies with more than 300 employees are required to establish an internal reporting system and designate specific individuals - 従事者 (jujisha), often translated as designated handlers - to receive and handle reports. Companies below that threshold are only under a best-efforts obligation to do the same.
 
 That distinction matters more than it might first appear, because "required" versus "best efforts" changes what a compliance officer needs to be able to demonstrate, and what happens if they can't.
@@ -825,6 +854,8 @@ This is a description of a legal structure as we understand it, not legal advice
     readTime: "5 min read",
     excerpt:
       "Short answer: most whistleblowing and case management platforms price by per-seat, per-case, opaque enterprise quote, or flat headcount. Here's what each one means for your actual bill as your organization changes.",
+    metaDescription:
+      "Whistleblowing platforms price by seat, case, opaque enterprise quote or headcount. What each model means for your bill as the organization changes.",
     content: `Most whistleblowing and workplace case management software is priced one of four ways: per-seat (charged per HR/investigator login), per-case (charged per report filed, sometimes with a base fee plus overage), opaque enterprise quoting (no published pricing, negotiated per deal), or flat headcount-based pricing (charged per total employee, regardless of report volume or admin seats). Most enterprise incumbents, NAVEX included, use opaque enterprise quoting. Rectifia uses headcount-based pricing exclusively.
 
 ## Why the model matters more than any single quote
@@ -859,6 +890,8 @@ Before comparing two quotes, ask: "under this pricing model, what happens to my 
     readTime: "5 min read",
     excerpt:
       "Case-count billing was on the table early in Rectifia's pricing design. We ruled it out on purpose, for a reason that has nothing to do with margins and everything to do with what the incentive actually rewards.",
+    metaDescription:
+      "Per-case billing charges you more the more employees speak up. Why Rectifia ruled it out, and what that pricing incentive actually rewards in practice.",
     content: `Case-count or per-submission billing was genuinely on the table early in Rectifia's pricing design - it's a common model in this category, and it's easier to price aggressively at the low end because it scales revenue with usage. We ruled it out deliberately, and it's worth explaining why, because the reasoning isn't really about margins. It's about what the incentive actually rewards.
 
 ## The incentive problem, stated plainly
@@ -891,6 +924,8 @@ Not "why do you price this way" - most will have a reasonable-sounding answer ab
     readTime: "4 min read",
     excerpt:
       "Short answer: on a headcount-based model, roughly $549/month. On an enterprise-quoted incumbent, the number is rarely published and typically runs into five figures annually. Here's the actual breakdown.",
+    metaDescription:
+      "Whistleblowing software for 500 employees costs about $549/month on a headcount model, versus five figures a year from enterprise-quoted incumbents.",
     content: `A 500-employee company sits right at an interesting line: too large for the very cheapest self-serve tiers most vendors offer, but well below the size where enterprise incumbents like NAVEX typically become cost-competitive with newer, headcount-priced platforms. Here's what the real numbers look like at that specific size.
 
 ## On a published, headcount-based model
@@ -921,6 +956,8 @@ If you're a 500-employee company evaluating vendors, ask for a number before the
     readTime: "6 min read",
     excerpt:
       "\"Whistleblower hotline\" and \"case management platform\" get used interchangeably, but they describe different amounts of the actual work. A hotline gets a report in the door. Everything after that is a different problem.",
+    metaDescription:
+      "A hotline gets a report in the door. A case management platform runs the investigation after it. What separates the two, and why the gap matters.",
     content: `"Whistleblower hotline" and "case management platform" get used interchangeably in a lot of vendor marketing, but they describe genuinely different scopes of what actually happens after someone reports a problem. Worth being precise about the difference, because it changes what you should be evaluating a vendor on.
 
 ## What a hotline actually is
@@ -953,6 +990,8 @@ If you're evaluating a vendor and want to know whether you're looking at a hotli
     readTime: "5 min read",
     excerpt:
       "A report that gets routed to the accused person's own manager, or worse, to the accused person themselves, isn't a hypothetical edge case - it's what manual routing eventually produces at scale. Here's how automatic detection closes that gap.",
+    metaDescription:
+      "Manual routing eventually sends a report to the accused or their manager. How automatic conflict-of-interest detection closes that gap at intake.",
     content: `A report that ends up routed to the accused person's own manager - or, in a smaller org, to someone close enough to the accused that impartiality is genuinely in question - isn't a hypothetical edge case. It's what manual routing eventually produces at scale, especially in organizations where the same small group of people wears multiple hats: department head, case handler, occasional company admin covering for someone on leave.
 
 Nobody sets out to route a case to a conflicted person. It happens because routing rules are usually built around category and department, and nobody's cross-checking every assignment against every accused person's actual working relationships in real time.
@@ -985,6 +1024,8 @@ Conflict-of-interest risk in workplace investigations is rarely dramatic - it's 
     readTime: "5 min read",
     excerpt:
       "The category a report gets filed under shapes almost everything downstream - which questions get asked, how the case gets scored, who it gets routed to. Getting the category wrong at intake has consequences that show up much later.",
+    metaDescription:
+      "The category a report gets at intake shapes the questions, scoring and routing that follow. Why toxic management and harassment must not be merged.",
     content: `The category a report gets filed under isn't just a label for a dashboard filter. It shapes almost everything downstream: which questions the intake questionnaire asks, how the AI scoring engine evaluates severity, which department or specialist the case routes to, and even how the case gets compared later for consistency checking. Getting the category wrong or leaving it too vague at intake has consequences that show up much later, when a case that should have been handled one way was investigated another.
 
 ## Why toxic management and harassment get confused
@@ -1017,6 +1058,8 @@ If you're a reporter unsure which category fits, that's a legitimate reason to l
     readTime: "8 min read",
     excerpt:
       "A reporting channel collects complaints. Investigation software is what happens after that - the part most 'anonymous reporting' vendors treat as an afterthought. Here's what to actually evaluate, and where it lives on most vendors' roadmaps versus in the product.",
+    metaDescription:
+      "Anonymous complaint intake is the easy part. What to evaluate in investigation and case management software, and where most vendors fall short.",
     content: `Most of what gets marketed as "whistleblowing software" is a reporting channel: a form, a QR code, maybe a passcode-protected chat thread back to the reporter. That's a real and necessary piece of infrastructure. It is also not the same product as investigation software, and the gap between the two is where most of the actual HR and Compliance workload lives.
 
 A reporting channel answers "how does someone tell us something." Investigation software answers a harder set of questions: who's assigned to this, what should they ask, does this look like the last five cases like it or different, is there a conflict of interest nobody caught, and can we show - months later, to a board or a tribunal - that we handled this the same way we handled everything comparable to it.
@@ -1057,6 +1100,8 @@ Not "is it anonymous" - most platforms in this category are, to varying degrees.
     readTime: "7 min read",
     excerpt:
       "Most EU Directive compliance guides are checklists built for a 50-employee threshold decision. At 1,000+ employees, with multiple investigators and multiple departments, the compliance question changes - and a checklist stops being the right tool to answer it.",
+    metaDescription:
+      "At 1,000+ employees, EU Whistleblowing Directive compliance stops being a checklist. What changes with multiple investigators and departments.",
     content: `Most content comparing EU Whistleblowing Directive platforms is written for the threshold decision: does my organization need a compliant channel at all, and which vendor checks the six boxes - anonymous reporting, 7-day acknowledgment, two-way communication, 3-month feedback, retaliation-protection documentation, GDPR-compliant retention. (We've written a detailed breakdown of the 7-day and 3-month clocks specifically, if that's the question you're actually asking.)
 
 That checklist is the right evaluation for a 60-person company deciding whether they're in scope at all. It stops being the right evaluation once you're past roughly 1,000 employees, because at that scale the six-box checklist is table stakes - nearly every vendor you demo will tick all six - and the actual differentiator moves somewhere the checklist doesn't cover.
@@ -1093,6 +1138,8 @@ We don't have SOC 2 or ISO 27001 yet, and if that's a hard gate in your procurem
     readTime: "5 min read",
     excerpt:
       "NAVEX's marketing says anonymous. The honest answer is more specific than that - it depends which channel a reporter uses, and what 'anonymous' is technically doing versus what it's promising. Here's the actual distinction.",
+    metaDescription:
+      "Whether NAVEX EthicsPoint is genuinely anonymous depends on the channel a reporter uses. What the technology protects, and what it only promises.",
     content: `"Is NAVEX anonymous" is a reasonable question to ask before trusting a reporting channel with something serious, and the honest answer is: it depends which channel, and what you mean by anonymous.
 
 ## The distinction that matters: confidentiality versus anonymity
@@ -1121,6 +1168,8 @@ Not "is it anonymous" - nearly every vendor will say yes, and most mean it since
     readTime: "6 min read",
     excerpt:
       "Section 301 requires an audit committee complaint procedure. Section 806 protects the people who use it. Neither section tells you how to actually run a defensible investigation once a report comes in - and that's usually where the real exposure sits.",
+    metaDescription:
+      "SOX Section 301 requires an audit committee complaint procedure and 806 protects reporters. Neither covers running a defensible investigation.",
     content: `Sarbanes-Oxley's whistleblower provisions get cited constantly in vendor pitches, but the two sections that actually matter are narrower than the marketing suggests, and neither one is primarily about the reporting channel.
 
 ## What SOX actually requires
@@ -1153,6 +1202,8 @@ This isn't legal advice, and whether your specific procedures satisfy Section 30
     readTime: "6 min read",
     excerpt:
       "PIDA doesn't require a reporting channel by name - it requires that a worker who makes a protected disclosure isn't dismissed or subjected to detriment because of it. The distance between those two things is exactly where most compliance content stops short.",
+    metaDescription:
+      "PIDA protects workers from detriment after a protected disclosure; it never mandates a channel. Where a reporting channel stops being enough.",
     content: `The Public Interest Disclosure Act 1998 protects workers who make a qualifying, public-interest disclosure from dismissal or detriment as a result. It doesn't, in its text, mandate that employers run a specific reporting channel. That gap - between what PIDA actually requires and what most vendor content implies it requires - is worth being precise about before evaluating software against it.
 
 ## What PIDA actually does
@@ -1183,6 +1234,8 @@ PIDA compliance, and whether a specific set of internal practices would satisfy 
     readTime: "6 min read",
     excerpt:
       "At 1,000-5,000 employees, the pricing conversation stops being a rate card and starts being a negotiation shaped by which modules get bundled in. Here's what actually drives the number at this size, and what to separate out before you sign.",
+    metaDescription:
+      "At 1,000-5,000 employees, whistleblowing software pricing becomes a negotiation over bundled modules. What drives the number, and what to unbundle.",
     content: `Below roughly 500 employees, whistleblowing and case management software pricing is mostly rate-card math - a tier, a monthly number, done. Above 1,000, that stops being true. The quote becomes a negotiation shaped by bundling, and the range between vendors for comparable headcounts gets genuinely wide, which makes it hard to know if a number is reasonable without a real anchor.
 
 ## What actually moves the number at this size
@@ -1215,6 +1268,8 @@ Headcount-only pricing with no per-case fee at any size, and above 500 employees
     readTime: "6 min read",
     excerpt:
       "Translating the intake form is the easy 20% of operating across jurisdictions. The hard 80% is legal structure - designated roles, deadline logic, retention rules - that a language pack doesn't touch. Here's the distinction most vendor comparisons skip.",
+    metaDescription:
+      "Translating the intake form is not multi-jurisdiction compliance. Designated roles, deadline logic and retention rules are what actually differ.",
     content: `"Multilingual reporting" shows up on almost every whistleblowing platform's feature list, and it's a genuinely useful thing to have - an employee who can't file a report in their working language is less likely to file one at all. But translation coverage and jurisdictional compliance get conflated constantly in vendor comparisons, and they're not the same axis of capability.
 
 ## Why this distinction matters
