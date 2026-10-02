@@ -56,7 +56,7 @@ export const seoTitles: Record<string, string> = {
   "japan-whistleblower-protection-act-300-employees": "Japan Whistleblower Act: What Changes at 300",
   "why-we-dont-bill-per-case": "Why We Don't Bill Per Case",
   "whistleblowing-software-cost-500-employees": "Whistleblowing Software Cost for 500 Employees",
-  "what-is-workplace-misconduct-case-management-software": "Case Management Platform vs. Whistleblower Hotline",
+  "what-is-workplace-misconduct-case-management-software": "Case Management vs. Whistleblower Hotline",
   "conflict-of-interest-auto-detection": "Conflict-of-Interest Auto-Detection in HR Cases",
   "toxic-management-vs-harassment-categorization": "Toxic Management vs. Harassment: Categorizing",
   "best-investigation-case-management-software-anonymous-complaints": "Best Anonymous Complaint Case Management Tools",
