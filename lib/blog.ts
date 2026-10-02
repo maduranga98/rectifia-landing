@@ -66,6 +66,9 @@ export const seoTitles: Record<string, string> = {
   "uk-pida-compliance-growing-employers": "UK PIDA Compliance for Growing Employers",
   "whistleblowing-software-cost-enterprise-1000-5000-employees": "Whistleblowing Software Cost: 1,000-5,000 Staff",
   "multi-jurisdiction-compliance-not-multi-language": "Multi-Jurisdiction vs. Multi-Language Compliance",
+  "workplace-retaliation-after-a-report-how-to-investigate": "Workplace Retaliation Investigation Guide",
+  "how-to-document-a-workplace-investigation-audit-trail": "Workplace Investigation Documentation Checklist",
+  "whistleblowing-software-for-small-companies-25-200-employees": "Whistleblower Software for Small Business",
 };
 
 export const OG_IMAGE = {

@@ -1284,4 +1284,265 @@ Ask: "if I add a jurisdiction with a genuinely different legal structure - not j
 
 Jurisdiction is a per-company configuration setting, and where a jurisdiction introduces a structurally different legal requirement - like Japan's designated-handler mechanism - that's built as its own mechanism, dormant until that jurisdiction is added, rather than the EU framework relabeled. We support [Australia, Japan, the EU, the UK, the US, and Kenya](/jurisdictions) as configured jurisdictions currently; India is explicitly out of scope for now, not silently unsupported. This isn't a claim to have solved every jurisdiction's legal nuance - it's a claim that jurisdiction is treated as a structural setting rather than a translation toggle, and that's worth verifying directly with any vendor by asking the "what actually changes" question above rather than counting languages on a features page.`,
   },
+  {
+    slug: "workplace-retaliation-after-a-report-how-to-investigate",
+    title: "Retaliation After a Report: How to Spot It and Investigate It",
+    category: "Trust & Safety",
+    date: "2026-12-09",
+    readTime: "5 min read",
+    excerpt:
+      "Retaliation is the risk that silences every future reporter. Here is how to recognise detriment, build a timeline from the original report, keep conflicted managers away, and what Rectifia does and does not link today.",
+    metaDescription:
+      "Learn how to spot workplace retaliation after a report, build a dated timeline, and run an independent investigation, with EU and UK context.",
+    content: `A workplace retaliation investigation asks one question: did something adverse happen to this person because they raised a concern? Retaliation is the risk that silences every future reporter, because employees watch what happens to the first person who speaks up. The practical answer is to separate the original report from the treatment that followed, build a dated timeline of both, and have someone with no stake in the outcome examine the gap between them.
+
+## Why retaliation silences everyone else
+
+A reporting channel only works if people believe it is safe to use. When a reporter is moved off a project, passed over for a review, or quietly frozen out a few weeks later, colleagues notice. Nobody needs to read the original report to learn the lesson that speaking up costs you.
+
+That is why retaliation matters beyond the individual case. It decides whether the next person files a report at all. A carefully handled investigation into the original concern can be undone by how the person who raised it is treated afterwards.
+
+Retaliation is also rarely dramatic. It usually looks like ordinary management decisions made by people who happen to know who reported. That is what makes it hard to see, and why the evidence has to be assembled deliberately.
+
+## What counts as detriment
+
+Detriment is broader than dismissal. Dismissal and demotion are the obvious cases, but the same pattern often shows up as quieter changes:
+
+- Dismissal, demotion, or a missed promotion or pay review
+- Schedule, shift, or location changes the person did not ask for
+- Removal from projects, meetings, or reporting lines
+- Exclusion from team communication or social contact
+- Sudden extra scrutiny, or a negative review where none existed before
+
+Whether a particular change counts as detriment depends on the facts and the framework that applies. So record every change first and classify it later. A change you dismissed as minor at the time is exactly what a reviewer will ask about.
+
+## Why timing matters, and how to build the timeline
+
+Timing is usually the first thing a reviewer looks at. An adverse action shortly after a report is not proof of retaliation, but it is a reason to ask what else explains it. An action that was already in motion before the report tells a different story, provided you can show that it was.
+
+### Build two columns
+
+Start with two sets of dates and set them side by side:
+
+- The original report: the date it was filed, and the date the accused person or the reporter's manager first learned of it, if known
+- The adverse action: the date of each later decision about the reporter, who made it, and where the written reasoning is recorded
+
+The gap between the two columns is the question under investigation. If the reasoning for a decision was only written down after the report, say so plainly in the file.
+
+### Compare against similar situations
+
+Next, check how comparable situations were handled for people who never reported. If the reporter got a harsher response to a performance concern than their peers did, that gap is a finding. The same principle sits behind the [Consistency & Bias Engine](/blog/consistency-bias-engine-explained), which flags when a proposed outcome departs from how similar closed cases were handled. It compares cases within Rectifia, not an employee's wider HR history, so the comparison with non-reporters still has to be done by the investigator.
+
+## Who should investigate, and who should not
+
+A retaliation complaint often points at someone in the reporter's own management chain. That person should not investigate, choose the investigator, or see the case file. The conflict is obvious on paper and easy to miss in a small team, where the same few people fill several roles.
+
+Rectifia's [conflict-of-interest check](/blog/conflict-of-interest-auto-detection) compares the accused person's department and role against the handlers and admins who would otherwise receive the case. A match sends the case to manual assignment instead of routing it. It is a v1 mechanism built on department and role matching, so it will not catch a personal relationship that does not show up in the org chart. A human still has to ask who is close to whom.
+
+Also keep the reporter's manager out of decisions about the reporter that fall close in time to the report. If a decision cannot wait, ask someone independent to review the reasoning before it is acted on.
+
+### Anonymous and confidential reporters
+
+The type of reporter changes how retaliation shows up. An anonymous reporter has no identity stored, which helps: the harder it is to identify who disclosed, the harder it is to retaliate against them. They can still be wrongly suspected, though, and changes that affect their whole team can land on them anyway.
+
+A confidential reporter's identity is known to the assigned handler, which makes the handler responsible for protecting it. The investigation also has to avoid giving it away through who gets interviewed and in what order. The [difference between anonymous and confidential reporting](/blog/anonymous-vs-confidential-reporting) decides what you can promise a reporter and what follow-up is possible.
+
+In both modes, a reporter can use their case ID and passcode to check status and add information, with no login. That is often how retaliation first comes to light, so tell reporters up front that they can use it.
+
+## What the EU and UK frameworks say
+
+The [EU Whistleblower Directive](/jurisdictions/eu-whistleblower-directive-compliance-software) sets the 7-day acknowledgment and 3-month feedback clocks, and both apply whether or not the report is anonymous. Retaliation-protection documentation is part of the usual checklist for a compliant channel. If internal channels fail to respond in time, the Directive permits the reporter to escalate externally.
+
+In the UK, the [Public Interest Disclosure Act](/jurisdictions/uk-whistleblowing-software-pida-compliance) protects workers from dismissal and detriment after a qualifying disclosure. Once a worker shows a protected disclosure followed by detriment or dismissal, the burden shifts to the employer to show the disclosure played no part in the treatment.
+
+The practical lesson from both is the same: keep a record showing why each decision about the reporter was made, at the time it was made. Whether a specific decision would satisfy either framework is a question for counsel.
+
+## What Rectifia does and does not do here
+
+In Rectifia v1, retaliation is its own report category. It is not yet automatically linked to the original case, so the investigator makes that connection using dates and the case thread. We would rather say that plainly than imply a feature that is not there.
+
+Severity and evidence are scored separately, and the AI never decides guilt, recommends discipline, or closes a case. The finding on whether retaliation occurred stays with a human investigator. Access is role-based, so handlers see only the cases assigned to them and the Company Admin has no access to case content.
+
+This is general information, not legal advice.`,
+    faqs: [
+      { q: "What counts as retaliation after a workplace report?", a: "Retaliation is any adverse treatment connected to the fact that someone reported a concern. Dismissal and demotion are the clearest examples, but changes to schedule, removal from projects, exclusion from the team, or sudden extra scrutiny can count too. Whether a specific change qualifies depends on the facts and the framework that applies, so record it first and take advice." },
+      { q: "How do you investigate a retaliation complaint?", a: "Build a dated timeline that separates the original report from each later decision about the reporter. Compare the written reasoning for those decisions with how similar situations were handled for people who never reported. Use an investigator who is independent of the accused and of the reporter's management chain, and rely on notes made at the time." },
+      { q: "Who should not investigate a retaliation complaint?", a: "The accused person, and anyone in the reporter's management chain who took part in or influenced the decisions under review. Small teams make this harder because the same few people hold several roles. Check assignments against the accused person's department and role before routing, and ask who is personally close to whom." },
+      { q: "Does Rectifia link a retaliation report to the original case?", a: "Not yet. In Rectifia v1, retaliation is its own report category and is not automatically linked to the original case, so the investigator connects the two using dates and the case thread. Severity and evidence are scored separately, and a human investigator makes every finding." },
+    ],
+  },
+  {
+    slug: "how-to-document-a-workplace-investigation-audit-trail",
+    title: "How to Document a Workplace Investigation: An Audit-Trail Checklist",
+    category: "Product",
+    date: "2026-12-16",
+    readTime: "4 min read",
+    excerpt:
+      "A defensible case file is seven parts, not a folder of emails. What each part should contain, the gaps that cause trouble later, and a checklist you can copy into your own template.",
+    metaDescription:
+      "Use this audit-trail checklist to document a workplace investigation: intake, timeline, evidence log, rationale, deadlines, and consistency check.",
+    content: `Workplace investigation documentation is what lets you show, months later, what was reported, what you did, and why you decided what you did. A defensible case file has seven parts: an intake record, a dated timeline, an evidence log, interview notes, the decision and its rationale, a deadline log, and the outcome of a consistency check. If any one is missing, the file tells an incomplete story, however carefully the investigation was run.
+
+## What a defensible case file contains
+
+Think of the file as something a stranger has to be able to read. A board member, an auditor, or a tribunal will not have been in the room. Each part below answers a question they are likely to ask.
+
+### Intake record
+
+What was reported, when, through which channel, and under which category. Record the severity and evidence scores as first assigned, and who the case was routed to. Keep [severity and evidence as two separate numbers](/blog/severity-vs-evidence-scoring-workplace-complaints), because a serious allegation with thin evidence and a moderate one with a long paper trail need different next steps.
+
+### Dated timeline
+
+A running list of events in the order they happened: the underlying incidents as described, the report, each action taken on the case, and each communication with the reporter. Date every entry. Where a date is approximate or second-hand, say so rather than rounding it.
+
+### Evidence log
+
+Every document, message, or record collected, with what it is, who provided it, when it arrived, and where it is stored. If the decision relies on a piece of evidence, it should appear here. If something was requested and not provided, log that too.
+
+### Interview notes
+
+Who was interviewed, when, by whom, and what was asked. Keep notes close to what was said and observed, and keep opinions out of them. Corrections should be added as new, dated entries instead of overwriting the original.
+
+### Decision and rationale
+
+The action taken, and the reasons for it, in the investigator's own words. This is the part most often left thin. A decision with no stated rationale is hard to defend even when the decision itself was sound.
+
+### Deadline log
+
+When the report arrived, when it was acknowledged, and when feedback was given. Under the EU Whistleblower Directive that means [a 7-day acknowledgment and a 3-month feedback clock](/blog/eu-whistleblower-directive-deadlines), and both apply to anonymous reports too. Other frameworks have their own timelines, so log whichever applies to the case.
+
+### Consistency check outcome
+
+Whether the proposed action was compared with how similar closed cases were handled, what the comparison showed, and what the investigator did about it. Rectifia's [Consistency & Bias Engine](/blog/consistency-bias-engine-explained) runs that comparison before a case closes and flags a deviation in either direction. It never says which action is right, so the investigator's response to the flag belongs in the file.
+
+## Common gaps in case files
+
+Most gaps are mundane. They come from busy people, not bad faith:
+
+- Decisions recorded with no rationale
+- Notes edited after the fact with no record of what changed
+- No proof the reporter was acknowledged, or when
+- Evidence referred to in the decision but never logged
+- Deadlines tracked in a personal calendar instead of on the case
+- A timeline rebuilt from memory at the end instead of kept as events happened
+
+Each of these is cheap to prevent while the case is open and expensive to repair afterwards.
+
+The most damaging gap is often the quietest: a decision that was reasonable when it was made but has no written reason attached. Months later the memory of why is gone, and the file cannot supply it. If you only fix one habit, make it writing the rationale on the day of the decision.
+
+## An audit-trail checklist you can copy
+
+Paste this into your own template and work through it before closing a case.
+
+- Intake: date, channel, category, severity score, evidence score, routed-to
+- Conflict check: accused person's department and role checked against the assigned handler
+- Acknowledgment: date sent, and by whom
+- Timeline: every event dated, approximations marked as such
+- Evidence log: each item with source, date received, and storage location
+- Interviews: who, when, by whom, questions asked, notes dated
+- Decision: action taken and written rationale
+- Consistency check: comparison run, result recorded, response recorded
+- Feedback to the reporter: date given and what was shared
+- Deadlines: acknowledgment and feedback dates against the applicable clocks
+- Corrections: any change to a note added as a new dated entry
+- Closure: final summary reviewed before the case is marked closed
+
+Not every case needs every line. A short, low-severity case may have a one-line timeline and two evidence items. What matters is that the same structure is used each time, so a missing piece stands out.
+
+## Where a structured thread helps
+
+Doing all of this by hand means rebuilding the file from inboxes, spreadsheets, and memory at the moment you most need it. A structured case record changes that. In Rectifia, the conversation with the reporter doubles as the audit trail instead of a separate log someone has to maintain, and investigator notes sit alongside it as manual log entries. Any Consistency & Bias Engine flag is recorded along with how it was resolved.
+
+Acknowledgment and feedback clocks start when the report is filed and are shown on the case. When a case closes, it produces a closed-case report with the full timeline attached, and the full case history can be exported. That is the difference described in our piece on [what a case management platform adds beyond a hotline](/blog/what-is-workplace-misconduct-case-management-software).
+
+None of this writes the file for you. The AI never decides guilt, recommends discipline, or closes a case, and the notes, rationale, and decision are still written by people. The platform's job is to keep what they write in order and make it hard to lose. The quality of the file still depends on whether the people handling the case write things down as they go.
+
+This is general information, not legal advice.`,
+    faqs: [
+      { q: "What should be in a workplace investigation file?", a: "Seven things: the intake record, a dated timeline, an evidence log, interview notes, the decision with its rationale, a deadline log, and the outcome of any consistency check. Together they let someone who was not in the room follow what was reported, what was done, and why the final decision was made." },
+      { q: "How detailed should investigation notes be?", a: "Detailed enough that a stranger can see what was asked, what was said, and what was decided. Date notes when they are made, keep opinions out of them, and add corrections as new entries instead of overwriting the original. Conclusions belong in the decision section, with the reasons stated." },
+      { q: "What is an audit trail in a workplace investigation?", a: "A timestamped record of who did what and when on a case: messages, evidence added, investigator log entries, decisions, and any flags raised and how they were resolved. It lets you show the order of events without rebuilding it from memory or inboxes, which is when errors and gaps usually creep in." },
+      { q: "Does Rectifia's AI write the decision?", a: "No. The AI never decides guilt, recommends discipline, or closes a case. It scores severity and evidence separately and flags patterns, such as a proposed action that differs from similar closed cases. The decision and the reasons for it are written by the investigator and stay part of the case record." },
+    ],
+  },
+  {
+    slug: "whistleblowing-software-for-small-companies-25-200-employees",
+    title: "Whistleblowing Software for Small Companies (25-200 Employees)",
+    category: "Pricing",
+    date: "2026-12-23",
+    readTime: "4 min read",
+    excerpt:
+      "When a 25-200 employee company needs a reporting channel, what to skip, what not to compromise on, and what published pricing looks like at this size, including when a lighter tool fits better.",
+    metaDescription:
+      "Find out when a 25-200 employee company needs a reporting channel and what to keep. Starter is $59/mo for up to 25 staff, Growth $199/mo for 26-200.",
+    content: `Whistleblower software for a small business makes sense in two situations: when you have a legal reason to run a reporting channel, and when your people have no safe way to raise a problem that does not run through someone they work with every day. At 25 to 200 employees you do not need an enterprise suite. You need anonymity that holds up, deadline tracking, and a way to keep conflicted people away from a case. Rectifia's published pricing at this size is $59 a month for up to 25 employees and $199 a month for 26 to 200.
+
+## When a small company actually needs a reporting channel
+
+Start with the law, because the thresholds differ by country and by type of company. This is only a summary of what our jurisdiction pages describe:
+
+- [Japan's Whistleblower Protection Act](/jurisdictions/japan-whistleblower-protection-act-compliance) requires companies with more than 300 employees to set up an internal reporting system and designate handlers. Below that, the obligation is best-efforts.
+- Australia: Part 9.4AAA applies to public companies, large proprietary companies, and corporate trustees of registrable superannuation entities.
+- United States: SOX requires the audit committees of public companies to have a complaint procedure, and it does not apply to private companies directly.
+- United Kingdom: the Public Interest Disclosure Act protects workers who make a protected disclosure but does not itself mandate a reporting channel.
+- European Union: whether the Directive applies to you depends on your headcount and on the law of the member state where you operate.
+- Kenya: there is no dedicated whistleblower law yet, though the Bribery Act 2016 asks entities to maintain corruption-prevention procedures.
+
+A company of 25 to 200 employees sits below Japan's 300-employee line, and most small firms are not public companies, so many will have no statutory duty to run a channel at all. If you operate in several countries, check with counsel before you assume you are out of scope.
+
+There are also trust reasons. In a small company the founder, the HR lead, and the accused person's manager are often one conversation apart. People do not report through that chain, and they are right not to. A channel with real anonymity gives them somewhere to go that does not depend on trusting any one person.
+
+A quick test: ask who an employee would tell today if their own manager were the problem. If the honest answer is nobody, or the founder, that gap is the case for a channel, whatever the statute says.
+
+## What to skip at this size
+
+Skip what a compliance department of five would use and one HR person will not:
+
+- Training modules and third-party risk management. Those are different products, and Rectifia does not sell them.
+- Multi-tier approval workflows and custom integrations
+- A dedicated account manager
+- Certifications you do not need. If a SOC 2 or ISO 27001 certificate is a hard procurement requirement for you, Rectifia does not hold either today, and you should look elsewhere for now.
+
+The test for any feature at this size is whether it changes how you handle a report. If it does not, it is overhead.
+
+## What not to compromise on
+
+Small teams are where shortcuts hurt most, because there is no second person to catch a mistake. Three things are worth holding firm on.
+
+### Anonymity that is structural
+
+Anonymous should mean no identity is stored at all, not a promise not to look. Reporters should be able to come back with a case ID and passcode, with no login, to check status or answer a question. Our explainer on [anonymous versus confidential reporting](/blog/anonymous-vs-confidential-reporting) covers what each mode actually protects.
+
+### Deadline tracking
+
+If you fall under the EU Directive, the 7-day acknowledgment and 3-month feedback clocks apply to every report, including anonymous ones. In a team where one person handles everything, that person going on leave is the usual way a deadline is missed. A countdown on the case, visible to more than one person, is cheap insurance.
+
+### Conflict-of-interest handling
+
+In a 50-person company, the person who would normally handle a complaint may well be a colleague or manager of the person it names. [Automatic conflict-of-interest detection](/blog/conflict-of-interest-auto-detection) compares the accused person's department and role against the handlers and admins who would receive the case, and sends a match to manual assignment. It is a v1 check built on department and role, not a full conflict-management system, so it narrows the risk rather than removing it.
+
+Everything else is negotiable at this size. These three are the difference between a channel people use and a channel that exists on paper.
+
+## Published pricing, and why there are no per-report fees
+
+Pricing is by headcount. Starter covers up to 25 employees at $59 a month, and Growth covers 26 to 200 employees at $199 a month. Under 500 employees the pricing is self-serve with no setup fee, and you can see the numbers in the [pricing section](/#pricing) without a sales call.
+
+Most teams are live within one to two weeks. If you grow past 200 employees, the Scale tier covers 201 to 500 employees at $549 a month, so there is a defined next step.
+
+There is no charge per report. We ruled per-case billing out on purpose, because a vendor paid per report has a quiet incentive to make reporting harder. The reasoning is in [why we don't bill per case](/blog/why-we-dont-bill-per-case). If your reporting culture improves and more people speak up, your bill does not change.
+
+## When a lighter tool fits better
+
+Not every small company needs investigation workflow. If you are under roughly 300 employees and mainly need a trusted anonymous reporting channel, without case investigation, deadline tracking, or consistency checks, a lighter tool may serve you better. [VoxWel](https://voxwel.com) is our sister product built for exactly that: flat $1 per employee per month, live in under 24 hours, with no case-investigation layer bolted on. We would rather point you there than sell you more than you need.
+
+If you expect to run investigations, track statutory clocks, and keep records you can defend later, the Growth tier is the better fit. The deciding question is simple: do you need somewhere to receive reports, or a way to handle them well afterwards?
+
+This is general information, not legal advice.`,
+    faqs: [
+      { q: "Does a company with 50 employees need whistleblower software?", a: "It depends on where you operate and what kind of company you are. Some obligations turn on headcount, others on company type, and some places have no dedicated law. Many small companies adopt a channel anyway because employees will not report through people they work with every day. Check your position with counsel." },
+      { q: "How much does whistleblower software cost for a small business?", a: "Rectifia publishes its pricing: Starter is $59 a month for up to 25 employees, and Growth is $199 a month for 26 to 200 employees. Billing is by headcount with no per-report fees, so a rise in reports does not raise your bill. Under 500 employees it is self-serve with no setup fee." },
+      { q: "What should a small company not skip when choosing a reporting tool?", a: "Anonymity that does not depend on trusting an administrator, automatic deadline tracking, and a way to keep conflicted people away from a case. Small teams are where the same few people hold several roles, so those three matter more than a long feature list or an enterprise-style approval workflow." },
+      { q: "When is a simpler tool a better fit than a case management platform?", a: "If you mainly need a trusted anonymous reporting channel and do not expect to run structured investigations, a lighter tool can be enough. VoxWel, Rectifia's sister product, is built for that at a flat $1 per employee per month. If you expect to investigate, track deadlines, and keep defensible records, a case management platform fits better." },
+    ],
+  },
 ];

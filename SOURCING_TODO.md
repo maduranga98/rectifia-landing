@@ -133,3 +133,31 @@ These are general statements about the market rather than named-vendor claims, a
 ## Cross-link direction note
 
 The date rule only lets a post link to posts dated on or before itself. The two NAVEX comparison posts (`navex-alternative-australia-respect-at-work`, 2026-09-02, and `navex-alternative-japan-whistleblower-act`, 2026-09-09) are older than their compliance counterparts, so the pair cross-links run compliance post to comparison post only. Reverse links would need those dates to change.
+
+## Needs counsel review
+
+Legal assertions added in the three new posts. Each is kept to the level already used on the matching page in `lib/jurisdictions.ts`; none has been checked by counsel.
+
+### `workplace-retaliation-after-a-report-how-to-investigate`
+- "The EU Whistleblower Directive sets the 7-day acknowledgment and 3-month feedback clocks, and both apply whether or not the report is anonymous." (EU page)
+- "Retaliation-protection documentation is part of the usual checklist for a compliant channel." (EU page's six-point checklist)
+- "If internal channels fail to respond in time, the Directive permits the reporter to escalate externally." (EU page / `eu-whistleblower-directive-deadlines`)
+- "In the UK, the Public Interest Disclosure Act protects workers from dismissal and detriment after a qualifying disclosure." (UK page)
+- "Once a worker shows a protected disclosure followed by detriment or dismissal, the burden shifts to the employer to show the disclosure played no part in the treatment." (UK page)
+- "Whether a particular change counts as detriment depends on the facts and the framework that applies." and the list of examples of detriment (dismissal, demotion, schedule changes, exclusion, extra scrutiny). The list is general; the UK page only states that detriment covers "anything short of dismissal".
+- "The harder it is to identify who disclosed, the harder it is to retaliate against them." (UK page, practical rather than legal)
+
+### `how-to-document-a-workplace-investigation-audit-trail`
+- "Under the EU Whistleblower Directive that means a 7-day acknowledgment and a 3-month feedback clock, and both apply to anonymous reports too." (EU page)
+- "Other frameworks have their own timelines, so log whichever applies to the case." (general)
+- No other legal assertions. The documentation guidance is practice advice, not a statement of what any law requires, and the post says so by framing it as "defensible" rather than "required".
+
+### `whistleblowing-software-for-small-companies-25-200-employees`
+- Japan: companies with more than 300 employees must set up an internal reporting system and designate handlers; below that the obligation is best-efforts. (JP page)
+- Australia: Part 9.4AAA applies to public companies, large proprietary companies, and corporate trustees of registrable superannuation entities. (AU page)
+- United States: SOX requires the audit committees of public companies to have a complaint procedure and does not apply to private companies directly. (US page)
+- United Kingdom: PIDA protects workers who make a protected disclosure but does not itself mandate a reporting channel. (UK page)
+- European Union: "whether the Directive applies to you depends on your headcount and on the law of the member state where you operate". This is deliberately non-numeric because the site's jurisdiction pages do not state the Directive's headcount threshold.
+- Kenya: no dedicated whistleblower law yet; the Bribery Act 2016 asks entities to maintain corruption-prevention procedures. (KE page; the page cites section 9)
+- "If you fall under the EU Directive, the 7-day acknowledgment and 3-month feedback clocks apply to every report, including anonymous ones." (EU page)
+- Inference worth checking: "A company of 25 to 200 employees sits below Japan's 300-employee line, and most small firms are not public companies, so many will have no statutory duty to run a channel at all." This is an inference from the thresholds above, not a statement on any jurisdiction page.
