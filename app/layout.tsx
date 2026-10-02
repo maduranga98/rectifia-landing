@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://rectifia.com";
-const siteTitle = "Rectifia | Anonymous Reporting & Consistent HR Investigations";
+const siteTitle = "Rectifia | Anonymous Reporting & HR Case Management";
 const siteDescription =
   "An anonymous reporting channel employees trust, plus an AI-assisted workflow that flags inconsistent HR outcomes. EU, UK, US, and AU compliant.";
 
@@ -50,14 +50,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Rectifia" }],
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "/",
-      "en-GB": "/",
-      "en-AU": "/",
-      "en-KE": "/",
-      en: "/",
-      "x-default": "/",
-    },
   },
   openGraph: {
     type: "website",

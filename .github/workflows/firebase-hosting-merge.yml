@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - main
+  # Daily rebuild so posts dated in the future publish on their date.
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest

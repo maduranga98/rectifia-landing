@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { Reveal } from "@/components/ui/reveal";
 import { CategoryThumbnail } from "@/components/blog/category-thumbnail";
-import { blogPosts } from "@/lib/content";
+import { getPublishedPostsSorted, OG_IMAGE } from "@/lib/blog";
 
 const description =
   "Notes on consistent case outcomes, whistleblower compliance deadlines, and how Rectifia's reporting and investigation platform actually works.";
@@ -21,18 +21,18 @@ export const metadata: Metadata = {
     url: "https://rectifia.com/blog",
     title: "Blog | Rectifia",
     description,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog | Rectifia",
     description,
+    images: [OG_IMAGE.url],
   },
 };
 
 export default function BlogIndexPage() {
-  const sorted = [...blogPosts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+  const sorted = getPublishedPostsSorted();
 
   return (
     <>

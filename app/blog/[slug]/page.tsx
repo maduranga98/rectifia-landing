@@ -5,14 +5,17 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { MarkdownContent } from "@/components/blog/markdown-content";
-import { blogPosts } from "@/lib/content";
+import {
+  getJurisdictionsForPost,
+  getPost,
+  getPublishedPosts,
+  getRelatedPosts,
+  OG_IMAGE,
+  seoTitles,
+} from "@/lib/blog";
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
-}
-
-function getPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  return getPublishedPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -26,8 +29,10 @@ export async function generateMetadata({
 
   const url = `https://rectifia.com/blog/${post.slug}`;
 
+  const seoTitle = seoTitles[post.slug] ?? post.title;
+
   return {
-    title: post.title,
+    title: seoTitle,
     description: post.metaDescription,
     alternates: {
       canonical: url,
@@ -35,15 +40,17 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
       url,
-      title: post.title,
+      title: seoTitle,
       description: post.metaDescription,
       publishedTime: post.date,
       section: post.category,
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: seoTitle,
       description: post.metaDescription,
+      images: [OG_IMAGE.url],
     },
   };
 }
@@ -57,7 +64,8 @@ export default async function BlogPostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
-  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const related = getRelatedPosts(post, 3);
+  const hubs = getJurisdictionsForPost(post.slug);
   const url = `https://rectifia.com/blog/${post.slug}`;
 
   const articleJsonLd = {
@@ -65,6 +73,9 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    image: "https://rectifia.com/opengraph-image.png",
+    inLanguage: "en",
+    wordCount: post.content.split(/\s+/).filter(Boolean).length,
     datePublished: post.date,
     dateModified: post.date,
     articleSection: post.category,
@@ -122,6 +133,26 @@ export default async function BlogPostPage({
             </div>
 
             <MarkdownContent content={post.content} />
+
+            {hubs.length > 0 && (
+              <aside className="mt-12 rounded-lg border border-navy/8 bg-surface p-6">
+                <div className="mb-3 font-mono text-[11px] font-medium tracking-[0.06em] text-gold">
+                  COMPLIANCE GUIDES
+                </div>
+                <ul className="flex flex-col gap-2">
+                  {hubs.map((hub) => (
+                    <li key={hub.slug}>
+                      <Link
+                        href={`/jurisdictions/${hub.slug}`}
+                        className="font-display text-[15px] font-semibold text-navy transition-colors hover:text-gold"
+                      >
+                        {hub.h1} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
           </div>
         </article>
 
