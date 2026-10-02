@@ -327,9 +327,9 @@ And it's exactly the pattern that turns into a discrimination lawsuit eighteen m
 
 ## The problem nobody's software actually solves
 
-Most workplace case management tools - NAVEX included - are built to help you handle one case well. Intake, routing, documentation, closure. That's useful, but it's solving for the wrong unit of analysis. A single case can be handled perfectly and your organization can still be dangerously inconsistent, because consistency isn't a property of one case. It's a property of the pattern across all of them.
+In our experience, most workplace case management tools are built to help you handle one case well. Intake, routing, documentation, closure. That's useful, but it's solving for the wrong unit of analysis. A single case can be handled perfectly and your organization can still be dangerously inconsistent, because consistency isn't a property of one case. It's a property of the pattern across all of them.
 
-The tools that exist today have no memory. Each investigation starts from zero.
+In the tools we've looked at, there is no memory across cases: each investigation starts from zero.
 
 ## What we actually built
 
@@ -366,12 +366,14 @@ If you're [evaluating case management software](/blog/best-navex-alternative-202
     date: "2026-08-05",
     readTime: "8 min read",
     excerpt:
-      "NAVEX's EthicsPoint routinely runs $36,000–$120,000+ a year for a 500–5,000 employee company. Here's an honest answer on whether you need all of that, from a company building a direct competitor.",
+      "Buyers commonly report five- to six-figure annual NAVEX EthicsPoint quotes for a 500–5,000 employee company. Here's an honest answer on whether you need all of that, from a company building a direct competitor.",
     metaDescription:
-      "NAVEX EthicsPoint runs $36,000-$120,000+ a year. An honest look at when a mid-size company needs all of that and when a leaner alternative fits.",
+      "Buyers commonly report five- to six-figure annual quotes for NAVEX EthicsPoint. An honest look at when a mid-size company needs that and when it doesn't.",
     content: `If you're reading this, chances are a NAVEX rep just sent you a quote, and the number made you close the laptop for a minute.
 
-You're not overreacting. For a company somewhere in the 500–5,000 employee range, NAVEX's EthicsPoint platform routinely lands between $36,000 and $120,000+ a year, before you even talk about the $5,000–$25,000 setup fee that shows up in the fine print. For a lot of HR and Compliance teams, that's not "a line item." That's a headcount.
+You're not overreacting. NAVEX doesn't appear to publish its prices, but buyers commonly report quotes in the range of $36,000 to $120,000+ a year for a company in the 500–5,000 employee range, plus a setup fee in the range of $5,000–$25,000. Those are our estimates, not published NAVEX prices (more on that below). For a lot of HR and Compliance teams, a number like that isn't "a line item." It's a headcount.
+
+**How we estimated this.** These ranges are Rectifia's own estimate of what buyers commonly report. NAVEX does not appear to publish its pricing, and we have no published price list to cite, so treat them as a rough anchor rather than a quote. Ask NAVEX for a written quote before you compare.
 
 So the question people actually ask isn't "is NAVEX good." It's "do I need all of that, or am I paying enterprise prices for a mid-market problem."
 
@@ -379,9 +381,9 @@ Here's an honest answer, from a company building a direct competitor.
 
 ## What you're actually paying for with NAVEX
 
-NAVEX earned its reputation. Twenty-plus years in the market, a hotline that's been through every kind of audit, and a brand that Fortune 500 general counsel recognize on sight. If you're a 15,000-person multinational with a dedicated compliance department and a board that wants a name they've heard of, that reputation is worth something real.
+NAVEX has earned its reputation as a long-established vendor, with a hotline service and a brand that large enterprises widely recognize. If you're a 15,000-person multinational with a dedicated compliance department and a board that wants a name they've heard of, that reputation is worth something real.
 
-But most of what NAVEX charges for is built for that company, not yours. Multi-tier approval workflows for a compliance org with five direct reports. Custom integrations you'll never configure. A sales process that assumes you have a procurement team standing by.
+In our view, much of what an enterprise platform like NAVEX's is priced for is built for that company, not yours: multi-tier approval workflows, custom integrations, and a sales process that assumes you have a procurement team standing by. We haven't audited NAVEX's feature set, so check this against what they show you in a demo.
 
 If you're an HR Director juggling this alongside twelve other things, you're paying for scale you don't have yet.
 
@@ -401,7 +403,7 @@ None of that is a caveat buried at the bottom. It's the honest tradeoff you're m
 
 **Headcount-only billing, on principle, not as a marketing line.** We looked at per-case or per-submission pricing early on and ruled it out completely. Think about what that model actually rewards: a vendor who charges you more every time an employee reports something has a quiet incentive to make reporting harder, not easier. That's not a hypothetical risk - it's the exact kind of misalignment the [EU Whistleblower Directive](/jurisdictions/eu-whistleblower-directive-compliance-software) was written to prevent by tying obligations to headcount rather than volume. We priced Rectifia the same way the regulation thinks about it.
 
-**A Consistency & Bias Checking Engine.** This is the one NAVEX doesn't have an equivalent for. When a case closes, it [becomes a reference point](/blog/consistency-bias-engine-explained) - category, severity, evidence strength, department, action taken. When a similar case comes up later, the system flags it if the proposed action looks harsher or more lenient than what similar cases got. It doesn't tell an investigator what to do. It just says "this deviates from your own pattern, take a look before you close it." For an HR team trying to defend consistent treatment later - in a tribunal, in an audit, in a board question - that's not a nice-to-have. It's the thing that keeps "we handled it case by case" from turning into "we handled it inconsistently and now we have a discrimination claim."
+**A Consistency & Bias Checking Engine.** As far as we know, NAVEX doesn't offer an equivalent, but confirm that with them directly. When a case closes, it [becomes a reference point](/blog/consistency-bias-engine-explained) - category, severity, evidence strength, department, action taken. When a similar case comes up later, the system flags it if the proposed action looks harsher or more lenient than what similar cases got. It doesn't tell an investigator what to do. It just says "this deviates from your own pattern, take a look before you close it." For an HR team trying to defend consistent treatment later - in a tribunal, in an audit, in a board question - that's not a nice-to-have. It's the thing that keeps "we handled it case by case" from turning into "we handled it inconsistently and now we have a discrimination claim."
 
 **Policy-grounded scoring, with a hard boundary.** Our AI reads company policy to structure intake and flag severity and evidence gaps. It is explicitly instructed - in the actual prompt code, not just in marketing copy - to never conclude that a policy was violated. That determination stays with a human investigator, always. If a vendor tells you their AI "detects policy violations," ask them what happens the first time it's wrong. We built the product so that question doesn't come up.
 
@@ -555,13 +557,15 @@ Most reporting decisions in a workplace aren't really about the form. They're ab
       "The quote doesn't show up on NAVEX's website, so most buyers walk into the sales call blind. Here's what the number actually looks like at 2,000 employees, and what the same headcount costs on a headcount-based model instead.",
     metaDescription:
       "What NAVEX really costs a 2,000-employee company in 2026, why the quote is never published, and how headcount-based pricing compares at that size.",
-    content: `NAVEX doesn't publish pricing. That's not an accident - enterprise software with a sales-led motion rarely does, because the number depends on what a rep thinks your budget can absorb. But it means most HR and Compliance leaders walk into their first call with no anchor at all, which makes it hard to know whether a quote is reasonable or padded.
+    content: `NAVEX doesn't appear to publish its pricing. That's common for enterprise software with a sales-led motion, where the number often depends on the buyer's size and scope. But it means most HR and Compliance leaders walk into their first call with no anchor at all, which makes it hard to know whether a quote is reasonable or padded.
 
-Here's a real anchor, built from public benchmarking and vendor-comparison data across the compliance software market: for a company in the 500-5,000 employee range, EthicsPoint pricing routinely lands between $36,000 and $120,000+ a year, before the $5,000-$25,000 setup fee that tends to show up once you're past the discovery call. At 2,000 employees specifically, most companies land somewhere in the middle to upper end of that range once you add the modules incumbents typically bundle in - hotline access, case management, policy management, and often a training or third-party-risk module you didn't ask for but got quoted anyway.
+Here's a rough anchor, and it is an estimate rather than a published price: buyers commonly report EthicsPoint quotes in the range of $36,000 to $120,000+ a year for a company in the 500-5,000 employee range, plus a setup fee in the range of $5,000-$25,000 once you're past the discovery call. At 2,000 employees specifically, we'd expect a quote toward the middle to upper end of that range if modules such as hotline access, case management, policy management, and training or third-party-risk are bundled in.
+
+**How we estimated this.** These ranges are Rectifia's own estimate of what buyers commonly report, not a NAVEX price list. NAVEX doesn't appear to publish its pricing and we have no published source to cite, so use them as a rough anchor and get a written quote before you compare.
 
 ## Why the number is so wide
 
-A big part of NAVEX's range comes from what gets bundled, not just headcount. Multi-tier approval workflows, custom integrations, dedicated account management, and add-on modules for training or vendor risk all move the number - and a lot of mid-size buyers end up paying for modules built for a much larger compliance org than the one they actually run.
+In our view, a big part of the range comes from what gets bundled, not just headcount. Multi-tier approval workflows, custom integrations, dedicated account management, and add-on modules for training or vendor risk can all move the number - and some mid-size buyers may end up paying for modules built for a much larger compliance org than the one they actually run.
 
 That's not a criticism of NAVEX's product. It's a genuinely broad platform, and if you need that breadth, the price reflects real engineering and support cost. The issue is narrower: if you're a 2,000-person company that needs case intake, investigation workflow, and [consistent outcomes](/blog/why-similar-hr-cases-get-different-outcomes) - not a full GRC suite - you may be paying enterprise price for mid-market use.
 
@@ -569,7 +573,7 @@ That's not a criticism of NAVEX's product. It's a genuinely broad platform, and 
 
 Rectifia bills by employee headcount only, with no per-case or per-submission fee. At 2,000 employees, a real worked example looks like this: Core case management at roughly $2,200/month, plus the optional Pulse Check wellness add-on at roughly $400/month, comes to about $2,600/month - or $31,200 a year. No setup fee.
 
-That's somewhere between 40% and 70% below the low end of the NAVEX range at the same headcount, and it's a number you can calculate yourself before ever getting on a call, because the [pricing bands under 500 employees are published outright](/#pricing) and the 500+ formula is disclosed on request rather than negotiated case by case.
+On our estimate of the NAVEX range, that would put Rectifia below the low end at the same headcount, and it's a number you can calculate yourself before ever getting on a call, because the [pricing bands under 500 employees are published outright](/#pricing) and the 500+ formula is disclosed on request rather than negotiated case by case.
 
 ## What you don't get at that price
 
@@ -593,7 +597,7 @@ Not "can you discount this," which mostly just moves the number within a range t
 
 ## Where the gap shows up
 
-Most enterprise whistleblowing platforms, NAVEX included, were built with the EU Whistleblower Directive as the primary compliance frame - [7-day acknowledgment, 3-month feedback](/blog/eu-whistleblower-directive-deadlines), designated impartial handler. Those obligations are real and worth supporting, but they're not the same shape as Australia's requirements. The Corporations Act's Part 9.4AAA sets out specific whistleblower policy content requirements for public companies, large proprietary companies, and corporate trustees. The positive duty sits alongside that as a separate, broader obligation focused on prevention, not just response.
+In our experience, many enterprise whistleblowing platforms were built with the EU Whistleblower Directive as the primary compliance frame - [7-day acknowledgment, 3-month feedback](/blog/eu-whistleblower-directive-deadlines), designated impartial handler. Those obligations are real and worth supporting, but they're not the same shape as Australia's requirements. The Corporations Act's Part 9.4AAA sets out specific whistleblower policy content requirements for public companies, large proprietary companies, and corporate trustees. The positive duty sits alongside that as a separate, broader obligation focused on prevention, not just response.
 
 A platform configured EU-first tends to surface EU-shaped compliance widgets - acknowledgment countdowns, feedback deadlines - without necessarily reflecting what an Australian compliance officer actually needs to demonstrate: a documented, proportionate system of prevention and response that a regulator or board would recognize as reasonable.
 
@@ -609,7 +613,7 @@ Rectifia is not a law firm, and this isn't legal advice. Whether a specific conf
 
 ## Why this matters for the buying decision
 
-If you're an Australian HR Director evaluating [NAVEX or a similar EU-first incumbent](/blog/best-navex-alternative-2026), the honest question isn't just price - it's whether the platform's compliance assumptions were built around your legal framework or adapted to it after the fact. That's a harder thing to verify in a demo than a pricing sheet, but it's worth asking the vendor directly to walk through how AU-specific settings actually change system behavior, not just which checkbox gets ticked in onboarding.`,
+If you're an Australian HR Director evaluating [NAVEX or a similar enterprise incumbent](/blog/best-navex-alternative-2026), the honest question isn't just price - it's whether the platform's compliance assumptions were built around your legal framework or adapted to it after the fact. That's a harder thing to verify in a demo than a pricing sheet, but it's worth asking the vendor directly to walk through how AU-specific settings actually change system behavior, not just which checkbox gets ticked in onboarding.`,
   },
   {
     slug: "navex-alternative-japan-whistleblower-act",
@@ -662,7 +666,7 @@ Ask directly: "does your platform have a concept of designated handler as a dist
 
 **Per-seat or per-user pricing.** Common in general-purpose case management and ticketing tools adapted for compliance use. The problem here is definitional: whistleblowing reports aren't filed by "users" in the seat-license sense - they're filed by any employee, anonymously in many cases, who may never log in as a named user at all. Per-seat pricing on a product like this usually means only counting HR/investigator seats, which doesn't scale with the actual population the compliance obligation covers.
 
-**Opaque enterprise quoting.** The NAVEX model - [no published pricing](/blog/navex-pricing-2000-employees-2026), a sales call, a quote shaped by company size, perceived budget, and bundled modules. This isn't inherently dishonest, but it means every buyer is negotiating from an information deficit, and the final number can vary significantly for comparable headcounts depending on how the sales conversation went.
+**Opaque enterprise quoting.** The model NAVEX appears to use - [no published pricing](/blog/navex-pricing-2000-employees-2026), a sales call, a quote shaped by company size, perceived budget, and bundled modules. This isn't inherently dishonest, but it means every buyer is negotiating from an information deficit, and the final number can vary significantly for comparable headcounts depending on how the sales conversation went.
 
 **Headcount-based flat pricing.** You pay based on total employee count, regardless of how many reports get filed or how many staff seats use the admin side. This is the model most closely aligned with how compliance regulations themselves think about scope - the [EU Whistleblower Directive](/jurisdictions/eu-whistleblower-directive-compliance-software)'s own obligations trigger based on employee headcount, not report volume.
 
@@ -680,7 +684,9 @@ Rectifia's self-serve pricing is published: Starter (up to 25 employees) at $59/
 
 ## A worked example at 2,000 employees
 
-At 2,000 employees, industry-standard enterprise quoting for a platform like NAVEX's EthicsPoint typically lands between $36,000 and $120,000+ a year, plus a $5,000-$25,000 setup fee. On Rectifia's headcount-based model, the same 2,000-employee company lands around $2,600/month - roughly $31,200/year, including the optional Pulse Check module - with no setup fee, and the bill doesn't change based on how many reports come in that year.
+At 2,000 employees, buyers commonly report quotes in the range of $36,000 to $120,000+ a year for a platform like NAVEX's EthicsPoint, plus a setup fee in the range of $5,000-$25,000. On Rectifia's headcount-based model, the same 2,000-employee company lands around $2,600/month - roughly $31,200/year, including the optional Pulse Check module - with no setup fee, and the bill doesn't change based on how many reports come in that year.
+
+**How we estimated this.** The NAVEX range is Rectifia's own estimate of what buyers commonly report, not a published price. NAVEX doesn't appear to publish its pricing and we have no published source to cite, so treat it as a rough anchor and get a written quote.
 
 ## What to actually ask a vendor
 
@@ -905,10 +911,10 @@ Not "why do you price this way" - most will have a reasonable-sounding answer ab
     date: "2026-11-11",
     readTime: "4 min read",
     excerpt:
-      "Short answer: on a headcount-based model, roughly $549/month. On an enterprise-quoted incumbent, the number is rarely published and typically runs into five figures annually. Here's the actual breakdown.",
+      "Short answer: on a headcount-based model, roughly $549/month. On an enterprise-quoted incumbent, the number is rarely published, and buyers commonly report five figures annually. Here's the actual breakdown.",
     metaDescription:
-      "Whistleblowing software for 500 employees costs about $549/month on a headcount model, versus five figures a year from enterprise-quoted incumbents.",
-    content: `A 500-employee company sits right at an interesting line: too large for the very cheapest self-serve tiers most vendors offer, but well below the size where enterprise incumbents like NAVEX typically become cost-competitive with newer, [headcount-priced platforms](/blog/whistleblowing-software-pricing-models-compared). Here's what the real numbers look like at that specific size.
+      "Whistleblowing software for 500 employees costs about $549/month on a headcount model; buyers commonly report five-figure annual incumbent quotes.",
+    content: `A 500-employee company sits right at an interesting line: too large for the very cheapest self-serve tiers most vendors offer, but well below the size where enterprise incumbents like NAVEX may become cost-competitive with newer, [headcount-priced platforms](/blog/whistleblowing-software-pricing-models-compared). Here's what the real numbers look like at that specific size.
 
 ## On a published, headcount-based model
 
@@ -916,11 +922,13 @@ At 500 employees, [Rectifia's Scale tier](/#pricing) - the top self-serve band b
 
 ## On an opaque enterprise-quote model
 
-NAVEX and comparable incumbents [don't publish a number](/blog/navex-pricing-2000-employees-2026) at this size, but industry benchmarking places companies in the 500-employee range toward the lower-to-middle part of the broader $36,000-$120,000+ annual range typically seen across the 500-5,000 employee band, plus a setup fee that commonly runs $5,000-$25,000 depending on implementation scope. Even conservatively, that puts a 500-employee company's likely annual cost at several times what a headcount-priced platform charges for comparable core functionality.
+NAVEX and comparable incumbents [don't appear to publish a number](/blog/navex-pricing-2000-employees-2026) at this size. Our estimate, based on what buyers commonly report, is that a 500-employee company would sit toward the lower-to-middle part of a $36,000-$120,000+ annual range, plus a setup fee in the range of $5,000-$25,000 depending on implementation scope. If that estimate holds, the likely annual cost would be several times what a headcount-priced platform charges for core functionality.
+
+**How we estimated this.** These ranges are Rectifia's own estimate, not published NAVEX prices. NAVEX doesn't appear to publish its pricing and we have no published source to cite, so treat them as a rough anchor and get a written quote.
 
 ## Why the gap is this wide at exactly this size
 
-500 employees is large enough to trigger genuine compliance obligations - it's near or above thresholds in [several jurisdictional frameworks](/jurisdictions) - but still small enough that a dedicated, multi-person compliance function often doesn't exist yet. Enterprise incumbents tend to price for the compliance department they assume you'll eventually build, not the one you actually have today. A headcount-based model prices for the company you are right now, and scales up automatically as you grow, without a renegotiation.
+500 employees is large enough to trigger genuine compliance obligations - it's near or above thresholds in [several jurisdictional frameworks](/jurisdictions) - but still small enough that a dedicated, multi-person compliance function often doesn't exist yet. In our view, enterprise incumbents tend to price for the compliance department they assume you'll eventually build, not the one you actually have today. A headcount-based model prices for the company you are right now, and scales up automatically as you grow, without a renegotiation.
 
 ## What's genuinely not included at this price
 
@@ -1128,15 +1136,15 @@ We don't have SOC 2 or ISO 27001 yet, and if that's a hard gate in your procurem
 
 A platform can promise confidentiality - "we won't tell anyone who you are" - as an organizational policy backed by access controls. Or it can be architected so that [the platform itself never has the reporter's identity to begin with](/blog/anonymous-vs-confidential-reporting), meaning there's nothing to leak even under a subpoena, an insider threat, or a well-meaning admin mistake. Those are different guarantees, and the difference matters most in exactly the situations where anonymity matters most - when the accused person has organizational power.
 
-[NAVEX EthicsPoint's web-based reporting](/blog/best-navex-alternative-2026) is built on the confidentiality model: server-side handling with access controls and a stated policy against disclosure, not a zero-knowledge architecture that makes the identity technically unrecoverable. That's a legitimate, widely-used approach, and for a lot of organizations and report types it's sufficient. It is not the same claim as "the system architecturally cannot know who you are."
+As we understand it, [NAVEX EthicsPoint's web-based reporting](/blog/best-navex-alternative-2026) is built on the confidentiality model: server-side handling with access controls and a stated policy against disclosure, not a zero-knowledge architecture that makes the identity technically unrecoverable. We haven't verified this against NAVEX's current documentation. That's a legitimate, widely-used approach, and for a lot of organizations and report types it's sufficient. It is not the same claim as "the system architecturally cannot know who you are."
 
 ## Where the phone hotline changes the picture
 
-NAVEX's flagship differentiator is a 24/7 staffed phone hotline with live agents - a real strength for large, distributed workforces where a web form feels less accessible or less trusted. But a phone channel introduces a risk a web form doesn't: voice recognition. In a large enterprise, a live agent hearing a voice is a non-issue. In a smaller team, or when the report concerns someone who might plausibly recognize a colleague's voice, that channel is structurally weaker on anonymity than the technical promise implies, regardless of what confidentiality policy sits behind it.
+NAVEX is generally associated with a staffed phone hotline with live agents - a real strength for large, distributed workforces where a web form feels less accessible or less trusted. But a phone channel introduces a risk a web form doesn't: voice recognition. In a large enterprise, a live agent hearing a voice is a non-issue. In a smaller team, or when the report concerns someone who might plausibly recognize a colleague's voice, that channel is structurally weaker on anonymity than the technical promise implies, regardless of what confidentiality policy sits behind it.
 
 ## What we can and can't tell you
 
-We're not going to pretend to have audited NAVEX's actual infrastructure - that's not something a vendor comparison post can honestly claim to know from the outside, and we'd be skeptical of any competitor post that asserted it did. What we can point to is publicly available: NAVEX's own materials describe confidentiality and access-control-based protection for web submissions, not a zero-knowledge architecture, and the phone hotline's voice-recognition exposure is a structural property of any live-agent phone channel, not something specific to NAVEX's implementation.
+We're not going to pretend to have audited NAVEX's actual infrastructure - that's not something a vendor comparison post can honestly claim to know from the outside, and we'd be skeptical of any competitor post that asserted it did. What we can offer is our understanding, which we have not checked against NAVEX's current documentation: that web submissions rely on confidentiality and access-control-based protection rather than a zero-knowledge architecture. Separately, the phone hotline's voice-recognition exposure is a structural property of any live-agent phone channel, not something specific to NAVEX's implementation.
 
 ## The question to ask directly, whoever you're evaluating
 
@@ -1222,15 +1230,17 @@ PIDA compliance, and whether a specific set of internal practices would satisfy 
 
 ## What actually moves the number at this size
 
-**Modules bundled beyond core case management.** Policy management, compliance training, third-party risk monitoring, and advanced analytics dashboards routinely get added to a quote whether or not the buyer asked for them, because incumbents' enterprise packages are built around a full GRC suite by default. Each of these is a legitimate product for some buyers - the issue is that they get priced into a quote for a company that only wanted case intake and investigation workflow.
+**Modules bundled beyond core case management.** Policy management, compliance training, third-party risk monitoring, and advanced analytics dashboards can get added to a quote whether or not the buyer asked for them, since some incumbents' enterprise packages are built around a full GRC suite. Each of these is a legitimate product for some buyers - the issue is that they get priced into a quote for a company that only wanted case intake and investigation workflow.
 
-**Implementation and setup fees.** At enterprise scale, setup fees of $5,000-$25,000+ are common among legacy vendors, covering onboarding, configuration, and training sessions. Whether that reflects genuinely complex integration work or a standard line item applied regardless of actual complexity is worth asking directly - a platform designed for fast self-serve configuration shouldn't need six weeks and a consultant to set up regardless of headcount.
+**Implementation and setup fees.** At enterprise scale, buyers commonly report setup fees in the range of $5,000-$25,000+ from legacy vendors, covering onboarding, configuration, and training sessions. Whether that reflects genuinely complex integration work or a standard line item applied regardless of actual complexity is worth asking directly - a platform designed for fast self-serve configuration shouldn't need six weeks and a consultant to set up regardless of headcount.
 
-**Contract structure.** Multi-year commitments with 60-90 day notice periods are standard in the legacy enterprise segment, and they change the real cost of a bad vendor fit - not just the sticker price, but the cost of being locked in if the platform doesn't work for your team.
+**Contract structure.** Buyers commonly report multi-year commitments with 60-90 day notice periods from legacy enterprise vendors, and these change the real cost of a bad vendor fit - not just the sticker price, but the cost of being locked in if the platform doesn't work for your team.
 
 ## A realistic range at this scale
 
-For a 1,000-5,000 employee company evaluating a [legacy GRC-style platform](/blog/navex-pricing-2000-employees-2026) for case management specifically (not the full training-plus-policy-plus-third-party-risk suite), the realistic range tends to run $2,000-$10,000+ per month depending on modules bundled in, plus the setup fee above. The full-suite version of the same vendor relationship can run considerably higher.
+For a 1,000-5,000 employee company evaluating a [legacy GRC-style platform](/blog/navex-pricing-2000-employees-2026) for case management specifically (not the full training-plus-policy-plus-third-party-risk suite), our estimate is a range of roughly $2,000-$10,000+ per month depending on modules bundled in, plus the setup fee above. The full-suite version of the same vendor relationship could run higher.
+
+**How we estimated this.** The ranges in this section are Rectifia's own estimates of what buyers commonly report, not published prices from any vendor. We have no published source to cite, so ask each vendor for a written, itemized quote.
 
 [Under a headcount-based model with no per-case fee](/blog/whistleblowing-software-pricing-models-compared) and no forced modules, the same range of company sizes looks structurally different: a straight per-head calculation with no separate charge for report volume, module count, or seat-based admin access. The honest caveat is that pricing at this size genuinely requires a conversation rather than a published number, on any model - the question worth asking isn't "can you show me a number instantly," it's "can you show me the calculation, so I can verify it myself rather than trusting that it's fair."
 
