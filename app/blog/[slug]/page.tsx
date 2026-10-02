@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { MarkdownContent } from "@/components/blog/markdown-content";
+import { AUTHOR } from "@/lib/site";
 import {
   getJurisdictionsForPost,
   getPost,
@@ -13,6 +14,14 @@ import {
   OG_IMAGE,
   seoTitles,
 } from "@/lib/blog";
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 
 export function generateStaticParams() {
   return getPublishedPosts().map((post) => ({ slug: post.slug }));
@@ -43,6 +52,7 @@ export async function generateMetadata({
       title: seoTitle,
       description: post.metaDescription,
       publishedTime: post.date,
+      ...(post.updatedAt && { modifiedTime: post.updatedAt }),
       section: post.category,
       images: [OG_IMAGE],
     },
@@ -77,9 +87,15 @@ export default async function BlogPostPage({
     inLanguage: "en",
     wordCount: post.content.split(/\s+/).filter(Boolean).length,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt ?? post.date,
     articleSection: post.category,
-    author: { "@type": "Organization", name: "Rectifia" },
+    author: AUTHOR.name
+      ? {
+          "@type": "Person",
+          name: AUTHOR.name,
+          ...(AUTHOR.url && { url: AUTHOR.url }),
+        }
+      : { "@type": "Organization", name: "Rectifia" },
     publisher: {
       "@type": "Organization",
       name: "Rectifia",
@@ -98,12 +114,28 @@ export default async function BlogPostPage({
     ],
   };
 
+  const faqJsonLd = post.faqs && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -124,15 +156,34 @@ export default async function BlogPostPage({
               {post.title}
             </h1>
             <div className="mb-10 font-mono text-[12px] text-ink/50">
-              {new Date(post.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}{" "}
-              · {post.readTime}
+              {formatDate(post.date)} · {post.readTime}
+              {post.updatedAt && (
+                <div className="mt-1">
+                  Last reviewed {formatDate(post.updatedAt)}
+                  {post.reviewedBy && ` · ${post.reviewedBy}`}
+                </div>
+              )}
             </div>
 
             <MarkdownContent content={post.content} />
+
+            {post.faqs && (
+              <section className="mt-12">
+                <h2 className="mb-6 font-display text-[22px] font-bold tracking-tight text-navy">
+                  Frequently asked questions
+                </h2>
+                <div className="flex flex-col gap-6">
+                  {post.faqs.map((faq) => (
+                    <div key={faq.q}>
+                      <h3 className="mb-2 font-display text-[17px] font-semibold text-navy">
+                        {faq.q}
+                      </h3>
+                      <p className="font-sans text-base leading-relaxed text-ink">{faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {hubs.length > 0 && (
               <aside className="mt-12 rounded-lg border border-navy/8 bg-surface p-6">

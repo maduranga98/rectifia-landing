@@ -297,6 +297,11 @@ export type BlogPost = {
   excerpt: string;
   metaDescription: string;
   content: string;
+  faqs?: { q: string; a: string }[];
+  /** ISO date; used for dateModified and sitemap lastModified. */
+  updatedAt?: string;
+  /** e.g. "Reviewed by [name], [credential]". Shown only when set. */
+  reviewedBy?: string;
 };
 
 export const blogPosts: BlogPost[] = [
