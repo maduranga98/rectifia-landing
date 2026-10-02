@@ -13,6 +13,7 @@ const columns = [
       { label: "Platform", href: "/#features" },
       { label: "Pricing", href: "/#pricing" },
       { label: "Compliance", href: "/#frameworks" },
+      { label: "Jurisdictions", href: "/jurisdictions" },
     ],
   },
   {

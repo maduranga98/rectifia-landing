@@ -54,6 +54,17 @@ export function MarkdownContent({ content }: { content: string }) {
           );
         }
 
+        if (trimmed.startsWith("### ")) {
+          return (
+            <h3
+              key={i}
+              className="mt-2 font-display text-[17px] font-semibold tracking-tight text-navy"
+            >
+              {renderInline(trimmed.slice(4), `h3-${i}`)}
+            </h3>
+          );
+        }
+
         if (trimmed.startsWith("- ")) {
           const items = trimmed
             .split("\n")

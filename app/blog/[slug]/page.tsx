@@ -5,14 +5,26 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { MarkdownContent } from "@/components/blog/markdown-content";
-import { blogPosts } from "@/lib/content";
+import { AUTHOR } from "@/lib/site";
+import {
+  getJurisdictionsForPost,
+  getPost,
+  getPublishedPosts,
+  getRelatedPosts,
+  OG_IMAGE,
+  seoTitles,
+} from "@/lib/blog";
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
-}
-
-function getPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  return getPublishedPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -26,8 +38,10 @@ export async function generateMetadata({
 
   const url = `https://rectifia.com/blog/${post.slug}`;
 
+  const seoTitle = seoTitles[post.slug] ?? post.title;
+
   return {
-    title: post.title,
+    title: seoTitle,
     description: post.metaDescription,
     alternates: {
       canonical: url,
@@ -35,15 +49,18 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
       url,
-      title: post.title,
+      title: seoTitle,
       description: post.metaDescription,
       publishedTime: post.date,
+      ...(post.updatedAt && { modifiedTime: post.updatedAt }),
       section: post.category,
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: seoTitle,
       description: post.metaDescription,
+      images: [OG_IMAGE.url],
     },
   };
 }
@@ -57,7 +74,8 @@ export default async function BlogPostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
-  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const related = getRelatedPosts(post, 3);
+  const hubs = getJurisdictionsForPost(post.slug);
   const url = `https://rectifia.com/blog/${post.slug}`;
 
   const articleJsonLd = {
@@ -65,10 +83,19 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    image: "https://rectifia.com/opengraph-image.png",
+    inLanguage: "en",
+    wordCount: post.content.split(/\s+/).filter(Boolean).length,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt ?? post.date,
     articleSection: post.category,
-    author: { "@type": "Organization", name: "Rectifia" },
+    author: AUTHOR.name
+      ? {
+          "@type": "Person",
+          name: AUTHOR.name,
+          ...(AUTHOR.url && { url: AUTHOR.url }),
+        }
+      : { "@type": "Organization", name: "Rectifia" },
     publisher: {
       "@type": "Organization",
       name: "Rectifia",
@@ -87,12 +114,28 @@ export default async function BlogPostPage({
     ],
   };
 
+  const faqJsonLd = post.faqs && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -113,15 +156,54 @@ export default async function BlogPostPage({
               {post.title}
             </h1>
             <div className="mb-10 font-mono text-[12px] text-ink/50">
-              {new Date(post.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}{" "}
-              · {post.readTime}
+              {formatDate(post.date)} · {post.readTime}
+              {post.updatedAt && (
+                <div className="mt-1">
+                  Last reviewed {formatDate(post.updatedAt)}
+                  {post.reviewedBy && ` · ${post.reviewedBy}`}
+                </div>
+              )}
             </div>
 
             <MarkdownContent content={post.content} />
+
+            {post.faqs && (
+              <section className="mt-12">
+                <h2 className="mb-6 font-display text-[22px] font-bold tracking-tight text-navy">
+                  Frequently asked questions
+                </h2>
+                <div className="flex flex-col gap-6">
+                  {post.faqs.map((faq) => (
+                    <div key={faq.q}>
+                      <h3 className="mb-2 font-display text-[17px] font-semibold text-navy">
+                        {faq.q}
+                      </h3>
+                      <p className="font-sans text-base leading-relaxed text-ink">{faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {hubs.length > 0 && (
+              <aside className="mt-12 rounded-lg border border-navy/8 bg-surface p-6">
+                <div className="mb-3 font-mono text-[11px] font-medium tracking-[0.06em] text-gold">
+                  COMPLIANCE GUIDES
+                </div>
+                <ul className="flex flex-col gap-2">
+                  {hubs.map((hub) => (
+                    <li key={hub.slug}>
+                      <Link
+                        href={`/jurisdictions/${hub.slug}`}
+                        className="font-display text-[15px] font-semibold text-navy transition-colors hover:text-gold"
+                      >
+                        {hub.h1} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
           </div>
         </article>
 

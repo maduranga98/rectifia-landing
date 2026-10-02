@@ -15,11 +15,14 @@ export function Hero() {
           <Kicker className="mb-5">
             WORKPLACE MISCONDUCT REPORTING &amp; CASE MANAGEMENT
           </Kicker>
-          <h1 className="mb-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[56px]">
+          <h1 className="mb-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[56px]">
             Fair cases.
             <br />
             Consistent outcomes.
           </h1>
+          <p className="mb-5 font-display text-base font-medium text-gold">
+            Anonymous workplace misconduct reporting and HR case management in one platform.
+          </p>
           <p className="mb-9 max-w-[520px] font-sans text-lg leading-relaxed text-white/78">
             A reporting channel employees actually trust, and an investigation workflow that
             keeps outcomes consistent across every case, department, and investigator.

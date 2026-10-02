@@ -2,12 +2,10 @@ import Link from "next/link";
 import { Kicker } from "@/components/ui/kicker";
 import { Reveal } from "@/components/ui/reveal";
 import { CategoryThumbnail } from "@/components/blog/category-thumbnail";
-import { blogPosts } from "@/lib/content";
+import { getPublishedPostsSorted } from "@/lib/blog";
 
 export function Blog() {
-  const sorted = [...blogPosts]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+  const sorted = getPublishedPostsSorted().slice(0, 3);
 
   return (
     <section id="blog" className="bg-white px-8 py-24">

@@ -7,7 +7,7 @@ import { Kicker } from "@/components/ui/kicker";
 import { MarkdownContent } from "@/components/blog/markdown-content";
 import { DemoCta } from "@/components/sections/demo-cta";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
-import { blogPosts } from "@/lib/content";
+import { getPublishedPosts, OG_IMAGE } from "@/lib/blog";
 import { getJurisdiction, jurisdictions } from "@/lib/jurisdictions";
 
 const siteUrl = "https://rectifia.com";
@@ -39,11 +39,13 @@ export async function generateMetadata({
       url,
       title: jurisdiction.metaTitle,
       description: jurisdiction.metaDescription,
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: jurisdiction.metaTitle,
       description: jurisdiction.metaDescription,
+      images: [OG_IMAGE.url],
     },
   };
 }
@@ -58,8 +60,9 @@ export default async function JurisdictionPage({
   if (!jurisdiction) notFound();
 
   const url = `${siteUrl}/jurisdictions/${jurisdiction.slug}`;
+  const published = getPublishedPosts();
   const related = jurisdiction.relatedPosts
-    .map((postSlug) => blogPosts.find((post) => post.slug === postSlug))
+    .map((postSlug) => published.find((post) => post.slug === postSlug))
     .filter((post) => post !== undefined);
   const others = jurisdictions.filter((j) => j.slug !== jurisdiction.slug);
 
@@ -88,8 +91,8 @@ export default async function JurisdictionPage({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Compliance",
-        item: `${siteUrl}/#frameworks`,
+        name: "Jurisdictions",
+        item: `${siteUrl}/jurisdictions`,
       },
       { "@type": "ListItem", position: 3, name: jurisdiction.metaTitle, item: url },
     ],
@@ -110,10 +113,10 @@ export default async function JurisdictionPage({
         <section className="bg-white px-8 pb-16 pt-20">
           <div className="mx-auto max-w-[720px]">
             <Link
-              href="/#frameworks"
+              href="/jurisdictions"
               className="mb-8 inline-block font-mono text-xs font-medium tracking-[0.05em] text-navy/60 transition-colors hover:text-gold"
             >
-              ← ALL FRAMEWORKS
+              ← ALL JURISDICTIONS
             </Link>
 
             <Kicker className="mb-3.5">
