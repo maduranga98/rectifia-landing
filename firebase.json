@@ -11,6 +11,13 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/blog/how-whistleblowing-software-pricing-works-2026",
+        "destination": "/blog/whistleblowing-software-pricing-models-compared",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "/api/book-demo",

@@ -54,7 +54,6 @@ export const seoTitles: Record<string, string> = {
   "respect-at-work-positive-duty-2026": "Respect@Work Positive Duty: HR Checklist for 2026",
   "corporations-act-part-9-4aaa-whistleblower-policy": "Corporations Act Part 9.4AAA Whistleblower Policy",
   "japan-whistleblower-protection-act-300-employees": "Japan Whistleblower Act: What Changes at 300",
-  "how-whistleblowing-software-pricing-works-2026": "How Whistleblowing Software Pricing Works (2026)",
   "why-we-dont-bill-per-case": "Why We Don't Bill Per Case",
   "whistleblowing-software-cost-500-employees": "Whistleblowing Software Cost for 500 Employees",
   "what-is-workplace-misconduct-case-management-software": "Case Management Platform vs. Whistleblower Hotline",

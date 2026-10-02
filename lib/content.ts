@@ -648,6 +648,7 @@ Ask directly: "does your platform have a concept of designated handler as a dist
     title: "Whistleblowing & Case Management Software Pricing Compared (2026)",
     category: "Pricing",
     date: "2026-09-16",
+    updatedAt: "2026-10-02",
     readTime: "7 min read",
     excerpt:
       "Per-seat, per-case, flat enterprise quote, headcount-based - the pricing model a vendor picks tells you almost as much about their incentives as their feature list does. Here's how the major approaches actually work.",
@@ -672,6 +673,14 @@ A per-case model and a headcount-based model can produce similar dollar figures 
 ## Where Rectifia sits
 
 Headcount-only, [published self-serve bands under 500 employees](/#pricing) (roughly $59-$549/month across three tiers), and a disclosed - not negotiated case-by-case - per-head formula above that. No per-case fee, ever. This was a deliberate choice, not a default: case-volume billing was evaluated early on and rejected specifically because of the incentive problem above, and because it's structurally misaligned with how the EU Directive itself scopes the obligation.
+
+## The published bands under 500 employees
+
+Rectifia's self-serve pricing is published: Starter (up to 25 employees) at $59/month, Growth (26-200) at $199/month, and Scale (201-500) at $549/month. No sales call is required to see the number. Above 500 employees, pricing moves to a disclosed per-head formula rather than case-by-case negotiation - still calculable, just not published as a static table given how many variables scale into it at that size.
+
+## A worked example at 2,000 employees
+
+At 2,000 employees, industry-standard enterprise quoting for a platform like NAVEX's EthicsPoint typically lands between $36,000 and $120,000+ a year, plus a $5,000-$25,000 setup fee. On Rectifia's headcount-based model, the same 2,000-employee company lands around $2,600/month - roughly $31,200/year, including the optional Pulse Check module - with no setup fee, and the bill doesn't change based on how many reports come in that year.
 
 ## What to actually ask a vendor
 
@@ -779,7 +788,9 @@ If asked by a board, a regulator, or an external auditor: can you show a documen
 
 ## The honest gap
 
-No software product satisfies the positive duty's prevention requirement on its own - risk assessment, training, leadership engagement, and culture work sit outside what any reporting platform does. Treat this as one input to a compliance program, evaluated with counsel, not the compliance program itself.`,
+No software product satisfies the positive duty's prevention requirement on its own - risk assessment, training, leadership engagement, and culture work sit outside what any reporting platform does. Treat this as one input to a compliance program, evaluated with counsel, not the compliance program itself.
+
+If you are comparing vendors rather than working through the duty itself, our [NAVEX alternative guide for Australian employers](/blog/navex-alternative-australia-respect-at-work) covers how EU-first platforms measure up against Australian requirements.`,
   },
   {
     slug: "corporations-act-part-9-4aaa-whistleblower-policy",
@@ -849,43 +860,9 @@ For a company approaching the 300-employee threshold, this is also a point worth
 
 ## What this isn't
 
-This is a description of a legal structure as we understand it, not legal advice, and it isn't a substitute for review by counsel with expertise in Japanese labor and whistleblower law - particularly given how recently these amendments took effect and how implementation guidance may continue to evolve. If your company operates in Japan and is approaching or has crossed the 300-employee threshold, that's a conversation to have with counsel directly, informed by - not replaced by - what your reporting software supports.`,
-  },
-  {
-    slug: "how-whistleblowing-software-pricing-works-2026",
-    title: "How Whistleblowing Software Pricing Actually Works in 2026",
-    category: "Pricing",
-    date: "2026-10-28",
-    readTime: "5 min read",
-    excerpt:
-      "Short answer: most whistleblowing and case management platforms price by per-seat, per-case, opaque enterprise quote, or flat headcount. Here's what each one means for your actual bill as your organization changes.",
-    metaDescription:
-      "Whistleblowing platforms price by seat, case, opaque enterprise quote or headcount. What each model means for your bill as the organization changes.",
-    content: `Most whistleblowing and workplace case management software is priced one of four ways: per-seat (charged per HR/investigator login), per-case (charged per report filed, sometimes with a base fee plus overage), opaque enterprise quoting (no published pricing, negotiated per deal), or flat headcount-based pricing (charged per total employee, regardless of report volume or admin seats). Most enterprise incumbents, NAVEX included, use opaque enterprise quoting. Rectifia uses headcount-based pricing exclusively.
+This is a description of a legal structure as we understand it, not legal advice, and it isn't a substitute for review by counsel with expertise in Japanese labor and whistleblower law - particularly given how recently these amendments took effect and how implementation guidance may continue to evolve. If your company operates in Japan and is approaching or has crossed the 300-employee threshold, that's a conversation to have with counsel directly, informed by - not replaced by - what your reporting software supports.
 
-## Why the model matters more than any single quote
-
-A quote is a snapshot. A pricing model is what happens to your bill over time as your organization changes - more employees, more reports, a merger, a bad year for workplace culture that (hopefully temporarily) increases report volume. The model determines whether those changes cost you more, and if so, for which reason.
-
-**Per-case pricing** means your bill moves with report volume. If your reporting culture improves and people start actually using the channel, your bill goes up specifically because more people spoke up - which is a strange thing to financially penalize in a compliance product.
-
-**Per-seat pricing** means your bill moves with how many HR or investigator accounts you provision, which usually undercounts the actual population the system needs to serve, since reporters typically aren't "seats" in the licensing sense.
-
-**Opaque enterprise quoting** means your bill is set once, in a negotiation, and tends to move only at renewal - often upward, since renewal negotiations happen from a position where switching costs have already been sunk into implementation and training.
-
-**Headcount-based pricing** means your bill moves only with total employee count - the same metric regulatory frameworks like the [EU Whistleblower Directive](/jurisdictions/eu-whistleblower-directive-compliance-software) use to scope obligations in the first place, which makes it a genuinely aligned way to price a compliance product rather than an arbitrary choice.
-
-## What a real number looks like
-
-At 2,000 employees, industry-standard enterprise quoting for a platform like [NAVEX's EthicsPoint](/blog/navex-pricing-2000-employees-2026) typically lands between $36,000 and $120,000+ a year, plus a $5,000-$25,000 setup fee. On Rectifia's headcount-based model, the same 2,000-employee company lands around $2,600/month - roughly $31,200/year, including the optional Pulse Check module - with no setup fee, and the bill doesn't change based on how many reports come in that year.
-
-## Under 500 employees specifically
-
-[Rectifia publishes self-serve pricing outright](/#pricing) for companies under 500 employees: Starter (up to 25 employees) at $59/month, Growth (26-200) at $199/month, and Scale (201-500) at $549/month. No sales call required to see the number. Above 500 employees, pricing moves to a disclosed per-head formula rather than case-by-case negotiation - still calculable, just not published as a static table given how many variables scale into it at that size.
-
-## The question that actually matters
-
-Before comparing two quotes, ask: "under this pricing model, what happens to my bill if [reports double / headcount grows 20% / we add a new department]?" That answer tells you more about whether a vendor's incentives are aligned with yours than the sticker price on the quote in front of you.`,
+If you are comparing vendors rather than working out your own obligations, our [NAVEX alternative guide for Japan](/blog/navex-alternative-japan-whistleblower-act) covers how Western-built platforms handle the designated-handler role.`,
   },
   {
     slug: "why-we-dont-bill-per-case",
