@@ -36,11 +36,8 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "workplace misconduct reporting",
-    "whistleblower reporting software",
     "HR case management",
     "EU Whistleblower Directive compliance",
-    "anonymous employee reporting",
-    "HR investigation software",
     "UK whistleblowing software PIDA compliance",
     "Australia Respect@Work positive duty software",
     "Japan whistleblower protection act compliance",

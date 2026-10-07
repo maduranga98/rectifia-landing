@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "whistleblower hotline software",
-    "whistleblower hotline",
     "ethics hotline",
     "whistleblower software",
     "whistleblower reporting software",
@@ -291,6 +290,17 @@ export default function WhistleblowerHotlineSoftwarePage() {
               </Link>
               . Rectifia supports your process and is not legal advice. Confirm your requirements
               with counsel.
+            </p>
+            <p className="mt-4 font-sans text-base leading-relaxed text-ink">
+              If the case needs to continue after the report, see{" "}
+              <Link href="/workplace-investigation-software" className={linkClass}>
+                workplace investigation software
+              </Link>{" "}
+              or{" "}
+              <Link href="/employee-relations-case-management-software" className={linkClass}>
+                employee relations case management software
+              </Link>
+              .
             </p>
           </div>
         </section>

@@ -14,6 +14,11 @@ const columns = [
       { label: "Pricing", href: "/#pricing" },
       { label: "Compliance", href: "/#frameworks" },
       { label: "Whistleblower hotline software", href: "/whistleblower-hotline-software" },
+      {
+        label: "Employee relations case management",
+        href: "/employee-relations-case-management-software",
+      },
+      { label: "Workplace investigation software", href: "/workplace-investigation-software" },
       { label: "Jurisdictions", href: "/jurisdictions" },
     ],
   },
