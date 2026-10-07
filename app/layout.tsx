@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import { DemoModalProvider } from "@/components/ui/demo-modal-context";
 import { DemoModal } from "@/components/ui/demo-modal";
+import { ORGANIZATION_ID } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,9 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://rectifia.com";
-const siteTitle = "Rectifia | Anonymous Reporting & HR Case Management";
+const siteTitle = "HR Case Management Software & Anonymous Reporting | Rectifia";
 const siteDescription =
-  "An anonymous reporting channel employees trust, plus an AI-assisted workflow that flags inconsistent HR outcomes. EU, UK, US, and AU compliant.";
+  "HR case management software with anonymous reporting, AI-assisted intake, and a consistency check against your own past cases. Priced by headcount.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -108,7 +109,7 @@ const areaServed = [
   { "@type": "Country", name: "Kenya" },
 ];
 
-const organizationId = `${siteUrl}/#organization`;
+const organizationId = ORGANIZATION_ID;
 
 const structuredData = {
   "@context": "https://schema.org",

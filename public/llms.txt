@@ -26,6 +26,7 @@ Rectifia is built to align with the EU Whistleblower Directive (2019/1937). Rect
 ## Key pages
 
 - Homepage: https://rectifia.com/ - product overview, how it works, pricing, FAQ
+- Whistleblower hotline software: https://rectifia.com/whistleblower-hotline-software - anonymous reporting with Case ID and passcode, AI-assisted intake, deadline tracking
 - Blog: https://rectifia.com/blog - compliance deadlines, product mechanics, vendor comparisons
 - Privacy Policy: https://rectifia.com/privacy
 - Terms of Service: https://rectifia.com/terms

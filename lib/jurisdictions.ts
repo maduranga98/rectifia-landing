@@ -44,13 +44,17 @@ function fromFramework(
 export const jurisdictions: Jurisdiction[] = [
   fromFramework("EU", {
     slug: "eu-whistleblower-directive-compliance-software",
-    keyword: "EU Whistleblower Directive compliance",
-    keywords: ["EU Whistleblower Directive compliance", "EU whistleblowing software"],
+    keyword: "EU whistleblower protection directive compliance",
+    keywords: [
+      "EU whistleblower protection directive compliance",
+      "EU Whistleblower Directive compliance",
+      "EU whistleblowing software",
+    ],
     region: "European Union",
-    h1: "Whistleblowing software built for the EU Whistleblower Directive",
-    metaTitle: "EU Whistleblower Directive Compliance Software",
+    h1: "EU Whistleblower Protection Directive compliance software",
+    metaTitle: "EU Whistleblower Protection Directive Compliance",
     metaDescription:
-      "Whistleblowing software for Directive 2019/1937: 7-day acknowledgment and 3-month feedback clocks computed automatically on every case.",
+      "Whistleblowing software for the EU Whistleblower Protection Directive (2019/1937), with 7-day acknowledgment and 3-month feedback deadline tracking.",
     body: `Directive 2019/1937 sets two deadlines most HR teams know exist and few have a reliable system for meeting. Rectifia computes both at case creation, so the clock lives on the case rather than in someone's calendar.
 
 ## The two clocks

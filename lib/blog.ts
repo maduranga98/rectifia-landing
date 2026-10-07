@@ -44,11 +44,11 @@ export const seoTitles: Record<string, string> = {
   "best-navex-alternative-2026": "Best NAVEX Alternative for Mid-Size Firms (2026)",
   "consistency-bias-engine-explained": "How the Consistency & Bias Engine Scores a Case",
   "eu-whistleblower-directive-deadlines": "EU Whistleblower Directive: 7-Day, 3-Month Rules",
-  "anonymous-vs-confidential-reporting": "Anonymous vs. Confidential Reporting Explained",
+  "anonymous-vs-confidential-reporting": "Confidential Reporting vs. Anonymous Reporting",
   "navex-pricing-2000-employees-2026": "NAVEX Pricing 2026: Cost at 2,000 Employees",
   "navex-alternative-australia-respect-at-work": "NAVEX Alternative for Australia: Respect@Work",
   "navex-alternative-japan-whistleblower-act": "NAVEX Alternative for Japan's Whistleblower Act",
-  "whistleblowing-software-pricing-models-compared": "Whistleblowing Software Pricing Compared (2026)",
+  "whistleblowing-software-pricing-models-compared": "Whistleblower Hotline Cost and Pricing Models",
   "ai-flag-inconsistent-discipline-without-deciding": "AI That Flags Inconsistent Discipline, Safely",
   "severity-vs-evidence-scoring-workplace-complaints": "Severity vs. Evidence Score in Complaint Triage",
   "respect-at-work-positive-duty-2026": "Respect@Work Positive Duty: HR Checklist for 2026",
@@ -59,7 +59,7 @@ export const seoTitles: Record<string, string> = {
   "what-is-workplace-misconduct-case-management-software": "Case Management vs. Whistleblower Hotline",
   "conflict-of-interest-auto-detection": "Conflict-of-Interest Auto-Detection in HR Cases",
   "toxic-management-vs-harassment-categorization": "Toxic Management vs. Harassment: Categorizing",
-  "best-investigation-case-management-software-anonymous-complaints": "Best Anonymous Complaint Case Management Tools",
+  "best-investigation-case-management-software-anonymous-complaints": "Best HR Case Management Software for Complaints",
   "eu-directive-compliance-large-employers-1000-plus": "EU Whistleblowing Directive for 1,000+ Employers",
   "is-navex-ethicspoint-actually-anonymous": "Is NAVEX EthicsPoint Actually Anonymous?",
   "sox-whistleblower-requirements-beyond-a-hotline": "SOX Whistleblower Requirements Beyond a Hotline",
@@ -69,6 +69,8 @@ export const seoTitles: Record<string, string> = {
   "workplace-retaliation-after-a-report-how-to-investigate": "Workplace Retaliation Investigation Guide",
   "how-to-document-a-workplace-investigation-audit-trail": "Workplace Investigation Documentation Checklist",
   "whistleblowing-software-for-small-companies-25-200-employees": "Whistleblower Software for Small Business",
+  "can-a-whistleblower-remain-anonymous": "Can a Whistleblower Remain Anonymous?",
+  "what-is-a-whistleblower-hotline": "What Is a Whistleblower Hotline? How It Works",
 };
 
 export const OG_IMAGE = {
