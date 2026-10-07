@@ -27,6 +27,8 @@ Rectifia is built to align with the EU Whistleblower Directive (2019/1937). Rect
 
 - Homepage: https://rectifia.com/ - product overview, how it works, pricing, FAQ
 - Whistleblower hotline software: https://rectifia.com/whistleblower-hotline-software - anonymous reporting with Case ID and passcode, AI-assisted intake, deadline tracking
+- Employee relations case management software: https://rectifia.com/employee-relations-case-management-software - case management for complaints in four categories (harassment, toxic management, retaliation, burnout), with a consistency check across past cases
+- Workplace investigation software: https://rectifia.com/workplace-investigation-software - report to closed case with AI-assisted intake and routing, human decisions and deadline tracking
 - Blog: https://rectifia.com/blog - compliance deadlines, product mechanics, vendor comparisons
 - Privacy Policy: https://rectifia.com/privacy
 - Terms of Service: https://rectifia.com/terms

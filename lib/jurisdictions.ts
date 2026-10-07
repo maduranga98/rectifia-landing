@@ -11,7 +11,7 @@ export type Jurisdiction = {
   slug: string;
   /** The single target keyword this URL owns, from the list in app/layout.tsx. */
   keyword: string;
-  /** Extra keyword phrases for this page only - never the global 12-keyword array. */
+  /** Extra keyword phrases for this page only - never the global keyword array in app/layout.tsx. */
   keywords: string[];
   region: string;
   h1: string;

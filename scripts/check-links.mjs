@@ -30,6 +30,8 @@ const staticRoutes = new Set([
   "/privacy",
   "/terms",
   "/whistleblower-hotline-software",
+  "/employee-relations-case-management-software",
+  "/workplace-investigation-software",
 ]);
 const today = new Date();
 

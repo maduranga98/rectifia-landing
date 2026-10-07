@@ -18,6 +18,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${siteUrl}/employee-relations-case-management-software`,
+      lastModified: new Date("2026-10-07"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/workplace-investigation-software`,
+      lastModified: new Date("2026-10-07"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     { url: `${siteUrl}/jurisdictions`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/privacy`, lastModified: buildDate, changeFrequency: "yearly", priority: 0.3 },
     { url: `${siteUrl}/terms`, lastModified: buildDate, changeFrequency: "yearly", priority: 0.3 },
