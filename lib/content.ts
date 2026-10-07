@@ -1,3 +1,5 @@
+import { scheduledPosts } from "./content-scheduled";
+
 export const trustStrip = [
   "EU WHISTLEBLOWER DIRECTIVE ALIGNED",
   "AES-256 IDENTITY VAULT",
@@ -304,7 +306,7 @@ export type BlogPost = {
   reviewedBy?: string;
 };
 
-export const blogPosts: BlogPost[] = [
+const baseBlogPosts: BlogPost[] = [
   {
     slug: "why-similar-hr-cases-get-different-outcomes",
     title: "Why Similar HR Cases Get Different Outcomes - and How to Fix It",
@@ -516,7 +518,7 @@ Rectifia is designed to support these obligations. It isn't legal advice - confi
     excerpt:
       "Every workplace reporting tool says some version of \"your identity is protected.\" Almost none explain what that actually means technically, and the difference matters more than the marketing copy suggests.",
     metaDescription:
-      "Anonymous and confidential reporting are two different technical promises. What each actually protects, where it breaks, and why the difference matters.",
+      "Confidential reporting and anonymous reporting make different promises. What each protects, where each breaks, and how to choose between them.",
     content: `Every workplace reporting tool says some version of "your identity is protected." Almost none of them explain what that actually means technically, and the difference matters more than the marketing copy suggests.
 
 ## Two different promises, not one
@@ -540,6 +542,8 @@ Rectifia's answer is a case ID and passcode, generated at submission, with no lo
 A lot of reporting tools describe their anonymity as a policy commitment: we collect some identifying data, but we promise not to use it against you, or to only share it under specific conditions. That's a real protection, and it's better than nothing. But it's a different category of protection than a system that architecturally never had the data to begin with.
 
 Anonymous mode in Rectifia isn't a policy promise sitting on top of collected data. There's no identity field to accidentally expose, no database column that could be misconfigured, no access log that could be subpoenaed for something that was never there. The protection isn't a rule someone has to follow correctly every time. It's a property of what the system does and doesn't store in the first place.
+
+Employees tend to ask a simpler question than either term: [can a whistleblower remain anonymous](/blog/can-a-whistleblower-remain-anonymous)? That post covers where anonymity holds up and where it breaks.
 
 ## What this looks like for the person filing the report
 
@@ -657,7 +661,7 @@ Ask directly: "does your platform have a concept of designated handler as a dist
     excerpt:
       "Per-seat, per-case, flat enterprise quote, headcount-based - the pricing model a vendor picks tells you almost as much about their incentives as their feature list does. Here's how the major approaches actually work.",
     metaDescription:
-      "Per-seat, per-case, enterprise quote or headcount-based: how each whistleblowing software pricing model works and what it does to your annual bill.",
+      "What a whistleblower hotline costs under per-seat, per-case, enterprise quote and headcount pricing, and how each model changes your annual bill.",
     content: `Before comparing quotes, it's worth understanding that whistleblowing and case management software isn't priced one consistent way across the market. The model a vendor uses shapes their incentives, and it's worth understanding before you're deep in a sales cycle and the framing has already been set by their pitch.
 
 ## The four models you'll actually encounter
@@ -687,6 +691,10 @@ Rectifia's self-serve pricing is published: Starter (up to 25 employees) at $59/
 At 2,000 employees, buyers commonly report quotes in the range of $36,000 to $120,000+ a year for a platform like NAVEX's EthicsPoint, plus a setup fee in the range of $5,000-$25,000. On Rectifia's headcount-based model, the same 2,000-employee company lands around $2,600/month - roughly $31,200/year, including the optional Pulse Check module - with no setup fee, and the bill doesn't change based on how many reports come in that year.
 
 **How we estimated this.** The NAVEX range is Rectifia's own estimate of what buyers commonly report, not a published price. NAVEX doesn't appear to publish its pricing and we have no published source to cite, so treat it as a rough anchor and get a written quote.
+
+## What a whistleblower hotline costs
+
+Buyers asking what a whistleblower hotline costs are usually asking which of the four models above they will end up on. Per-report pricing ties the cost of listening to how many people speak up, and per-seat pricing counts staff who never file anything. Rectifia is a software reporting channel with case management behind it, priced by headcount, so the [published Starter, Growth and Scale bands](/#pricing) are the whole answer for companies under 500 employees. The [whistleblower hotline software page](/whistleblower-hotline-software) shows how reporting works across those tiers.
 
 ## What to actually ask a vendor
 
@@ -1049,7 +1057,7 @@ If you're a reporter unsure which category fits, that's a legitimate reason to l
     excerpt:
       "A reporting channel collects complaints. Investigation software is what happens after that - the part most 'anonymous reporting' vendors treat as an afterthought. Here's what to actually evaluate, and where it lives on most vendors' roadmaps versus in the product.",
     metaDescription:
-      "Anonymous complaint intake is the easy part. What to evaluate in investigation and case management software, and where most vendors fall short.",
+      "What to look for in HR case management and workplace investigation software for anonymous complaints, and where most vendors fall short.",
     content: `Most of what gets marketed as "whistleblowing software" is a reporting channel: a form, a QR code, maybe a passcode-protected chat thread back to the reporter. That's a real and necessary piece of infrastructure. It is also not the same product as investigation software, and the gap between the two is where most of the actual HR and Compliance workload lives.
 
 A reporting channel answers "how does someone tell us something." Investigation software answers a harder set of questions: who's assigned to this, what should they ask, does this look like the last five cases like it or different, is there a conflict of interest nobody caught, and can we show - months later, to a board or a tribunal - that we handled this the same way we handled everything comparable to it.
@@ -1073,6 +1081,8 @@ Rectifia was built around the investigation, not just the intake. Category-speci
 The part that doesn't exist anywhere else we've found: when a case closes, it becomes a reference point - category, severity, evidence strength, department, action taken, no names or narrative. When a similar case comes up later and a Case Handler proposes an action, the [Consistency & Bias Checking Engine compares](/blog/consistency-bias-engine-explained) it against that history and flags it - in either direction, harsher or more lenient - if it deviates from the pattern. It never suggests what to do. It just makes the deviation visible before the case closes, which is the only point where seeing it actually changes anything.
 
 Conflict-of-interest detection runs automatically too: if an accused person's department and role match a Case Handler or the Company Admin, the case doesn't route to them - it gets flagged for manual Super Admin assignment instead, with no case content exposed in that notification.
+
+If you are comparing the best HR case management software on intake alone, the [whistleblower hotline software page](/whistleblower-hotline-software) covers how reports come in, and the [homepage](/) shows the full workflow from report to closed case.
 
 ## Where we're honest about the gaps
 
@@ -1545,4 +1555,79 @@ This is general information, not legal advice.`,
       { q: "When is a simpler tool a better fit than a case management platform?", a: "If you mainly need a trusted anonymous reporting channel and do not expect to run structured investigations, a lighter tool can be enough. VoxWel, Rectifia's sister product, is built for that at a flat $1 per employee per month. If you expect to investigate, track deadlines, and keep defensible records, a case management platform fits better." },
     ],
   },
+  {
+    slug: "can-a-whistleblower-remain-anonymous",
+    title: "Can a Whistleblower Remain Anonymous? What Helps and What Doesn't",
+    category: "Trust & Safety",
+    date: "2026-10-07",
+    readTime: "6 min read",
+    excerpt:
+      "Often, yes, but no tool can promise it in every case. Where anonymity holds, where it tends to break, and what an organization can do to protect it.",
+    metaDescription:
+      "Can a whistleblower remain anonymous? How anonymous reporting works, where anonymity can break, and what helps ensure whistleblower anonymity.",
+    content: `Often, yes. A whistleblower can remain anonymous in many situations, but no system can promise it in every one. Anonymity depends on three things working together: the reporting channel, the content of the report, and the size and habits of the workplace. A tool can control the first. It cannot control the other two. This post covers where anonymity holds, where it tends to break, and what an organization can do to protect it.
+
+## What anonymous reporting means
+
+An anonymous report is one where the reporter does not give a name or contact details and the organization does not collect them. That is different from [confidential reporting](/blog/anonymous-vs-confidential-reporting), where the reporter's identity is known to the system but access to it is restricted to a small number of people. Both are legitimate and they protect against different risks. Anonymous reporting limits what can be learned about the reporter. Confidential reporting keeps a route open for follow-up questions.
+
+The legal picture depends on where you operate and what the report is about. Some regimes require organizations to offer a reporting channel and to protect reporters from retaliation, and they differ on how anonymous reports are treated. Confirm the requirements that apply to you with counsel before building a policy around them. For EU deadlines, see the [EU Whistleblower Protection Directive compliance guide](/jurisdictions/eu-whistleblower-directive-compliance-software).
+
+## Where anonymity usually breaks
+
+Most anonymity failures are not technical. They come from what a report says and who could have known it.
+
+**Specific details.** A report that mentions a meeting with four attendees, an exact date, or a conversation only two people heard narrows the field quickly. Anyone investigating the report, and anyone it is about, can work backwards from those details.
+
+**Small teams.** The smaller the group that could have witnessed something, the easier it is to guess who reported it. A report about a team of five is hard to keep anonymous even if the channel stores nothing about the sender.
+
+**Writing style.** Colleagues recognize each other's phrasing, favorite words and habits. A long free-text narrative can point to its author for people who know them well.
+
+**Follow-up questions.** An investigator who asks a question only the reporter could answer reveals the reporter, even if the system never did. What a question gives away is as important as what it asks.
+
+**Conversations outside the system.** If a reporter tells a manager first, forwards an email or discusses the report with colleagues, the anonymity of the formal report matters much less.
+
+**Device and network traces.** Reporting from a work laptop on a company network can leave traces that the reporting tool never sees. Whether that matters depends on how the organization monitors its devices and networks. Reporters who are concerned can use a different device or network, and organizations can say plainly what they do and do not log.
+
+## What helps ensure whistleblower anonymity
+
+No single control can ensure whistleblower anonymity on its own. These practices reduce the risk:
+
+- Use a channel that does not require a login or an email address
+- Give reporters a way to come back to their case without revealing who they are
+- Tell reporters up front what to leave out, such as details only they would know
+- Train investigators to ask questions that do not give the reporter away
+- Limit access to case content to the people assigned to the case
+- State in the policy what can and cannot be promised
+
+The last point matters most. A policy that promises more than it can deliver damages trust the first time a reporter is identified by inference, and every employee who hears about it becomes less likely to report.
+
+## What a reporter can do
+
+Reporters have more control than they usually realize. Stick to what happened and who was involved, and leave out anything that points to where you were standing or who you spoke to. Describe events in plain terms rather than in your usual turn of phrase. Use a personal device on a network you trust if you are worried about traces. Keep the details you use to return to your case somewhere private, because a lost login or passcode cannot always be recovered.
+
+## How Rectifia handles the channel
+
+Rectifia lets employees report anonymously or confidentially, with no login. After filing, the reporter receives a Case ID and a passcode, and uses those two things to check status and add evidence later. Rectifia has no recovery flow by design. A lost passcode cannot be reset through an email address or phone number, because that would need the kind of identifying detail anonymous reporting avoids. Reporters should keep both the Case ID and passcode somewhere private.
+
+Behind the channel, AI assists with intake: it structures and categorizes the report, routes it, scores it and organizes the evidence. Humans make every investigation decision. A tool can limit what the channel itself collects. It cannot change what a report's text reveals or which colleagues could have seen what, which is why the guidance above applies to any reporting system.
+
+To see how reporting works from first report to closed case, read the [whistleblower hotline software page](/whistleblower-hotline-software) or visit the [homepage](/).`,
+    faqs: [
+      {
+        q: "Can a whistleblower remain anonymous?",
+        a: "Often, yes, but no tool can promise it in every case. A channel with no login and no collected contact details protects the sender, but the content of the report and the size of the team can still point to a person.",
+      },
+      {
+        q: "What should a reporter leave out to protect their anonymity?",
+        a: "Details only they would know, such as a conversation with two people present, an exact date and time, or distinctive phrasing. Stick to what happened and who was involved.",
+      },
+      {
+        q: "What happens if a reporter loses their Case ID or passcode in Rectifia?",
+        a: "Rectifia has no recovery flow by design, so a lost passcode cannot be reset. Reporters should store the Case ID and passcode privately when they file.",
+      },
+    ],
+  },
 ];
+
+export const blogPosts: BlogPost[] = [...baseBlogPosts, ...scheduledPosts];

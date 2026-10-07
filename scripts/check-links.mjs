@@ -2,7 +2,9 @@
 // missing slug/route, or to a blog post dated after the post that links to it.
 import { readFileSync } from "node:fs";
 
-const source = readFileSync(new URL("../lib/content.ts", import.meta.url), "utf8");
+const source =
+  readFileSync(new URL("../lib/content.ts", import.meta.url), "utf8") +
+  readFileSync(new URL("../lib/content-scheduled.ts", import.meta.url), "utf8");
 const jurisdictionSource = readFileSync(
   new URL("../lib/jurisdictions.ts", import.meta.url),
   "utf8",
@@ -21,7 +23,15 @@ const postBySlug = new Map(posts.map((p) => [p.slug, p]));
 const jurisdictionSlugs = new Set(
   [...jurisdictionSource.matchAll(/^\s{4}slug: "([^"]+)",/gm)].map((m) => m[1]),
 );
-const staticRoutes = new Set(["/", "/blog", "/jurisdictions", "/privacy", "/terms"]);
+const staticRoutes = new Set([
+  "/",
+  "/blog",
+  "/jurisdictions",
+  "/privacy",
+  "/terms",
+  "/whistleblower-hotline-software",
+]);
+const today = new Date();
 
 const errors = [];
 let checked = 0;
@@ -38,8 +48,8 @@ for (const post of posts) {
     } else if (path.startsWith("/blog/")) {
       const target = postBySlug.get(path.slice("/blog/".length));
       if (!target) errors.push(`${where}: no such post`);
-      else if (new Date(target.date) > new Date(post.date))
-        errors.push(`${where}: target (${target.date}) is dated after this post (${post.date})`);
+      else if (new Date(target.date) > new Date(post.date) && new Date(target.date) > today)
+        errors.push(`${where}: target (${target.date}) is not live yet and is dated after this post (${post.date})`);
     } else if (path.startsWith("/jurisdictions/")) {
       if (!jurisdictionSlugs.has(path.slice("/jurisdictions/".length)))
         errors.push(`${where}: no such jurisdiction page`);

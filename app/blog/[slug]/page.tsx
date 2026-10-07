@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Kicker } from "@/components/ui/kicker";
 import { MarkdownContent } from "@/components/blog/markdown-content";
-import { AUTHOR } from "@/lib/site";
+import { AUTHOR, ORGANIZATION_ID } from "@/lib/site";
 import {
   getJurisdictionsForPost,
   getPost,
@@ -95,9 +95,10 @@ export default async function BlogPostPage({
           name: AUTHOR.name,
           ...(AUTHOR.url && { url: AUTHOR.url }),
         }
-      : { "@type": "Organization", name: "Rectifia" },
+      : { "@type": "Organization", "@id": ORGANIZATION_ID, name: "Rectifia" },
     publisher: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: "Rectifia",
       logo: { "@type": "ImageObject", url: "https://rectifia.com/logo.png" },
     },
