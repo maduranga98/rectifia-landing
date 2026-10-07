@@ -70,6 +70,7 @@ export const seoTitles: Record<string, string> = {
   "how-to-document-a-workplace-investigation-audit-trail": "Workplace Investigation Documentation Checklist",
   "whistleblowing-software-for-small-companies-25-200-employees": "Whistleblower Software for Small Business",
   "hr-case-management-best-practices": "HR Case Management Best Practices: A Checklist",
+  "employee-relations-case-management-challenges": "Employee Relations Case Management Challenges",
   "can-a-whistleblower-remain-anonymous": "Can a Whistleblower Remain Anonymous?",
   "what-is-a-whistleblower-hotline": "What Is a Whistleblower Hotline? How It Works",
 };
