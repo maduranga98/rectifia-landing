@@ -108,25 +108,43 @@ const areaServed = [
   { "@type": "Country", name: "Kenya" },
 ];
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Rectifia",
-  url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
-  description: siteDescription,
-  email: "sales@rectifia.com",
-  sameAs: ["https://www.linkedin.com/company/rectifia/"],
-  areaServed,
-};
+const organizationId = `${siteUrl}/#organization`;
 
-const websiteJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Rectifia",
-  url: siteUrl,
-  description: siteDescription,
-  publisher: { "@type": "Organization", name: "Rectifia" },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "Rectifia",
+      url: siteUrl,
+      logo: `${siteUrl}/logo.png`,
+      description: siteDescription,
+      email: "sales@rectifia.com",
+      sameAs: ["https://www.linkedin.com/company/rectifia/"],
+      parentOrganization: { "@type": "Organization", name: "Lumora Ventures" },
+      areaServed,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Rectifia",
+      url: siteUrl,
+      description: siteDescription,
+      publisher: { "@id": organizationId },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#software`,
+      name: "Rectifia",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description:
+        "A workplace misconduct reporting channel employees trust, and an AI-assisted investigation workflow that keeps outcomes consistent across every case, department, and investigator.",
+      url: siteUrl,
+      publisher: { "@id": organizationId },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -138,11 +156,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-surface text-ink">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <DemoModalProvider>
           {children}
