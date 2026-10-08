@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Kicker } from "@/components/ui/kicker";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 import { Reveal } from "@/components/ui/reveal";
 import { trustStrip } from "@/lib/content";
@@ -12,14 +11,12 @@ export function Hero() {
     >
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 lg:grid-cols-[55%_45%] lg:gap-8">
         <Reveal>
-          <Kicker className="mb-5">
-            WORKPLACE MISCONDUCT REPORTING &amp; CASE MANAGEMENT
-          </Kicker>
-          <h1 className="mb-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[56px]">
-            Fair cases.
-            <br />
-            Consistent outcomes.
+          <h1 className="mb-4 font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[48px]">
+            Workplace misconduct reporting &amp; case management software
           </h1>
+          <p className="mb-5 font-display text-2xl font-semibold tracking-tight text-white/90">
+            Fair cases. Consistent outcomes.
+          </p>
           <p className="mb-5 font-display text-base font-medium text-gold">
             Anonymous workplace misconduct reporting and HR case management in one platform.
           </p>

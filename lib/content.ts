@@ -587,11 +587,11 @@ Here's a rough anchor, and it is an estimate rather than a published price: buye
 
 In our view, a big part of the range comes from what gets bundled, not just headcount. Multi-tier approval workflows, custom integrations, dedicated account management, and add-on modules for training or vendor risk can all move the number - and some mid-size buyers may end up paying for modules built for a much larger compliance org than the one they actually run.
 
-That's not a criticism of NAVEX's product. It's a genuinely broad platform, and if you need that breadth, the price reflects real engineering and support cost. The issue is narrower: if you're a 2,000-person company that needs case intake, investigation workflow, and [consistent outcomes](/blog/why-similar-hr-cases-get-different-outcomes) - not a full GRC suite - you may be paying enterprise price for mid-market use.
+That's not a criticism of NAVEX's product. It's a genuinely broad platform, and if you need that breadth, the price reflects real engineering and support cost. The issue is narrower: if you're a 2,000-person company that needs [anonymous case intake](/whistleblower-hotline-software), investigation workflow, and [consistent outcomes](/blog/why-similar-hr-cases-get-different-outcomes) - not a full GRC suite - you may be paying enterprise price for mid-market use.
 
 ## What the same headcount looks like billed differently
 
-Rectifia bills by employee headcount only, with no per-case or per-submission fee. At 2,000 employees, a real worked example looks like this: Core case management at roughly $2,200/month, plus the optional Pulse Check wellness add-on at roughly $400/month, comes to about $2,600/month - or $31,200 a year. No setup fee.
+Rectifia bills by employee headcount only, with no per-case or per-submission fee. At 2,000 employees, a real worked example looks like this: Core [employee relations case management](/employee-relations-case-management-software) at roughly $2,200/month, plus the optional Pulse Check wellness add-on at roughly $400/month, comes to about $2,600/month - or $31,200 a year. No setup fee.
 
 On our estimate of the NAVEX range, that would put Rectifia below the low end at the same headcount, and it's a number you can calculate yourself before ever getting on a call, because the [pricing bands under 500 employees are published outright](/#pricing) and the 500+ formula is disclosed on request rather than negotiated case by case.
 
@@ -782,7 +782,7 @@ Picture a single "priority score" that happens to land two very different cases 
 
 ## The tradeoff of keeping them separate
 
-It's genuinely a little harder to build a simple sorted queue view around two numbers instead of one - "sort by priority" is a cleaner UI pattern than "sort by severity, then check evidence gaps." That's a real cost, and it's worth naming rather than pretending the two-score design is free. The reason it's still the right call: the alternative optimizes for a clean dashboard at the expense of the actual judgment call an investigator has to make. Software that makes triage look simpler than it is doesn't make the underlying decision easier - it just moves the complexity somewhere less visible, usually onto the investigator who has to reconstruct the missing distinction by opening every case file anyway.`,
+It's genuinely a little harder to build a simple sorted queue view around two numbers instead of one - "sort by priority" is a cleaner UI pattern than "sort by severity, then check evidence gaps." That's a real cost, and it's worth naming rather than pretending the two-score design is free. The reason it's still the right call: the alternative optimizes for a clean dashboard at the expense of the actual judgment call an investigator has to make. [Workplace investigation software](/workplace-investigation-software) that makes triage look simpler than it is doesn't make the underlying decision easier - it just moves the complexity somewhere less visible, usually onto the investigator who has to reconstruct the missing distinction by opening every case file anyway.`,
   },
   {
     slug: "respect-at-work-positive-duty-2026",

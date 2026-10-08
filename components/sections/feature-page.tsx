@@ -7,6 +7,7 @@ import { MarkdownContent } from "@/components/blog/markdown-content";
 import { DemoCta } from "@/components/sections/demo-cta";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 import { getPost, OG_IMAGE } from "@/lib/blog";
+import { pricingTiers } from "@/lib/content";
 import { ORGANIZATION_ID } from "@/lib/site";
 
 const siteUrl = "https://rectifia.com";
@@ -141,9 +142,43 @@ export function FeaturePage({ config }: { config: FeaturePageConfig }) {
           </section>
         ))}
 
+        <section
+          className={`border-t border-navy/8 px-8 py-16 ${config.sections.length % 2 === 0 ? "bg-surface" : "bg-white"}`}
+        >
+          <div className="mx-auto max-w-[720px]">
+            <h2 className="mb-4 font-display text-[26px] font-bold tracking-tight text-navy">
+              Pricing by headcount, not by case
+            </h2>
+            <ul className="mb-5 flex flex-col gap-2.5">
+              {pricingTiers.map((tier) => (
+                <li
+                  key={tier.name}
+                  className="flex items-start gap-2.5 font-sans text-base leading-relaxed text-ink"
+                >
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  <span>
+                    <strong className="font-semibold text-navy">{tier.name}</strong>: {tier.range},{" "}
+                    {tier.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-sans text-base leading-relaxed text-ink">
+              No per-case or per-report fees.{" "}
+              <Link
+                href="/#pricing"
+                className="font-semibold text-navy underline decoration-gold underline-offset-4"
+              >
+                See pricing
+              </Link>{" "}
+              for what each plan includes.
+            </p>
+          </div>
+        </section>
+
         {related.length > 0 && (
           <section
-            className={`border-t border-navy/8 px-8 py-16 ${config.sections.length % 2 === 0 ? "bg-surface" : "bg-white"}`}
+            className={`border-t border-navy/8 px-8 py-16 ${(config.sections.length + 1) % 2 === 0 ? "bg-surface" : "bg-white"}`}
           >
             <div className="mx-auto max-w-[720px]">
               <h2 className="mb-4 font-display text-[26px] font-bold tracking-tight text-navy">
@@ -170,7 +205,7 @@ export function FeaturePage({ config }: { config: FeaturePageConfig }) {
         )}
 
         <section
-          className={`border-t border-navy/8 px-8 py-16 ${(config.sections.length + (related.length > 0 ? 1 : 0)) % 2 === 0 ? "bg-surface" : "bg-white"}`}
+          className={`border-t border-navy/8 px-8 py-16 ${(config.sections.length + 1 + (related.length > 0 ? 1 : 0)) % 2 === 0 ? "bg-surface" : "bg-white"}`}
         >
           <div className="mx-auto max-w-[720px]">
             <h2 className="mb-6 font-display text-[26px] font-bold tracking-tight text-navy">
