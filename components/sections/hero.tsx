@@ -10,8 +10,19 @@ const mockCases = [
 function HeroMockup() {
   return (
     <div className="relative mr-0 sm:mb-28 sm:mr-10">
+      {/* depth glow */}
+      <div
+        className="pointer-events-none absolute -inset-10 -z-10 opacity-60 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(60% 60% at 60% 30%, rgba(219,155,58,0.25) 0%, rgba(219,155,58,0) 70%)",
+        }}
+      />
+      {/* stacked card behind, for depth */}
+      <div className="absolute -right-3 -top-3 hidden h-full w-full rounded-xl border border-white/10 bg-white/[0.06] sm:block" />
+
       {/* main dashboard card */}
-      <div className="overflow-hidden rounded-xl border border-white/10 bg-white shadow-[0_30px_70px_-20px_rgba(0,0,0,0.55)]">
+      <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white shadow-[0_30px_70px_-20px_rgba(0,0,0,0.55)]">
         <div className="flex h-9 items-center gap-1.5 border-b border-navy/8 bg-[#F1F2F5] px-4">
           <span className="h-2.5 w-2.5 rounded-full bg-[#D6D9DE]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#D6D9DE]" />
@@ -78,7 +89,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-navy px-8 pb-20 pt-16 lg:pb-28 lg:pt-20"
+      className="relative overflow-hidden bg-navy px-8 pb-8 pt-16 lg:pb-10 lg:pt-20"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -102,13 +113,8 @@ export function Hero() {
             keeps outcomes consistent across every case, department, and investigator.
           </p>
           <div className="mb-10 flex flex-wrap gap-3.5">
-            <DemoTriggerButton className="rounded-md bg-gold px-[26px] py-[14px] font-display text-[15px] font-semibold text-navy transition-colors hover:bg-gold-dark">
-              Book a demo
-            </DemoTriggerButton>
-            <a
-              href="#pricing"
-              className="rounded-md border border-white/25 px-[26px] py-[14px] font-display text-[15px] font-semibold text-white transition-colors hover:border-gold hover:text-gold"
-            >
+            <DemoTriggerButton className="btn btn-lg btn-primary">Book a demo</DemoTriggerButton>
+            <a href="#pricing" className="btn btn-lg btn-outline-dark">
               See pricing
             </a>
           </div>

@@ -44,10 +44,7 @@ export function WhyRectifia() {
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href="#demo"
-            className="inline-block rounded-md bg-gold px-[26px] py-[14px] font-display text-[15px] font-semibold text-navy transition-colors hover:bg-gold-dark"
-          >
+          <a href="#demo" className="btn btn-lg btn-primary">
             See Rectifia in action
           </a>
         </div>
