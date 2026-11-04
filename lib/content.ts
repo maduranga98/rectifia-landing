@@ -7,6 +7,13 @@ export const trustStrip = [
   "NO LOGIN REQUIRED TO REPORT",
 ];
 
+export const heroStats = [
+  { value: "6", label: "Compliance frameworks supported, AU to US" },
+  { value: "AES-256", label: "Encrypted identity vault, split-key access" },
+  { value: "7-day", label: "EU acknowledgment clock, computed automatically" },
+  { value: "0", label: "Case-content access for Company Admin, by design" },
+];
+
 export const problemPoints = [
   {
     num: "01",

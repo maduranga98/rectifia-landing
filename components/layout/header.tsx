@@ -32,7 +32,18 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/95 shadow-[0_1px_0_0_rgba(0,0,0,0.2)] backdrop-blur">
+      <div className="hidden items-center justify-center gap-2 border-b border-white/10 bg-gold/10 px-8 py-2 sm:flex">
+        <span className="font-mono text-[11px] font-medium tracking-[0.04em] text-gold">
+          FOUNDING-PARTNER PRICING
+        </span>
+        <span className="font-sans text-[12.5px] text-white/65">
+          Join the first cohort and lock in early-adopter rates.
+        </span>
+        <DemoTriggerButton className="font-sans text-[12.5px] font-semibold text-white underline decoration-gold/60 underline-offset-2 transition-colors hover:text-gold">
+          Book a demo →
+        </DemoTriggerButton>
+      </div>
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-4">
         <Link href="/" className="flex items-center gap-2.5">
           <Image src="/logo.png" alt="" width={32} height={32} className="rounded-lg" priority />
@@ -77,7 +88,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <DemoTriggerButton className="rounded-md bg-gold px-5 py-2.5 font-display text-sm font-semibold text-navy transition-colors hover:bg-gold-dark">
+          <DemoTriggerButton className="rounded-md bg-gold px-5 py-2.5 font-display text-sm font-semibold text-navy shadow-[0_6px_16px_-6px_rgba(219,155,58,0.55)] transition-colors hover:bg-gold-dark">
             Book a demo
           </DemoTriggerButton>
         </div>

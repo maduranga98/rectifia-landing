@@ -14,7 +14,7 @@ export function Pricing() {
       <div className="mx-auto max-w-[1280px]">
         <Reveal>
           <Kicker className="mb-3.5">PRICING</Kicker>
-          <h2 className="mb-3 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mb-3 max-w-[640px] font-display text-[32px] font-bold tracking-tight text-navy sm:text-[40px]">
             Priced by headcount, not by report
           </h2>
           <p className="mb-12 max-w-[640px] font-sans text-base leading-relaxed text-ink">
@@ -28,8 +28,10 @@ export function Pricing() {
             <Reveal
               key={tier.name}
               delay={i * 90}
-              className={`hover-lift rounded-lg border border-navy/8 bg-white p-7 ${
-                tier.highlight ? "border-t-[3px] border-t-gold" : ""
+              className={`hover-lift rounded-xl border border-navy/8 bg-white p-7 shadow-[0_2px_10px_-4px_rgba(11,44,73,0.08)] ${
+                tier.highlight
+                  ? "border-t-[3px] border-t-gold shadow-[0_12px_30px_-10px_rgba(219,155,58,0.3)]"
+                  : ""
               }`}
             >
               {tier.highlight && (
@@ -57,7 +59,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <Reveal className="flex flex-wrap items-center justify-between gap-6 rounded-lg border border-navy/8 bg-white px-7 py-6">
+        <Reveal className="flex flex-wrap items-center justify-between gap-6 rounded-xl border border-navy/8 bg-white px-7 py-6 shadow-[0_2px_10px_-4px_rgba(11,44,73,0.08)]">
           <div>
             <span className="font-mono text-[10px] font-medium tracking-[0.06em] text-gold">
               ADD-ON
