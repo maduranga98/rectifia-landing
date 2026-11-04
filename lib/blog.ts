@@ -73,6 +73,21 @@ export const seoTitles: Record<string, string> = {
   "employee-relations-case-management-challenges": "Employee Relations Case Management Challenges",
   "can-a-whistleblower-remain-anonymous": "Can a Whistleblower Remain Anonymous?",
   "what-is-a-whistleblower-hotline": "What Is a Whistleblower Hotline? How It Works",
+  "what-hr-should-do-after-employee-complaint": "Employee Filed a Complaint? What HR Should Do",
+  "how-to-conduct-a-workplace-investigation": "How to Conduct a Workplace Investigation: 8 Steps",
+  "how-to-investigate-anonymous-employee-complaints": "Can HR Investigate an Anonymous Complaint?",
+  "prevent-retaliation-after-employee-complaint": "How to Prevent Retaliation After a Complaint",
+  "who-should-know-about-hr-investigation": "Who Should Know About an HR Investigation?",
+  "workplace-investigation-evidence-checklist": "Workplace Investigation Evidence Checklist",
+  "how-hr-handles-conflicting-employee-statements": "Conflicting Employee Statements: How HR Decides",
+  "how-long-should-workplace-investigation-take": "How Long Should a Workplace Investigation Take?",
+  "what-to-do-when-workplace-investigation-is-inconclusive": "When a Workplace Investigation Is Inconclusive",
+  "who-investigates-complaint-against-manager": "Who Investigates a Complaint Against a Manager?",
+  "what-to-do-when-employee-complains-about-hr": "What to Do When an Employee Complains About HR",
+  "workplace-investigation-witness-questions": "Workplace Investigation Witness Questions",
+  "how-to-document-workplace-investigation": "How to Document a Workplace Investigation",
+  "how-to-close-workplace-investigation": "How to Close a Workplace Investigation Fairly",
+  "identify-workplace-misconduct-patterns": "How HR Can Identify Misconduct Patterns",
 };
 
 export const OG_IMAGE = {
