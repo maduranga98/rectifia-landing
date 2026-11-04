@@ -3,10 +3,8 @@ import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 import { Reveal } from "@/components/ui/reveal";
 import { pricingTiers, pulseAddon } from "@/lib/content";
 
-const ctaClass =
-  "block w-full rounded-md py-2.5 text-center font-display text-sm font-semibold transition-colors";
-const primaryCta = `${ctaClass} border-none bg-gold text-navy hover:bg-gold-dark`;
-const secondaryCta = `${ctaClass} border border-navy/20 text-navy hover:border-navy/40`;
+const primaryCta = "btn btn-md btn-primary w-full";
+const secondaryCta = "btn btn-md btn-outline-light w-full";
 
 export function Pricing() {
   return (

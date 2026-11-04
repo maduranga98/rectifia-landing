@@ -122,7 +122,7 @@ export function DemoForm({ variant = "inline" }: { variant?: "inline" | "modal" 
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-1 rounded-md bg-gold px-6 py-3 font-display text-sm font-semibold text-navy transition-colors hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-60"
+        className="btn btn-md btn-primary mt-1 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "Booking..." : "Book a demo"}
       </button>

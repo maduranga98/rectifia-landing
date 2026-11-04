@@ -26,7 +26,8 @@ const navLinksAfter = [
   { href: "/#faq", label: "FAQ" },
 ];
 
-const desktopLinkClass = "font-sans text-sm text-white/75 transition-colors hover:text-gold";
+const desktopLinkClass =
+  "relative font-sans text-[14px] font-medium text-white/80 transition-colors hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-gold after:transition-all after:duration-200 hover:after:w-full";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,15 +45,15 @@ export function Header() {
           Book a demo →
         </DemoTriggerButton>
       </div>
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-4">
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-[18px]">
         <Link href="/" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="" width={32} height={32} className="rounded-lg" priority />
-          <span className="font-display text-lg font-semibold tracking-tight text-white">
+          <Image src="/logo.png" alt="" width={34} height={34} className="rounded-lg" priority />
+          <span className="font-display text-[19px] font-semibold tracking-tight text-white">
             Rectifia
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-9 lg:flex">
           {navLinksBefore.map((link) => (
             <a key={link.href} href={link.href} className={desktopLinkClass}>
               {link.label}
@@ -62,17 +63,20 @@ export function Header() {
             <button
               type="button"
               aria-haspopup="true"
-              className="font-sans text-sm text-white/75 transition-colors group-focus-within:text-gold group-hover:text-gold"
+              className="flex items-center gap-1 font-sans text-[14px] font-medium text-white/80 transition-colors group-focus-within:text-white group-hover:text-white"
             >
-              Solutions <span aria-hidden="true">▾</span>
+              Solutions
+              <span aria-hidden="true" className="text-[10px] transition-transform group-hover:rotate-180">
+                ▾
+              </span>
             </button>
             <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-              <div className="flex flex-col rounded-md border border-white/10 bg-navy p-2 shadow-lg">
+              <div className="flex flex-col rounded-lg border border-white/10 bg-navy p-2 shadow-[0_24px_48px_-12px_rgba(0,0,0,0.5)]">
                 {solutionLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded px-3 py-2 font-sans text-sm text-white/75 transition-colors hover:bg-white/5 hover:text-gold"
+                    className="rounded-md px-3 py-2.5 font-sans text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-gold"
                   >
                     {link.label}
                   </Link>
@@ -88,9 +92,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <DemoTriggerButton className="rounded-md bg-gold px-5 py-2.5 font-display text-sm font-semibold text-navy shadow-[0_6px_16px_-6px_rgba(219,155,58,0.55)] transition-colors hover:bg-gold-dark">
-            Book a demo
-          </DemoTriggerButton>
+          <DemoTriggerButton className="btn btn-sm btn-primary">Book a demo</DemoTriggerButton>
         </div>
 
         <button
@@ -112,13 +114,13 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="font-sans text-sm text-white/75 hover:text-gold"
+                className="font-sans text-[15px] font-medium text-white/80 hover:text-gold"
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          <DemoTriggerButton className="mt-5 w-full rounded-md bg-gold px-5 py-2.5 font-display text-sm font-semibold text-navy transition-colors hover:bg-gold-dark">
+          <DemoTriggerButton className="btn btn-md btn-primary mt-5 w-full">
             Book a demo
           </DemoTriggerButton>
         </div>

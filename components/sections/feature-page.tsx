@@ -122,9 +122,7 @@ export function FeaturePage({ config }: { config: FeaturePageConfig }) {
               {config.h1}
             </h1>
             <p className="mb-10 font-sans text-[17px] leading-relaxed text-ink">{config.lede}</p>
-            <DemoTriggerButton className="rounded-md bg-gold px-5 py-2.5 font-display text-sm font-semibold text-navy transition-colors hover:bg-gold-dark">
-              Book a demo
-            </DemoTriggerButton>
+            <DemoTriggerButton className="btn btn-md btn-primary">Book a demo</DemoTriggerButton>
           </div>
         </section>
 
