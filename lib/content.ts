@@ -1,4 +1,5 @@
 import { scheduledPosts } from "./content-scheduled";
+import { hrGuidePosts } from "./content-hr-guides";
 
 export const trustStrip = [
   "EU WHISTLEBLOWER DIRECTIVE ALIGNED",
@@ -1673,4 +1674,4 @@ To see how reporting works from first report to closed case, read the [whistlebl
   },
 ];
 
-export const blogPosts: BlogPost[] = [...baseBlogPosts, ...scheduledPosts];
+export const blogPosts: BlogPost[] = [...baseBlogPosts, ...scheduledPosts, ...hrGuidePosts];

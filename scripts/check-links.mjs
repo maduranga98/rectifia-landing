@@ -4,7 +4,8 @@ import { readFileSync } from "node:fs";
 
 const source =
   readFileSync(new URL("../lib/content.ts", import.meta.url), "utf8") +
-  readFileSync(new URL("../lib/content-scheduled.ts", import.meta.url), "utf8");
+  readFileSync(new URL("../lib/content-scheduled.ts", import.meta.url), "utf8") +
+  readFileSync(new URL("../lib/content-hr-guides.ts", import.meta.url), "utf8");
 const jurisdictionSource = readFileSync(
   new URL("../lib/jurisdictions.ts", import.meta.url),
   "utf8",
