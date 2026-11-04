@@ -12,12 +12,12 @@ export function Frameworks() {
       <div className="mx-auto max-w-[1280px]">
         <Reveal>
           <Kicker className="mb-3.5">COMPLIANCE</Kicker>
-          <h2 className="mb-10 max-w-[640px] font-display text-[32px] font-bold tracking-tight text-navy">
+          <h2 className="mb-10 max-w-[640px] font-display text-[32px] font-bold tracking-tight text-navy sm:text-[40px]">
             Built for the frameworks you&rsquo;re measured against
           </h2>
         </Reveal>
 
-        <div className="mb-5 grid grid-cols-1 gap-px border border-navy/8 bg-navy/8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {frameworks.map((f, i) => {
             const slug = slugByCode.get(f.code);
 
@@ -43,7 +43,11 @@ export function Frameworks() {
             );
 
             return (
-              <Reveal key={f.code} delay={(i % 3) * 90} className="hover-lift bg-white">
+              <Reveal
+                key={f.code}
+                delay={(i % 3) * 90}
+                className="hover-lift rounded-xl border border-navy/8 bg-white shadow-[0_2px_10px_-4px_rgba(11,44,73,0.08)]"
+              >
                 {slug ? (
                   <Link
                     href={`/jurisdictions/${slug}`}

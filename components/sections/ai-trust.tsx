@@ -9,7 +9,7 @@ export function AiTrust() {
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 lg:grid-cols-2">
         <Reveal>
           <Kicker className="mb-3.5">AI POLICY</Kicker>
-          <h2 className="mb-5 max-w-[440px] font-display text-[28px] font-bold tracking-tight text-white sm:text-[34px]">
+          <h2 className="mb-5 max-w-[460px] font-display text-[32px] font-bold tracking-tight text-white sm:text-[40px]">
             Every decision stays with your investigators.
           </h2>
           <p className="mb-4 max-w-[440px] font-sans text-base leading-relaxed text-white/75">
@@ -21,7 +21,10 @@ export function AiTrust() {
             guidance is specific to your organisation, never a generic model of misconduct.
           </p>
         </Reveal>
-        <Reveal delay={150} className="overflow-hidden rounded-lg border border-white/15">
+        <Reveal
+          delay={150}
+          className="overflow-hidden rounded-xl border border-white/15 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]"
+        >
           {aiDoesNot.map((item) => (
             <div
               key={item}

@@ -9,7 +9,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-[1280px]">
         <Reveal>
           <Kicker className="mb-3.5">HOW IT WORKS</Kicker>
-          <h2 className="mb-12 max-w-[640px] font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mb-12 max-w-[640px] font-display text-[32px] font-bold tracking-tight text-navy sm:text-[40px]">
             From report to a closed case, on a consistent track
           </h2>
         </Reveal>

@@ -15,7 +15,7 @@ export function WhyRectifia() {
       <div className="mx-auto max-w-[1280px]">
         <Reveal className="mx-auto max-w-[640px] text-center">
           <Kicker className="mx-auto mb-4">WHY RECTIFIA</Kicker>
-          <h2 className="mb-4.5 font-display text-[32px] font-bold tracking-tight text-white">
+          <h2 className="mb-4.5 font-display text-[32px] font-bold tracking-tight text-white sm:text-[40px]">
             Consistency and policy-grounded AI, not black-box scoring
           </h2>
           <p className="mb-10 font-sans text-base leading-relaxed text-white/75">
@@ -31,7 +31,7 @@ export function WhyRectifia() {
               <Reveal
                 key={point.title}
                 delay={i * 90}
-                className="rounded-lg border border-white/15 bg-white/[0.04] p-7"
+                className="hover-lift rounded-xl border border-white/15 bg-white/[0.04] p-7 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.4)]"
               >
                 <Icon className="mb-5" />
                 <div className="mb-2.5 font-display text-[17px] font-semibold text-white">

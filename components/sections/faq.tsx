@@ -15,7 +15,7 @@ export function Faq() {
           <Kicker className="mb-3.5 text-center" tone="gold">
             FAQ
           </Kicker>
-          <h2 className="mb-10 text-center font-display text-[32px] font-bold tracking-tight text-navy">
+          <h2 className="mb-10 text-center font-display text-[32px] font-bold tracking-tight text-navy sm:text-[40px]">
             Common questions
           </h2>
         </Reveal>
