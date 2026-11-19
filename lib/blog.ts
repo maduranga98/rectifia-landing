@@ -41,10 +41,10 @@ export function getJurisdictionsForPost(slug: string): Jurisdiction[] {
  */
 export const seoTitles: Record<string, string> = {
   "why-similar-hr-cases-get-different-outcomes": "Why Similar HR Cases Get Different Outcomes",
-  "best-navex-alternative-2026": "Best NAVEX Alternative for Mid-Size Firms (2026)",
+  "best-navex-alternative-2026": "NAVEX Alternatives for Mid-Size Companies (2026)",
   "consistency-bias-engine-explained": "How the Consistency & Bias Engine Scores a Case",
   "eu-whistleblower-directive-deadlines": "EU Whistleblower Directive: 7-Day, 3-Month Rules",
-  "anonymous-vs-confidential-reporting": "Anonymous Reporting System for Employees",
+  "anonymous-vs-confidential-reporting": "Anonymous vs Confidential Reporting Explained",
   "navex-pricing-2000-employees-2026": "NAVEX Pricing 2026: Cost at 2,000 Employees",
   "navex-alternative-australia-respect-at-work": "NAVEX Alternative for Australia: Respect@Work",
   "navex-alternative-japan-whistleblower-act": "NAVEX Alternative for Japan's Whistleblower Act",
@@ -72,7 +72,7 @@ export const seoTitles: Record<string, string> = {
   "hr-case-management-best-practices": "HR Case Management Best Practices: A Checklist",
   "employee-relations-case-management-challenges": "Employee Relations Case Management Challenges",
   "can-a-whistleblower-remain-anonymous": "Can a Whistleblower Remain Anonymous?",
-  "what-is-a-whistleblower-hotline": "What Is a Whistleblower Hotline? How It Works",
+  "what-is-a-whistleblower-hotline": "Whistleblower Hotline: Definition & How It Works",
   "what-hr-should-do-after-employee-complaint": "Employee Filed a Complaint? What HR Should Do",
   "how-to-conduct-a-workplace-investigation": "How to Conduct a Workplace Investigation: 8 Steps",
   "how-to-investigate-anonymous-employee-complaints": "Can HR Investigate an Anonymous Complaint?",

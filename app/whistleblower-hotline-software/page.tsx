@@ -12,9 +12,9 @@ import { ORGANIZATION_ID } from "@/lib/site";
 const siteUrl = "https://rectifia.com";
 const url = `${siteUrl}/whistleblower-hotline-software`;
 const published = "2026-10-07";
-const metaTitle = "Whistleblower Hotline Software for HR Teams";
+const metaTitle = "Whistleblower Hotline Software & Service";
 const description =
-  "Whistleblower hotline software where employees report anonymously with a Case ID and passcode, no login. AI-assisted intake, human-led investigations.";
+  "Whistleblower hotline software and service: employees report anonymously with a Case ID and passcode, no login. AI-assisted intake, human-led investigations.";
 
 export const metadata: Metadata = {
   title: metaTitle,

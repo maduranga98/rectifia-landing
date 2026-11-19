@@ -6,9 +6,9 @@ import {
 
 const config: FeaturePageConfig = {
   path: "/workplace-investigation-software",
-  metaTitle: "Workplace Investigation Software for HR Teams",
+  metaTitle: "Workplace & HR Investigation Software",
   description:
-    "Workplace investigation software for HR: anonymous or confidential reporting, AI-assisted intake and routing, and a consistency check on past cases.",
+    "Workplace and employee investigation software for HR teams: anonymous reporting, AI-assisted intake, case tracking and a consistency check on past cases.",
   keywords: [
     "workplace investigation software",
     "employee investigation software",

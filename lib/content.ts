@@ -380,7 +380,7 @@ For how this check fits a full complaint workflow, see [employee relations case 
     excerpt:
       "Buyers commonly report five- to six-figure annual NAVEX EthicsPoint quotes for a 500–5,000 employee company. Here's an honest answer on whether you need all of that, from a company building a direct competitor.",
     metaDescription:
-      "Buyers commonly report five- to six-figure annual quotes for NAVEX EthicsPoint. An honest look at when a mid-size company needs that and when it doesn't.",
+      "Comparing NAVEX alternatives for mid-size companies: what NAVEX EthicsPoint costs, when you need it, and when a simpler whistleblower and case tool is enough.",
     content: `If you're reading this, chances are a NAVEX rep just sent you a quote, and the number made you close the laptop for a minute.
 
 You're not overreacting. NAVEX doesn't appear to publish its prices, but buyers commonly report quotes in the range of $36,000 to $120,000+ a year for a company in the 500–5,000 employee range, plus a setup fee in the range of $5,000–$25,000. Those are our estimates, not published NAVEX prices (more on that below). For a lot of HR and Compliance teams, a number like that isn't "a line item." It's a headcount.
@@ -530,7 +530,7 @@ Rectifia is designed to support these obligations. It isn't legal advice - confi
     excerpt:
       "Every workplace reporting tool says some version of \"your identity is protected.\" Almost none explain what that actually means technically, and the difference matters more than the marketing copy suggests.",
     metaDescription:
-      "How an anonymous reporting system for employees works, how it differs from confidential reporting, and what each protects. Case ID and passcode.",
+      "Confidential vs anonymous reporting: the difference, what each protects, and how an anonymous reporting system for employees works with a Case ID and passcode.",
     content: `Every workplace reporting tool says some version of "your identity is protected." Almost none of them explain what that actually means technically, and the difference matters more than the marketing copy suggests.
 
 ## Two different promises, not one

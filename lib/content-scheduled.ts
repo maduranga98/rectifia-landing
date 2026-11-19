@@ -15,7 +15,7 @@ export const scheduledPosts: BlogPost[] = [
     excerpt:
       "A whistleblower hotline is a channel for reporting wrongdoing at work. What it is, how it differs from an ethics hotline, and what should happen after a report is filed.",
     metaDescription:
-      "What a whistleblower hotline is, how ethics hotlines take reports, and what happens to a report after it is filed. A plain-English guide for HR teams.",
+      "Whistleblower hotline definition: how it works, what to look for, and what happens after a report is filed. A plain-English guide for HR teams.",
     content: `A whistleblower hotline is a reporting channel that lets employees raise concerns about wrongdoing at work, usually with the option to stay anonymous. It is the entry point of a larger process: someone reports, the organization acknowledges the report, someone investigates, and the reporter hears back. This guide explains what a hotline is, how it differs from an ethics hotline, what should happen after a report is filed, and what HR teams should look for in one.
 
 ## What a whistleblower hotline is
