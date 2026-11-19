@@ -6,9 +6,9 @@ import {
 
 const config: FeaturePageConfig = {
   path: "/employee-relations-case-management-software",
-  metaTitle: "Employee Relations Case Management Software",
+  metaTitle: "Employee Relations Software & Case Management",
   description:
-    "Case management for employee complaints: anonymous or confidential reporting, AI-assisted intake and routing, and a consistency check across past cases.",
+    "Employee relations case management software for complaints and misconduct: anonymous intake, AI routing, case tracking and a consistency check.",
   keywords: [
     "employee relations case management software",
     "employee relations software",

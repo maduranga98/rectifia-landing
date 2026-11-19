@@ -21,7 +21,7 @@ export const hrGuidePosts: BlogPost[] = [
     excerpt:
       "Acknowledge the concern, assess risk, preserve evidence, assign an impartial handler, investigate and follow up. A six-step guide for HR teams.",
     metaDescription:
-      "Learn what HR should do after receiving an employee complaint, from initial assessment and evidence preservation to investigation, documentation, and follow-up.",
+      "What HR should do after an employee complaint: assess it, preserve evidence, investigate, document decisions, and follow up with the employee.",
     content: `## What should HR do when an employee files a complaint?
 
 When an employee files a complaint, HR should acknowledge the concern, assess immediate safety risks, preserve relevant evidence, determine the appropriate response, and document the next steps. The organization should follow its policies and applicable legal requirements while protecting the fairness and confidentiality of the process.
@@ -155,7 +155,7 @@ Rectifia's [workplace investigation software](/workplace-investigation-software)
     excerpt:
       "Yes. How HR can assess an anonymous complaint, find independent evidence, ask follow-up questions through a protected channel and document the decision.",
     metaDescription:
-      "Learn how HR can investigate anonymous employee complaints, assess evidence without a named reporter, and maintain a reliable follow-up process.",
+      "Can HR investigate an anonymous employee complaint? How to assess evidence without a named reporter and keep a reliable follow-up process.",
     content: `## Can HR investigate an anonymous complaint?
 
 Yes. HR can investigate an anonymous employee complaint when the available information provides a reasonable basis for further assessment. A reporter's identity is not the same as the quality of the information they provide.
@@ -217,7 +217,7 @@ In Rectifia's anonymous mode, no identity is stored, and reporters use a Case ID
     excerpt:
       "Retaliation prevention belongs inside the investigation process. Six steps: assess risk at intake, limit disclosure, review later decisions, brief managers, keep channels open and follow up.",
     metaDescription:
-      "Learn how employers can reduce retaliation risks after workplace complaints through risk assessments, manager guidance, documentation, and follow-up.",
+      "How employers can prevent retaliation after an employee complaint: risk assessments, manager guidance, documentation and follow-up.",
     content: `## How can employers prevent retaliation after a complaint?
 
 Employers can reduce retaliation risks by assessing potential risks early, limiting unnecessary disclosure, instructing relevant managers, documenting employment decisions, providing safe reporting channels, and monitoring for adverse treatment after a complaint.
@@ -277,7 +277,7 @@ Rectifia covers retaliation as a case category, keeps case content limited to as
     excerpt:
       "HR investigation confidentiality means need-to-know access, not secrecy at any cost. Who may need access, how to protect case information and when records can be disclosed.",
     metaDescription:
-      "Understand HR investigation confidentiality, need-to-know access, employee privacy, and how to handle sensitive case information.",
+      "HR investigation confidentiality: who needs to know, need-to-know access, employee privacy, and how to handle sensitive case information.",
     content: `## Who should know about an HR investigation?
 
 Information about an HR investigation should generally be shared only with people who need it for a legitimate purpose, such as investigating the allegations, obtaining appropriate advice, implementing necessary measures, or meeting legal obligations.
@@ -417,7 +417,7 @@ Rectifia's [workplace investigation software](/workplace-investigation-software)
     excerpt:
       "When accounts conflict, separate facts from interpretation, ask for detail, seek corroboration, assess reliability carefully and document what stays unresolved.",
     metaDescription:
-      "How workplace investigators assess conflicting employee statements using corroboration, reliability, timelines, and fair documentation.",
+      "How workplace investigators assess conflicting employee statements using corroboration, reliability checks, timelines and fair documentation.",
     content: `## What should HR do when employees give conflicting statements?
 
 When employees give conflicting statements, HR should identify the precise points of disagreement, seek corroborating evidence, ask neutral follow-up questions, consider alternative explanations, and document why particular findings are supported or remain unresolved.
@@ -674,7 +674,7 @@ Rectifia assigns a named owner to every case and limits case content to assigned
     excerpt:
       "A complaint about HR should not be handled by HR. Six steps for assessing the concern, choosing an independent reviewer, preserving records and documenting the outcome.",
     metaDescription:
-      "Learn how employers should handle complaints about HR, choose an independent reviewer, protect employees, and document findings without conflicts of interest.",
+      "What to do when an employee complains about HR: choose an independent reviewer, protect the employee, and document findings without conflicts of interest.",
     content: `## What should an organization do when an employee complains about HR?
 
 When an employee complains about HR, the organization should assess the concern independently, identify any conflicts of interest, preserve relevant evidence, and appoint an appropriate person to review the allegations.
@@ -740,7 +740,7 @@ Rectifia supports structured case assignment and role-based access, so a case ab
     excerpt:
       "Fifteen neutral, open-ended witness questions for workplace investigations, grouped by account, supporting evidence and context, plus how to avoid leading questions.",
     metaDescription:
-      "Use these workplace investigation witness questions to gather clear, impartial accounts, identify corroborating evidence, and avoid leading interview questions.",
+      "Workplace investigation witness questions that gather clear, impartial accounts and corroborating evidence, with tips to avoid leading questions.",
     content: `## What questions should HR ask witnesses during an investigation?
 
 Investigators should ask witnesses open-ended, neutral questions that establish what they personally observed, when and where it happened, who was present, and what evidence may corroborate their account.
@@ -931,7 +931,7 @@ Rectifia supports documented findings and a consistency check before a case clos
     excerpt:
       "A pattern is a signal for further examination, not proof. How HR can categorize complaints, read trends responsibly, compare teams and keep human judgment central.",
     metaDescription:
-      "Discover how HR teams can analyze workplace complaints to identify recurring misconduct, emerging risks, repeat locations, and opportunities for prevention.",
+      "How HR teams can analyze workplace complaints to spot recurring misconduct, emerging risks and repeat locations, and act on prevention.",
     content: `## How can HR identify patterns of workplace misconduct?
 
 HR can identify potential misconduct patterns by analyzing appropriately categorized complaints over time, comparing trends across teams and locations, reviewing repeat concerns, and investigating whether apparently separate cases share relevant circumstances.
