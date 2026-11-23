@@ -16,7 +16,9 @@
         "source": "/blog/how-whistleblowing-software-pricing-works-2026",
         "destination": "/blog/whistleblowing-software-pricing-models-compared",
         "type": 301
-      }
+      },
+      { "source": "/naibu-tsuho-system", "destination": "/ja/naibu-tsuho-system", "type": 301 },
+      { "source": "/ja", "destination": "/ja/naibu-tsuho-system", "type": 301 }
     ],
     "rewrites": [
       {
