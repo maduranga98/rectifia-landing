@@ -871,6 +871,7 @@ If you're a public company, large proprietary company, or corporate trustee eval
     title: "Japan's Whistleblower Protection Act: What Changes at 300 Employees",
     category: "Compliance",
     date: "2026-10-21",
+    updatedAt: "2026-11-23",
     readTime: "5 min read",
     excerpt:
       "The 300-employee line in Japan's amended Whistleblower Protection Act isn't a soft recommendation - it's the threshold where a specific legal obligation, with criminal liability attached, becomes mandatory.",
@@ -879,6 +880,20 @@ If you're a public company, large proprietary company, or corporate trustee eval
     content: `[Japan's amended Whistleblower Protection Act](/jurisdictions/japan-whistleblower-protection-act-compliance) (公益通報者保護法) sets a specific headcount threshold that changes what's legally required, not just what's recommended: companies with more than 300 employees are required to establish an internal reporting system and designate specific individuals - 従事者 (jujisha), often translated as designated handlers - to receive and handle reports. Companies below that threshold are only under a best-efforts obligation to do the same.
 
 That distinction matters more than it might first appear, because "required" versus "best efforts" changes what a compliance officer needs to be able to demonstrate, and what happens if they can't.
+
+## What changes on 1 December 2026
+
+The 2025 amendments to the Act (Act No. 62 of 2025) take effect on **1 December 2026**. The main changes:
+
+- **Criminal penalties for retaliation.** Dismissing or disciplining a worker because they made a protected report becomes a crime: up to six months' imprisonment or a fine of up to JPY 300,000 for individuals, and fines of up to JPY 30 million for companies. Personnel transfers are not covered by the criminal penalty.
+- **Presumed retaliation.** Dismissal or discipline within one year of a report is presumed to be retaliatory in civil disputes, so the employer has to show otherwise.
+- **Freelancers are protected.** Protection extends to freelancers under current contracts and contracts that ended recently.
+- **No hunting for the reporter.** Unjustified attempts to identify a whistleblower, or to stop someone from reporting, are prohibited, and agreements that block lawful reporting are void.
+- **Stronger enforcement for 300+ employee companies.** The Consumer Affairs Agency gains on-site inspection powers and can issue orders to companies that fail to designate handlers, with fines for ignoring those orders.
+
+The revised guidelines published on 31 March 2026 also expect companies to tell each designated handler, in writing at appointment, that they owe a confidentiality duty over anything that could identify a reporter and that breaching it can carry criminal penalties.
+
+Sources: [Act Partially Amending the Whistleblower Protection Act, summary (Japanese Law Translation)](https://www.japaneselawtranslation.go.jp/outline/200/905R726.pdf); [Baker McKenzie, Japan 2026 guidelines update](https://www.bakermckenzie.com/en/insight/publications/2026/04/japan-2026-guidelines-update-for-whistleblower-protection-act); [DLA Piper, 2025 amendments summary](https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2025/Amendments-to-the-Whistleblower-law-in-Japan-create-new-obligations-penalties-and-enforcement-powers).
 
 ## What crossing 300 employees actually obligates a company to do
 
