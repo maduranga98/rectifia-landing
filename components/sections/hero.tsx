@@ -105,7 +105,7 @@ export function Hero() {
             Fair cases. Consistent outcomes.
           </p>
           <h1 className="mb-6 font-display text-[44px] font-bold leading-[1.05] tracking-tight text-white sm:text-[56px] lg:text-[64px]">
-            Workplace misconduct reporting,
+            HR case management for workplace misconduct,
             <br className="hidden lg:block" /> handled consistently.
           </h1>
           <p className="mb-9 max-w-[520px] font-sans text-lg leading-relaxed text-white/75">
