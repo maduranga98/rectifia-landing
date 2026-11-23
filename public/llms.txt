@@ -31,6 +31,7 @@ Rectifia computes reporting deadlines and obligations per jurisdiction:
 - UK PIDA: https://rectifia.com/jurisdictions/uk-whistleblowing-software-pida-compliance
 - Australia Respect@Work positive duty: https://rectifia.com/jurisdictions/australia-respect-at-work-positive-duty-software
 - Japan Whistleblower Protection Act: https://rectifia.com/jurisdictions/japan-whistleblower-protection-act-compliance - designated handler (従事者) register for companies with 300+ employees; covers the 2025 amendments in force from 1 December 2026
+- Japan, in Japanese (日本語): https://rectifia.com/ja/naibu-tsuho-system - 公益通報者保護法対応の内部通報システム
 - US SOX reporting hotline: https://rectifia.com/jurisdictions/us-sox-compliance-reporting-hotline
 - Kenya: https://rectifia.com/jurisdictions/kenya-workplace-misconduct-reporting
 

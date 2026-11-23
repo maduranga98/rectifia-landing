@@ -9,6 +9,12 @@ import { DemoCta } from "@/components/sections/demo-cta";
 import { DemoTriggerButton } from "@/components/ui/demo-trigger-button";
 import { getPublishedPosts, OG_IMAGE } from "@/lib/blog";
 import { getJurisdiction, jurisdictions } from "@/lib/jurisdictions";
+import { EN_JAPAN_PATH, JA_PATH } from "@/lib/japan-ja";
+
+// Jurisdiction pages that have a Japanese-language counterpart.
+const JA_ALTERNATES: Record<string, string> = {
+  [EN_JAPAN_PATH.replace("/jurisdictions/", "")]: JA_PATH,
+};
 
 const siteUrl = "https://rectifia.com";
 
@@ -33,6 +39,13 @@ export async function generateMetadata({
     keywords: jurisdiction.keywords,
     alternates: {
       canonical: url,
+      ...(JA_ALTERNATES[jurisdiction.slug] && {
+        languages: {
+          en: url,
+          ja: `${siteUrl}${JA_ALTERNATES[jurisdiction.slug]}`,
+          "x-default": url,
+        },
+      }),
     },
     openGraph: {
       type: "website",
@@ -112,12 +125,24 @@ export default async function JurisdictionPage({
       <main className="flex-1">
         <section className="bg-white px-8 pb-16 pt-20">
           <div className="mx-auto max-w-[720px]">
-            <Link
-              href="/jurisdictions"
-              className="mb-8 inline-block font-mono text-xs font-medium tracking-[0.05em] text-navy/60 transition-colors hover:text-gold"
-            >
-              ← ALL JURISDICTIONS
-            </Link>
+            <div className="mb-8 flex items-center justify-between gap-4">
+              <Link
+                href="/jurisdictions"
+                className="font-mono text-xs font-medium tracking-[0.05em] text-navy/60 transition-colors hover:text-gold"
+              >
+                ← ALL JURISDICTIONS
+              </Link>
+              {JA_ALTERNATES[jurisdiction.slug] && (
+                <Link
+                  href={JA_ALTERNATES[jurisdiction.slug]}
+                  hrefLang="ja"
+                  lang="ja"
+                  className="font-mono text-xs font-medium tracking-[0.05em] text-navy/60 transition-colors hover:text-gold"
+                >
+                  日本語
+                </Link>
+              )}
+            </div>
 
             <Kicker className="mb-3.5">
               {jurisdiction.code} · {jurisdiction.region.toUpperCase()}

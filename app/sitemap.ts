@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublishedPosts } from "@/lib/blog";
 import { jurisdictions } from "@/lib/jurisdictions";
+import { EN_JAPAN_PATH, JA_PATH } from "@/lib/japan-ja";
 
 export const dynamic = "force-static";
 
@@ -46,12 +47,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/terms`, lastModified: LEGAL_UPDATED, changeFrequency: "yearly", priority: 0.3 },
   ];
 
+  const japanAlternates = {
+    languages: {
+      en: `${siteUrl}${EN_JAPAN_PATH}`,
+      ja: `${siteUrl}${JA_PATH}`,
+      "x-default": `${siteUrl}${EN_JAPAN_PATH}`,
+    },
+  };
+
   const jurisdictionRoutes: MetadataRoute.Sitemap = jurisdictions.map((jurisdiction) => ({
     url: `${siteUrl}/jurisdictions/${jurisdiction.slug}`,
     lastModified: JURISDICTIONS_UPDATED,
     changeFrequency: "monthly",
     priority: 0.7,
+    ...(`/jurisdictions/${jurisdiction.slug}` === EN_JAPAN_PATH && { alternates: japanAlternates }),
   }));
+
+  jurisdictionRoutes.push({
+    url: `${siteUrl}${JA_PATH}`,
+    lastModified: JURISDICTIONS_UPDATED,
+    changeFrequency: "monthly",
+    priority: 0.8,
+    alternates: japanAlternates,
+  });
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
